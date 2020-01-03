@@ -1,6 +1,6 @@
 package cn.service;
 
-public interface Service {
+public interface MySQLService {
 
     String getRatingSum(int top);
 

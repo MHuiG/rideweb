@@ -3,7 +3,7 @@ package cn.service.impl;
 import cn.mapper.Mapper;
 import cn.pojo.RatingSum;
 import cn.pojo.RatingSumToPageBean;
-import cn.service.Service;
+import cn.service.MySQLService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
 @org.springframework.stereotype.Service
-public class ServiceImpl implements Service {
+public class MySQLServiceImpl implements MySQLService {
 
     @Autowired
     private Mapper mapper;

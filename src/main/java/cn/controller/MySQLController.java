@@ -1,6 +1,6 @@
 package cn.controller;
 
-import cn.service.Service;
+import cn.service.MySQLService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,13 +12,13 @@ public class MySQLController {
 
 
     @Autowired
-    private Service Service;
+    private MySQLService MySQLService;
 
     @RequestMapping(value = "/getRatingSum", produces = "application/json;charset=UTF-8")
     @ResponseBody
     public String getRatingSum() {
         System.out.println("getRatingSum..");
-        String data = Service.getRatingSum(5);
+        String data = MySQLService.getRatingSum(5);
         return data;
     }
 
