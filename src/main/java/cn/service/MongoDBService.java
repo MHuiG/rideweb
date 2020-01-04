@@ -1,6 +1,7 @@
 package cn.service;
 
-public interface MongoDBService {
+
+public interface MongoDBService{
 
 
 }
