@@ -1,15 +1,15 @@
 package cn.service;
 
 import cn.pojo.Location;
-import com.datastax.driver.core.Session;
+
+import java.util.List;
 
 public interface CassandraService {
-    void connectcass(Session session);
 
-    void insertLocation(Session session, Location o);
+    void insertLocation(Location o);
 
-    void deletecass(Session session);
+    void deleteByTerminal(Location o);
 
-    void querycass(Session session);
+    List<Location> getLocationAll();
 
 }

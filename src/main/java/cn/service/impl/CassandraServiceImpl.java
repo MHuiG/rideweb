@@ -3,9 +3,15 @@ package cn.service.impl;
 import cn.mapper.Mapper;
 import cn.pojo.Location;
 import cn.service.CassandraService;
-import com.datastax.driver.core.*;
+import com.datastax.driver.core.Cluster;
+import com.datastax.driver.core.ResultSet;
+import com.datastax.driver.core.Row;
+import com.datastax.driver.core.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @org.springframework.stereotype.Service
 public class CassandraServiceImpl implements CassandraService {
@@ -15,49 +21,48 @@ public class CassandraServiceImpl implements CassandraService {
 
     public Session session;
 
-    @Test
-    public void main() {
-        connectcass(session);
-    }
-
-
-    @Override
-    public void connectcass(Session session) {
+    public void connectDB() {
         Cluster culster = Cluster.builder().withClusterName("Test Cluster").addContactPoint("worker01").build();
         session = culster.connect();
     }
 
     @Override
-    public void insertLocation(Session session, Location o) {
-        String cql = "INSERT INTO mydb.loca (Terminal,Station,Latitude,Longitude,Nbdocks) VALUES (" + o.getTerminal() + "," + ");";
+    public void insertLocation(Location o) {
+        connectDB();
+        String cql = "INSERT INTO mydb.loca (Terminal,Station,Latitude,Longitude,Nbdocks) VALUES (" + o.getTerminal() + "," + o.getStation() + "," + o.getLatitude() + "," + o.getLongitude() + "," + o.getNbdocks() + ");";
         session.execute(cql);
     }
 
 
     @Override
-    public void deletecass(Session session) {
-        String cql = "DELETE FROM mydb.test WHERE a='aa';";
+    public void deleteByTerminal(Location o) {
+        connectDB();
+        String cql = "DELETE FROM mydb.loca WHERE Terminal='" + o.getTerminal() + "';";
         session.execute(cql);
     }
 
     @Override
-    public void querycass(Session session) {
-        String cql = "SELECT * FROM mydb.test;";
-        String cql2 = "SELECT a,b,c,d FROM mydb.test;";
-
+    public List<Location> getLocationAll() {
+        connectDB();
+        List<Location> s = new ArrayList<>();
+        String cql = "SELECT * FROM mydb.loca;";
         ResultSet resultSet = session.execute(cql);
-        System.out.print("这里是字段名：");
-        for (ColumnDefinitions.Definition definition : resultSet.getColumnDefinitions()) {
-            System.out.print(definition.getName() + " ");
-        }
-        System.out.println();
-        System.out.println(String.format("%s\t%s\t%s\t%s\t\n%s", "a", "b", "c", "d",
-                "--------------------------------------------------------------------------"));
         for (Row row : resultSet) {
-            System.out.println(String.format("%s\t%d\t%s\t%d\t", row.getString("a"), row.getInt("b"),
-                    row.getString("c"), row.getInt("d")));
+            Location o = new Location();
+            o.setTerminal(row.getString("Terminal"));
+            o.setStation(row.getString("Station"));
+            o.setLatitude(row.getString("Latitude"));
+            o.setLongitude(row.getString("Longitude"));
+            o.setNbdocks(row.getString("Nbdocks"));
+            s.add(o);
         }
+        return s;
     }
 
-
+    @Test
+    public void main() {
+//        connectDB(session);
+        List<Location> o = getLocationAll();
+        System.out.println(o.toString());
+    }
 }
