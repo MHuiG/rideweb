@@ -5,12 +5,20 @@ import cn.pojo.Location;
 import cn.service.CassandraService;
 import com.datastax.driver.core.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.testng.annotations.Test;
 
 @org.springframework.stereotype.Service
 public class CassandraServiceImpl implements CassandraService {
 
     @Autowired
     private Mapper mapper;
+
+    public Session session;
+
+    @Test
+    public void main() {
+        connectcass(session);
+    }
 
 
     @Override
