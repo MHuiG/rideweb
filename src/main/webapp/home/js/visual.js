@@ -1,11 +1,11 @@
 //交通流量
 var data = {
     id: 'multipleBarsLines',
-    legendBar: ['高速公路', '城镇公路'],
+    legendBar: ['<=15min', '>15min'],
     symbol: ' ', //数值是否带百分号        --默认为空 ''
     legendLine: ['环比', '同比'],
-    xAxis: ['2014', '2015', '2016', '2017', '2018',
-        '2019'
+    xAxis: ['2010', '2011', '2012', '2013', '2014',
+        '2015'
     ],
     yAxis: [
         [8, 10, 10, 11, 4, 13],
@@ -253,7 +253,7 @@ option2 = {
         itemWidth: 14,
         itemHeight: 5,
         itemGap: 13,
-        data: ['小型车', '中型车', '大型车'],
+        data: ['会员车', '临时车'],
         right: '10px',
         top: '0px',
         textStyle: {
@@ -280,7 +280,7 @@ option2 = {
                 color:'#fff',
             },
         },
-        data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+        data: ['2010', '2010', '2011', '2011', '2012', '2012', '2013', '2013', '2014', '2014', '2015', '2015']
     }],
     yAxis: [{
         type: 'value',
@@ -308,7 +308,7 @@ option2 = {
         }
     }],
     series: [{
-        name: '小型车',
+        name: '会员车',
         type: 'line',
         smooth: true,
         lineStyle: {
@@ -336,7 +336,7 @@ option2 = {
         },
         data: [20,35,34,45,52,41,49,64,24,52.4,24,33]
     }, {
-        name: '中型车',
+        name: '临时车',
         type: 'line',
         smooth: true,
         lineStyle: {
@@ -363,58 +363,30 @@ option2 = {
             }
         },
         data: [97.3,99.2,99.3,100.0,99.6,90.6,80.0,91.5,69.8,67.5,90.4,84.9]
-    }, {
-        name: '大型车',
-        type: 'line',
-        smooth: true,
-        lineStyle: {
-            normal: {
-                width: 2
-            }
-        },
-        areaStyle: {
-            normal: {
-                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                    offset: 0,
-                    color: 'rgba(219, 50, 51, 0.3)'
-                }, {
-                    offset: 0.8,
-                    color: 'rgba(219, 50, 51, 0)'
-                }], false),
-                shadowColor: 'rgba(0, 0, 0, 0.1)',
-                shadowBlur: 10
-            }
-        },
-        itemStyle: {
-            normal: {
-                color: 'rgb(219,50,51)'
-            }
-        },
-        data: [84.2,81.0,67.5,62.1,43.7,68.5,51.9,71.8,76.7,67.6,62.9,0]
-    }, ]
+    },  ]
 };
 //////////////////////交通工具流量 end
 
 //本月发生事件1
 var color = ['#e9df3d', '#f79c19', '#21fcd6', '#08c8ff', '#df4131'];
 var data = [{
-        "name": "超速",
+        "name": "车锁",
         "value": 30
     },
     {
-        "name": "闯红灯",
+        "name": "二维码",
         "value": 30
     },
     {
-        "name": "闯禁行",
+        "name": "链条",
         "value": 42
     },
     {
-        "name": "违停",
+        "name": "刹车",
         "value": 50
     },
     {
-        "name": "逆行",
+        "name": "其他",
         "value": 34
     }
 ];
@@ -527,23 +499,23 @@ option3 = {
 //本月发生事件2
 var color = ['#e9df3d', '#f79c19', '#21fcd6', '#08c8ff', '#df4131'];
 var data = [{
-        "name": "超速",
+        "name": "车锁",
         "value": 15
     },
     {
-        "name": "闯红灯",
+        "name": "二维码",
         "value": 14
     },
     {
-        "name": "闯禁行",
+        "name": "链条",
         "value": 23
     },
     {
-        "name": "违停",
+        "name": "刹车",
         "value": 2
     },
     {
-        "name": "逆行",
+        "name": "其他",
         "value": 50
     }
 ];
@@ -657,7 +629,7 @@ option31 = {
 
 
 //收费站收费排行1
-var spirit = '../images.ksh45.png';
+var spirit = '../images/ksh45.png'; //gaigai--------------------------
 
 var maxData = 200;
 
@@ -703,11 +675,11 @@ option4 = {
         "type": "category",
         "inverse": false,
         "data": [
-          "晋城",
-          "太旧",
-          "太原",
-          "吕梁",
-          "长治",
+          "MCAD",
+          "Boom Island Park",
+          "Oak Street Ramp",
+          "Midtown Exchange",
+          "McNamara Center",
         ],
         "axisLine": {
           "show": false
@@ -849,11 +821,11 @@ option41 = {
         "type": "category",
         "inverse": false,
         "data": [
-          "朔州",
-          "大同",
-          "运城",
-          "忻州",
-          "临汾",
+          "Civil Engineering",
+          "Sanford Hall",
+          "Bohemian Flats",
+          "Lake Como Pavilion",
+          "Elliot Park",
         ],
         "axisLine": {
           "show": false
