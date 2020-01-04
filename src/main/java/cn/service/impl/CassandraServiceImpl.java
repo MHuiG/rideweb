@@ -5,6 +5,7 @@ import cn.pojo.Location;
 import cn.service.CassandraService;
 import com.datastax.driver.core.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.testng.annotations.Test;
 
 @org.springframework.stereotype.Service
 public class CassandraServiceImpl implements CassandraService {
@@ -12,10 +13,17 @@ public class CassandraServiceImpl implements CassandraService {
     @Autowired
     private Mapper mapper;
 
+    public Session session;
+
+    @Test
+    public void main() {
+        connectcass(session);
+    }
+
 
     @Override
     public void connectcass(Session session) {
-        Cluster culster = Cluster.builder().withClusterName("Test Cluster").addContactPoint("192.168.52.100").build();
+        Cluster culster = Cluster.builder().withClusterName("Test Cluster").addContactPoint("worker01").build();
         session = culster.connect();
     }
 
