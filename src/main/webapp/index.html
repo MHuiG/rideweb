@@ -6,6 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="refresh" content="0; URL=/rideweb/home/">
     <title>system</title>
+    <style>
+        /* 加载旋转动画 */
+        #load {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: url(home/images/data08.png) no-repeat #061537;
+            background-size: cover;
+            top: 0;
+            left: 0;
+            z-index: 999
+        }
+
+        #load .load_img {
+            position: absolute;
+            left: calc(50% - 182px);
+            top: calc(50% - 182px);
+        }
+
+        .load_img img {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .load_img .jzxz1 {
+            animation: xz1 8s infinite linear;
+        }
+
+        @keyframes xz1 {
+            from {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .load_img .jzxz2 {
+            animation: xz2 7s infinite linear;
+        }
+
+        @keyframes xz2 {
+            from {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(-180deg);
+            }
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+    </style>
 <body>
+<div id="load">
+    <div class="load_img"><!-- 加载动画 -->
+        <img class="jzxz1" src="home/images/jzxz1.png">
+        <img class="jzxz2" src="home/images/jzxz2.png">
+    </div>
+</div>
 </body>
 </html>
