@@ -15,7 +15,7 @@ public class CassandraServiceImpl implements CassandraService {
 
     @Override
     public void connectcass(Session session) {
-        Cluster culster = Cluster.builder().withClusterName("Test Cluster").addContactPoint("192.168.52.100").build();
+        Cluster culster = Cluster.builder().withClusterName("Test Cluster").addContactPoint("worker01").build();
         session = culster.connect();
     }
 
