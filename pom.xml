@@ -26,6 +26,11 @@
             <artifactId>bson</artifactId>
             <version>3.9.1</version>
         </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver-core</artifactId>
+            <version>3.9.1</version>
+        </dependency>
         <!--        cassandra-->
         <dependency>
             <groupId>com.datastax.cassandra</groupId>
