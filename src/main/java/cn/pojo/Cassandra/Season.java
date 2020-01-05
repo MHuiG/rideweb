@@ -1,6 +1,7 @@
-package cn.pojo;
+package cn.pojo.Cassandra;
 
 public class Season {
+    public String id;
     public String StartDate;
     public String StartStation;
     public String StartStationNumber;
@@ -9,6 +10,14 @@ public class Season {
     public String EndStationNumber;
     public String TotalDuration;
     public String AccountType;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getStartDate() {
         return StartDate;

@@ -1,11 +1,17 @@
 package cn.service.impl;
 
 import cn.mapper.Mapper;
-import cn.pojo.Location;
+import cn.pojo.Cassandra.Location;
 import cn.service.CassandraService;
-import com.datastax.driver.core.*;
+import com.datastax.driver.core.Cluster;
+import com.datastax.driver.core.ResultSet;
+import com.datastax.driver.core.Row;
+import com.datastax.driver.core.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @org.springframework.stereotype.Service
 public class CassandraServiceImpl implements CassandraService {
@@ -15,49 +21,104 @@ public class CassandraServiceImpl implements CassandraService {
 
     public Session session;
 
-    @Test
-    public void main() {
-        connectcass(session);
-    }
-
-
-    @Override
-    public void connectcass(Session session) {
+    public void connectDB() {
         Cluster culster = Cluster.builder().withClusterName("Test Cluster").addContactPoint("worker01").build();
         session = culster.connect();
     }
 
-    @Override
-    public void insertLocation(Session session, Location o) {
-        String cql = "INSERT INTO mydb.loca (Terminal,Station,Latitude,Longitude,Nbdocks) VALUES (" + o.getTerminal() + "," + ");";
+    /**
+     * 创建键空间
+     */
+    @Test
+    public void createKeyspace() {
+        connectDB();
+        /**单数据中心 复制策略 ：1**/
+        String cql = "CREATE KEYSPACE if not exists mydb WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'}";
         session.execute(cql);
     }
 
-
-    @Override
-    public void deletecass(Session session) {
-        String cql = "DELETE FROM mydb.test WHERE a='aa';";
+    /**
+     * 创建表locations
+     */
+    @Test
+    public void createTablelocations() {
+        connectDB();
+        String cql = "CREATE TABLE if not exists mydb.loca (Terminal text,Station text,Latitude text,Longitude text,Nbdocks text,PRIMARY KEY (Terminal))";
         session.execute(cql);
     }
 
-    @Override
-    public void querycass(Session session) {
-        String cql = "SELECT * FROM mydb.test;";
-        String cql2 = "SELECT a,b,c,d FROM mydb.test;";
+    /**
+     * 导入数据
+     */
 
+    /*
+    COPY mydb.loca(Terminal,Station,Latitude,Longitude,Nbdocks) FROM '/export/data/ride/locations/Locations' WITH HEADER = false;
+    */
+
+    /**
+     * 创建表seasons
+     */
+    @Test
+    public void createTableseasons() {
+        connectDB();
+        String cql = "CREATE TABLE if not exists mydb.season (id text,StartDate text,StartStation text,StartStationNumber text,EndDate text,EndStation text,EndStationNumber text,TotalDuration text,AccountType text,PRIMARY KEY (id))";
+        session.execute(cql);
+    }
+
+    /**
+     * 导入数据
+     */
+
+    /*
+    COPY mydb.season(id,StartDate,StartStation,StartStationNumber,EndDate,EndStation,EndStationNumber,TotalDuration,AccountType) FROM '/export/data/ride/seasons' WITH HEADER = false;
+    */
+
+    /**
+     * 插入Location
+     */
+    @Override
+    public void insertLocation(Location o) {
+        connectDB();
+        String cql = "INSERT INTO mydb.loca (Terminal,Station,Latitude,Longitude,Nbdocks) VALUES (" + "," + o.getTerminal() + "," + o.getStation() + "," + o.getLatitude() + "," + o.getLongitude() + "," + o.getNbdocks() + ");";
+        session.execute(cql);
+    }
+
+    /**
+     * 删除Location
+     */
+
+    @Override
+    public void deleteLocationByTerminal(Location o) {
+        connectDB();
+        String cql = "DELETE FROM mydb.loca WHERE Terminal='" + o.getTerminal() + "';";
+        session.execute(cql);
+    }
+
+    /**
+     * 查询Location
+     */
+    @Override
+    public List<Location> getLocationAll() {
+        connectDB();
+        List<Location> s = new ArrayList<>();
+        String cql = "SELECT * FROM mydb.loca;";
         ResultSet resultSet = session.execute(cql);
-        System.out.print("这里是字段名：");
-        for (ColumnDefinitions.Definition definition : resultSet.getColumnDefinitions()) {
-            System.out.print(definition.getName() + " ");
-        }
-        System.out.println();
-        System.out.println(String.format("%s\t%s\t%s\t%s\t\n%s", "a", "b", "c", "d",
-                "--------------------------------------------------------------------------"));
         for (Row row : resultSet) {
-            System.out.println(String.format("%s\t%d\t%s\t%d\t", row.getString("a"), row.getInt("b"),
-                    row.getString("c"), row.getInt("d")));
+            Location o = new Location();
+            o.setTerminal(row.getString("Terminal"));
+            o.setStation(row.getString("Station"));
+            o.setLatitude(row.getString("Latitude"));
+            o.setLongitude(row.getString("Longitude"));
+            o.setNbdocks(row.getString("Nbdocks"));
+            s.add(o);
         }
+        return s;
     }
 
-
+    @Test
+    public void main() {
+//        connectDB(session);
+        List<Location> o = getLocationAll();
+        System.out.println(o.toString());
+    }
 }

@@ -1,11 +1,11 @@
 //交通流量
 var data = {
     id: 'multipleBarsLines',
-    legendBar: ['高速公路', '城镇公路'],
+    legendBar: ['<=15min', '>15min'],
     symbol: ' ', //数值是否带百分号        --默认为空 ''
     legendLine: ['环比', '同比'],
-    xAxis: ['2014', '2015', '2016', '2017', '2018',
-        '2019'
+    xAxis: ['2010', '2011', '2012', '2013', '2014',
+        '2015'
     ],
     yAxis: [
         [8, 10, 10, 11, 4, 13],
@@ -253,7 +253,7 @@ option2 = {
         itemWidth: 14,
         itemHeight: 5,
         itemGap: 13,
-        data: ['小型车', '中型车', '大型车'],
+        data: ['会员车', '临时车'],
         right: '10px',
         top: '0px',
         textStyle: {
@@ -280,7 +280,7 @@ option2 = {
                 color:'#fff',
             },
         },
-        data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+        data: ['2010', '2010', '2011', '2011', '2012', '2012', '2013', '2013', '2014', '2014', '2015', '2015']
     }],
     yAxis: [{
         type: 'value',
@@ -308,7 +308,7 @@ option2 = {
         }
     }],
     series: [{
-        name: '小型车',
+        name: '会员车',
         type: 'line',
         smooth: true,
         lineStyle: {
@@ -336,7 +336,7 @@ option2 = {
         },
         data: [20,35,34,45,52,41,49,64,24,52.4,24,33]
     }, {
-        name: '中型车',
+        name: '临时车',
         type: 'line',
         smooth: true,
         lineStyle: {
@@ -363,58 +363,30 @@ option2 = {
             }
         },
         data: [97.3,99.2,99.3,100.0,99.6,90.6,80.0,91.5,69.8,67.5,90.4,84.9]
-    }, {
-        name: '大型车',
-        type: 'line',
-        smooth: true,
-        lineStyle: {
-            normal: {
-                width: 2
-            }
-        },
-        areaStyle: {
-            normal: {
-                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                    offset: 0,
-                    color: 'rgba(219, 50, 51, 0.3)'
-                }, {
-                    offset: 0.8,
-                    color: 'rgba(219, 50, 51, 0)'
-                }], false),
-                shadowColor: 'rgba(0, 0, 0, 0.1)',
-                shadowBlur: 10
-            }
-        },
-        itemStyle: {
-            normal: {
-                color: 'rgb(219,50,51)'
-            }
-        },
-        data: [84.2,81.0,67.5,62.1,43.7,68.5,51.9,71.8,76.7,67.6,62.9,0]
-    }, ]
+    },  ]
 };
 //////////////////////交通工具流量 end
 
 //本月发生事件1
 var color = ['#e9df3d', '#f79c19', '#21fcd6', '#08c8ff', '#df4131'];
 var data = [{
-        "name": "超速",
+        "name": "车锁",
         "value": 30
     },
     {
-        "name": "闯红灯",
+        "name": "二维码",
         "value": 30
     },
     {
-        "name": "闯禁行",
+        "name": "链条",
         "value": 42
     },
     {
-        "name": "违停",
+        "name": "刹车",
         "value": 50
     },
     {
-        "name": "逆行",
+        "name": "其他",
         "value": 34
     }
 ];
@@ -457,7 +429,7 @@ data.forEach(function(d, i) {
     renderData.push({
         value: value,
         symbol: 'circle',
-        symbolSize: 12,
+        symbolSize: 9,
         lineStyle: {
             normal: {
                 color: 'transparent'
@@ -499,7 +471,7 @@ option3 = {
         },
         axisLabel: {
             show: false,
-            fontSize: 20,
+            fontSize: 10,
             color: "#000",
             fontStyle: "normal",
             fontWeight: "normal"
@@ -527,23 +499,23 @@ option3 = {
 //本月发生事件2
 var color = ['#e9df3d', '#f79c19', '#21fcd6', '#08c8ff', '#df4131'];
 var data = [{
-        "name": "超速",
+        "name": "车锁",
         "value": 15
     },
     {
-        "name": "闯红灯",
+        "name": "二维码",
         "value": 14
     },
     {
-        "name": "闯禁行",
+        "name": "链条",
         "value": 23
     },
     {
-        "name": "违停",
+        "name": "刹车",
         "value": 2
     },
     {
-        "name": "逆行",
+        "name": "其他",
         "value": 50
     }
 ];
@@ -586,7 +558,7 @@ data.forEach(function(d, i) {
     renderData.push({
         value: value,
         symbol: 'circle',
-        symbolSize: 12,
+        symbolSize: 10,
         lineStyle: {
             normal: {
                 color: 'transparent'
@@ -628,7 +600,7 @@ option31 = {
         },
         axisLabel: {
             show: false,
-            fontSize: 20,
+            fontSize: 10,
             color: "#000",
             fontStyle: "normal",
             fontWeight: "normal"
@@ -657,7 +629,7 @@ option31 = {
 
 
 //收费站收费排行1
-var spirit = '../images.ksh45.png';
+var spirit = '../images/ksh45.png'; //gaigai--------------------------
 
 var maxData = 200;
 
@@ -679,7 +651,7 @@ option4 = {
     "tooltip": {
       "trigger": "item",
       "textStyle": {
-        "fontSize": 12
+        "fontSize": 16
       },
       "formatter": "{b0}:{c0}"
     },
@@ -703,11 +675,11 @@ option4 = {
         "type": "category",
         "inverse": false,
         "data": [
-          "晋城",
-          "太旧",
-          "太原",
-          "吕梁",
-          "长治",
+          "mCAD",
+          "boom",
+          "oak",
+          "midt",
+          "mcNa",
         ],
         "axisLine": {
           "show": false
@@ -719,7 +691,7 @@ option4 = {
           "margin": -4,
           "textStyle": {
             "color": "#fff",
-            "fontSize": 16.25
+            "fontSize": 16
           }
         }
       },
@@ -732,7 +704,7 @@ option4 = {
         "symbolRepeat": "fixed",
         "symbolMargin": "5%",
         "symbolClip": true,
-        "symbolSize": 22.5,
+        "symbolSize": 20.5,
         "symbolPosition": "start",
         "symbolOffset": [
           20,
@@ -765,7 +737,7 @@ option4 = {
         "symbolRepeat": "fixed",
         "symbolMargin": "5%",
         "symbol": "image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAADYElEQVR4nO2dz0sUYRjHP7tIdAmxQ1LdlhCKMohAIsgiyEuHjkUEFQTlpejS/xCCBB06RBGBBKIG4cGyH0qHBKE9eKyFqBQPRQeNCt06vGNY7bq7szPfeZLnAwuzM+/zgw/DDvMu70wOIVveLscJOwycA44A24CfwAfgKXAbeFVvovlC/o/vuVwuTj+x0FWiYdGbgXvA8RrjHgAXgIVaCbMU3SKr1BhtwEtgZx1jTwI7gG7ga5pNNUO+9pBMuEN9klfYD9xMqZdEsCj6AHAiRtxZYFeyrSSHRdGnYsblCD8jJrEoek8TsbsT6yJhLIrelFFsqlgUPZtRbKpYFP2kidjxxLpIGIuiB4AvMeLmgJGEe0kMi6I/AVdjxPVSx91hVlgUDXAXuEaY16jFMnAJeJhqR01iVTTAdeAYUFxjzBRwCLgl6agJrM51rDAO7AP2EmbxthPO8vfAc2Ams84axLpoCGKLrH1mm8eC6KPAGaAL2Fpj7AZgY7T9DfhRY/wc4eflPmH+OjOynI8uEGbpukXlJ4Dz84V8aWWHcj46q4thFzCNTjJRren2UrlLWPM3WYjuAMYIk/tq2oCx9lK5Q11YLboFGARaxXVX0woMtpfK0uuTWvRFoFNcsxKdhF5kqEX3iuuthbQXtehG/gdMG2kvlm/B1xUuWoSLFmFF9CRwg2TnM4pRzskEc8bGiugR4ArhNjkpJqKcJv51sSJ63eOiRbhoES5ahIsW4aJFuGgRLlqEixbhokW4aBEuWoSLFuGiRbhoES5ahIsW4aJFuGgRLlqEWvTHKvs/p1izWu5qvaSCWvTlCvtmgeEUaw5TeUVtpV5SQy16COgBRoHXhMWb3aS7PnAhqjEQ1RwFeuYL+aEUa/5DFmtYHkefOEwQVmcBvKD+FQNvgNN/P+pHiV8MRbhoES5ahIsW4aJFuGgRLlqEixbhokW4aBEuWoSLFuGiRbhoES5ahIsW4aJFuGgRLlqEixbhokVYEx3nudGKXE1jTfS6xUWLcNEiXLQIFy3CRYtw0SJctAgXLcJFi3DRIv430eUq2+axJvp7jePPqmzHySXFmuhHwFKVYzNA/6rv/VR/s9BSlMsM1kTPEN4DPkU4I8vAO6APOAgsrhq7GO3ri8aUo5ipKIep1zv9AtipgOACGIrLAAAAAElFTkSuQmCC",
-        "symbolSize": 22.5,
+        "symbolSize": 20.5,
         "symbolBoundingData": 300,
         "symbolPosition": "start",
         "symbolOffset": [
@@ -825,7 +797,7 @@ option41 = {
     "tooltip": {
       "trigger": "item",
       "textStyle": {
-        "fontSize": 12
+        "fontSize": 16
       },
       "formatter": "{b0}:{c0}"
     },
@@ -849,11 +821,11 @@ option41 = {
         "type": "category",
         "inverse": false,
         "data": [
-          "朔州",
-          "大同",
-          "运城",
-          "忻州",
-          "临汾",
+          "civi",
+          "hall",
+          "flat",
+          "pavi",
+          "park",
         ],
         "axisLine": {
           "show": false
@@ -865,7 +837,7 @@ option41 = {
           "margin": -4,
           "textStyle": {
             "color": "#fff",
-            "fontSize": 16.25
+            "fontSize": 16
           }
         }
       },
@@ -878,7 +850,7 @@ option41 = {
         "symbolRepeat": "fixed",
         "symbolMargin": "5%",
         "symbolClip": true,
-        "symbolSize": 22.5,
+        "symbolSize": 20.5,
         "symbolPosition": "start",
         "symbolOffset": [
           20,
@@ -911,7 +883,7 @@ option41 = {
         "symbolRepeat": "fixed",
         "symbolMargin": "5%",
         "symbol": "image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAADYElEQVR4nO2dz0sUYRjHP7tIdAmxQ1LdlhCKMohAIsgiyEuHjkUEFQTlpejS/xCCBB06RBGBBKIG4cGyH0qHBKE9eKyFqBQPRQeNCt06vGNY7bq7szPfeZLnAwuzM+/zgw/DDvMu70wOIVveLscJOwycA44A24CfwAfgKXAbeFVvovlC/o/vuVwuTj+x0FWiYdGbgXvA8RrjHgAXgIVaCbMU3SKr1BhtwEtgZx1jTwI7gG7ga5pNNUO+9pBMuEN9klfYD9xMqZdEsCj6AHAiRtxZYFeyrSSHRdGnYsblCD8jJrEoek8TsbsT6yJhLIrelFFsqlgUPZtRbKpYFP2kidjxxLpIGIuiB4AvMeLmgJGEe0kMi6I/AVdjxPVSx91hVlgUDXAXuEaY16jFMnAJeJhqR01iVTTAdeAYUFxjzBRwCLgl6agJrM51rDAO7AP2EmbxthPO8vfAc2Ams84axLpoCGKLrH1mm8eC6KPAGaAL2Fpj7AZgY7T9DfhRY/wc4eflPmH+OjOynI8uEGbpukXlJ4Dz84V8aWWHcj46q4thFzCNTjJRren2UrlLWPM3WYjuAMYIk/tq2oCx9lK5Q11YLboFGARaxXVX0woMtpfK0uuTWvRFoFNcsxKdhF5kqEX3iuuthbQXtehG/gdMG2kvlm/B1xUuWoSLFmFF9CRwg2TnM4pRzskEc8bGiugR4ArhNjkpJqKcJv51sSJ63eOiRbhoES5ahIsW4aJFuGgRLlqEixbhokW4aBEuWoSLFuGiRbhoES5ahIsW4aJFuGgRLlqEWvTHKvs/p1izWu5qvaSCWvTlCvtmgeEUaw5TeUVtpV5SQy16COgBRoHXhMWb3aS7PnAhqjEQ1RwFeuYL+aEUa/5DFmtYHkefOEwQVmcBvKD+FQNvgNN/P+pHiV8MRbhoES5ahIsW4aJFuGgRLlqEixbhokW4aBEuWoSLFuGiRbhoES5ahIsW4aJFuGgRLlqEixbhokVYEx3nudGKXE1jTfS6xUWLcNEiXLQIFy3CRYtw0SJctAgXLcJFi3DRIv430eUq2+axJvp7jePPqmzHySXFmuhHwFKVYzNA/6rv/VR/s9BSlMsM1kTPEN4DPkU4I8vAO6APOAgsrhq7GO3ri8aUo5ipKIep1zv9AtipgOACGIrLAAAAAElFTkSuQmCC",
-        "symbolSize": 22.5,
+        "symbolSize": 20.5,
         "symbolBoundingData": 300,
         "symbolPosition": "start",
         "symbolOffset": [

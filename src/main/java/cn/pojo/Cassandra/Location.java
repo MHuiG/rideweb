@@ -1,4 +1,4 @@
-package cn.pojo;
+package cn.pojo.Cassandra;
 
 public class Location {
     public String Terminal;
