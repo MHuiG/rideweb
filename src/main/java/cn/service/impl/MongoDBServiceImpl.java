@@ -6,26 +6,9 @@ import com.mongodb.*;
 import com.mongodb.client.*;
 import com.mongodb.client.MongoClient;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.mongodb.client.gridfs.GridFSBucket;
-import com.mongodb.client.gridfs.GridFSBuckets;
-import com.mongodb.client.gridfs.model.GridFSUploadOptions;
-
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.UnknownHostException;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-
 import org.bson.Document;
-import org.bson.types.ObjectId;
-
-import static com.mongodb.client.model.Updates.*;
-import static com.mongodb.client.model.Filters.*;
-import com.mongodb.client.gridfs.*;
-import com.mongodb.client.gridfs.model.*;
 import org.testng.annotations.Test;
 
 @org.springframework.stereotype.Service
@@ -38,22 +21,23 @@ public class MongoDBServiceImpl implements MongoDBService {
         MongoClient mongo = MongoClients.create("mongodb://worker02:27017");
         MongoDatabase db = mongo.getDatabase("ywh");
         MongoCollection col = db.getCollection("season");
-
-        BasicDBObject searchQuery = new BasicDBObject();
-        DBObject matchBasicDBObjet = new BasicDBObject("$match",new BasicDBObject("Account type","Casual"));
-        DBObject groupFields = new BasicDBObject("_id",new BasicDBObject("Start station","$Start station"));
-        groupFields.put("num",new BasicDBObject("$sum",1));
-        DBObject group = new BasicDBObject("$group", groupFields);
-        DBObject sortchBasicDBObjet = new BasicDBObject("$sort", new BasicDBObject("count",-1));
-        DBObject limitBasicDBObjet = new BasicDBObject("$limit",3);
-        List<DBObject> list = new ArrayList<DBObject>();
-        list.add(matchBasicDBObjet);
-        list.add(group);
-        list.add(sortchBasicDBObjet);
-        list.add(limitBasicDBObjet);
-        System.out.println(col.aggregate(list).toString());
-
-//      System.out.println("success!!!");
+        BasicDBObject query= new BasicDBObject();
+        query.append("Account type","Casual");
+        BasicDBObject match = new BasicDBObject("$match", query);
+        BasicDBObject group = new BasicDBObject("$group", new BasicDBObject("_id", "$Start station").append("num", new BasicDBObject("$sum", 1)));
+        BasicDBObject sort = new BasicDBObject("$sort", new BasicDBObject("num", -1));
+        BasicDBObject limit = new BasicDBObject("$limit",3);
+        List<DBObject> queryList = new ArrayList<>();
+        queryList .add(match);
+        queryList .add(group);
+        queryList .add(sort);
+        queryList .add(limit);
+        AggregateIterable<Document> iterable =  col.aggregate(queryList);
+        for (Document document : iterable){
+            Object users = document.get("_id");
+            Object num = document.get("num");
+            System.out.println(users+":"+num);
+        }
     }
 
 
