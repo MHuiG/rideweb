@@ -429,7 +429,7 @@ data.forEach(function(d, i) {
     renderData.push({
         value: value,
         symbol: 'circle',
-        symbolSize: 12,
+        symbolSize: 9,
         lineStyle: {
             normal: {
                 color: 'transparent'
@@ -471,7 +471,7 @@ option3 = {
         },
         axisLabel: {
             show: false,
-            fontSize: 20,
+            fontSize: 10,
             color: "#000",
             fontStyle: "normal",
             fontWeight: "normal"
@@ -558,7 +558,7 @@ data.forEach(function(d, i) {
     renderData.push({
         value: value,
         symbol: 'circle',
-        symbolSize: 12,
+        symbolSize: 10,
         lineStyle: {
             normal: {
                 color: 'transparent'
@@ -600,7 +600,7 @@ option31 = {
         },
         axisLabel: {
             show: false,
-            fontSize: 20,
+            fontSize: 10,
             color: "#000",
             fontStyle: "normal",
             fontWeight: "normal"
@@ -651,7 +651,7 @@ option4 = {
     "tooltip": {
       "trigger": "item",
       "textStyle": {
-        "fontSize": 12
+        "fontSize": 16
       },
       "formatter": "{b0}:{c0}"
     },
@@ -675,11 +675,11 @@ option4 = {
         "type": "category",
         "inverse": false,
         "data": [
-          "MCAD",
-          "Boom Island Park",
-          "Oak Street Ramp",
-          "Midtown Exchange",
-          "McNamara Center",
+          "mCAD",
+          "boom",
+          "oak",
+          "midt",
+          "mcNa",
         ],
         "axisLine": {
           "show": false
@@ -691,7 +691,7 @@ option4 = {
           "margin": -4,
           "textStyle": {
             "color": "#fff",
-            "fontSize": 16.25
+            "fontSize": 16
           }
         }
       },
@@ -704,7 +704,7 @@ option4 = {
         "symbolRepeat": "fixed",
         "symbolMargin": "5%",
         "symbolClip": true,
-        "symbolSize": 22.5,
+        "symbolSize": 20.5,
         "symbolPosition": "start",
         "symbolOffset": [
           20,
@@ -737,7 +737,7 @@ option4 = {
         "symbolRepeat": "fixed",
         "symbolMargin": "5%",
         "symbol": "image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAADYElEQVR4nO2dz0sUYRjHP7tIdAmxQ1LdlhCKMohAIsgiyEuHjkUEFQTlpejS/xCCBB06RBGBBKIG4cGyH0qHBKE9eKyFqBQPRQeNCt06vGNY7bq7szPfeZLnAwuzM+/zgw/DDvMu70wOIVveLscJOwycA44A24CfwAfgKXAbeFVvovlC/o/vuVwuTj+x0FWiYdGbgXvA8RrjHgAXgIVaCbMU3SKr1BhtwEtgZx1jTwI7gG7ga5pNNUO+9pBMuEN9klfYD9xMqZdEsCj6AHAiRtxZYFeyrSSHRdGnYsblCD8jJrEoek8TsbsT6yJhLIrelFFsqlgUPZtRbKpYFP2kidjxxLpIGIuiB4AvMeLmgJGEe0kMi6I/AVdjxPVSx91hVlgUDXAXuEaY16jFMnAJeJhqR01iVTTAdeAYUFxjzBRwCLgl6agJrM51rDAO7AP2EmbxthPO8vfAc2Ams84axLpoCGKLrH1mm8eC6KPAGaAL2Fpj7AZgY7T9DfhRY/wc4eflPmH+OjOynI8uEGbpukXlJ4Dz84V8aWWHcj46q4thFzCNTjJRren2UrlLWPM3WYjuAMYIk/tq2oCx9lK5Q11YLboFGARaxXVX0woMtpfK0uuTWvRFoFNcsxKdhF5kqEX3iuuthbQXtehG/gdMG2kvlm/B1xUuWoSLFmFF9CRwg2TnM4pRzskEc8bGiugR4ArhNjkpJqKcJv51sSJ63eOiRbhoES5ahIsW4aJFuGgRLlqEixbhokW4aBEuWoSLFuGiRbhoES5ahIsW4aJFuGgRLlqEWvTHKvs/p1izWu5qvaSCWvTlCvtmgeEUaw5TeUVtpV5SQy16COgBRoHXhMWb3aS7PnAhqjEQ1RwFeuYL+aEUa/5DFmtYHkefOEwQVmcBvKD+FQNvgNN/P+pHiV8MRbhoES5ahIsW4aJFuGgRLlqEixbhokW4aBEuWoSLFuGiRbhoES5ahIsW4aJFuGgRLlqEixbhokVYEx3nudGKXE1jTfS6xUWLcNEiXLQIFy3CRYtw0SJctAgXLcJFi3DRIv430eUq2+axJvp7jePPqmzHySXFmuhHwFKVYzNA/6rv/VR/s9BSlMsM1kTPEN4DPkU4I8vAO6APOAgsrhq7GO3ri8aUo5ipKIep1zv9AtipgOACGIrLAAAAAElFTkSuQmCC",
-        "symbolSize": 22.5,
+        "symbolSize": 20.5,
         "symbolBoundingData": 300,
         "symbolPosition": "start",
         "symbolOffset": [
@@ -797,7 +797,7 @@ option41 = {
     "tooltip": {
       "trigger": "item",
       "textStyle": {
-        "fontSize": 12
+        "fontSize": 16
       },
       "formatter": "{b0}:{c0}"
     },
@@ -821,11 +821,11 @@ option41 = {
         "type": "category",
         "inverse": false,
         "data": [
-          "Civil Engineering",
-          "Sanford Hall",
-          "Bohemian Flats",
-          "Lake Como Pavilion",
-          "Elliot Park",
+          "civi",
+          "hall",
+          "flat",
+          "pavi",
+          "park",
         ],
         "axisLine": {
           "show": false
@@ -837,7 +837,7 @@ option41 = {
           "margin": -4,
           "textStyle": {
             "color": "#fff",
-            "fontSize": 16.25
+            "fontSize": 16
           }
         }
       },
@@ -850,7 +850,7 @@ option41 = {
         "symbolRepeat": "fixed",
         "symbolMargin": "5%",
         "symbolClip": true,
-        "symbolSize": 22.5,
+        "symbolSize": 20.5,
         "symbolPosition": "start",
         "symbolOffset": [
           20,
@@ -883,7 +883,7 @@ option41 = {
         "symbolRepeat": "fixed",
         "symbolMargin": "5%",
         "symbol": "image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAADYElEQVR4nO2dz0sUYRjHP7tIdAmxQ1LdlhCKMohAIsgiyEuHjkUEFQTlpejS/xCCBB06RBGBBKIG4cGyH0qHBKE9eKyFqBQPRQeNCt06vGNY7bq7szPfeZLnAwuzM+/zgw/DDvMu70wOIVveLscJOwycA44A24CfwAfgKXAbeFVvovlC/o/vuVwuTj+x0FWiYdGbgXvA8RrjHgAXgIVaCbMU3SKr1BhtwEtgZx1jTwI7gG7ga5pNNUO+9pBMuEN9klfYD9xMqZdEsCj6AHAiRtxZYFeyrSSHRdGnYsblCD8jJrEoek8TsbsT6yJhLIrelFFsqlgUPZtRbKpYFP2kidjxxLpIGIuiB4AvMeLmgJGEe0kMi6I/AVdjxPVSx91hVlgUDXAXuEaY16jFMnAJeJhqR01iVTTAdeAYUFxjzBRwCLgl6agJrM51rDAO7AP2EmbxthPO8vfAc2Ams84axLpoCGKLrH1mm8eC6KPAGaAL2Fpj7AZgY7T9DfhRY/wc4eflPmH+OjOynI8uEGbpukXlJ4Dz84V8aWWHcj46q4thFzCNTjJRren2UrlLWPM3WYjuAMYIk/tq2oCx9lK5Q11YLboFGARaxXVX0woMtpfK0uuTWvRFoFNcsxKdhF5kqEX3iuuthbQXtehG/gdMG2kvlm/B1xUuWoSLFmFF9CRwg2TnM4pRzskEc8bGiugR4ArhNjkpJqKcJv51sSJ63eOiRbhoES5ahIsW4aJFuGgRLlqEixbhokW4aBEuWoSLFuGiRbhoES5ahIsW4aJFuGgRLlqEWvTHKvs/p1izWu5qvaSCWvTlCvtmgeEUaw5TeUVtpV5SQy16COgBRoHXhMWb3aS7PnAhqjEQ1RwFeuYL+aEUa/5DFmtYHkefOEwQVmcBvKD+FQNvgNN/P+pHiV8MRbhoES5ahIsW4aJFuGgRLlqEixbhokW4aBEuWoSLFuGiRbhoES5ahIsW4aJFuGgRLlqEixbhokVYEx3nudGKXE1jTfS6xUWLcNEiXLQIFy3CRYtw0SJctAgXLcJFi3DRIv430eUq2+axJvp7jePPqmzHySXFmuhHwFKVYzNA/6rv/VR/s9BSlMsM1kTPEN4DPkU4I8vAO6APOAgsrhq7GO3ri8aUo5ipKIep1zv9AtipgOACGIrLAAAAAElFTkSuQmCC",
-        "symbolSize": 22.5,
+        "symbolSize": 20.5,
         "symbolBoundingData": 300,
         "symbolPosition": "start",
         "symbolOffset": [
