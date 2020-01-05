@@ -74,7 +74,7 @@ public class CassandraServiceImpl implements CassandraService {
     */
 
     /**
-     * 插入Location
+     * 插入/更新Location
      */
     @Override
     public void insertLocation(Location o) {
