@@ -24,6 +24,28 @@ public class CassandraController {
         return o;
     }
 
+    @RequestMapping(value = "/insertLocation", produces = "application/json;charset=UTF-8")
+    @ResponseBody
+    public int insertLocation(String Terminal, String Station, String Latitude, String Longitude, String Nbdocks) {
+        Location o = new Location();
+        o.setTerminal(Terminal);
+        o.setStation(Station);
+        o.setLatitude(Latitude);
+        o.setLongitude(Longitude);
+        o.setNbdocks(Nbdocks);
+        CassandraService.insertLocation(o);
+        return 1;
+    }
+
+    @RequestMapping(value = "/deleteLocationByTerminal", produces = "application/json;charset=UTF-8")
+    @ResponseBody
+    public int deleteLocationByTerminal(String Terminal) {
+        Location o = new Location();
+        o.setTerminal(Terminal);
+        CassandraService.deleteLocationByTerminal(o);
+        return 1;
+    }
+
     @RequestMapping(value = "/getCassandraService", produces = "application/json;charset=UTF-8")
     @ResponseBody
     public int getCassandraService() {
