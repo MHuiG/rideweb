@@ -51,6 +51,7 @@
         <th>操作</th>
     </tr>
     </thead>
+    <tbody>
     <tr>
         <td>30000</td>
         <td>100 Main Street SE</td>
@@ -62,6 +63,7 @@
             <a href="#" id="dell">删除</a>
         </td>
     </tr>
+    </tbody>
 </table>
 </body>
 </html>
@@ -109,8 +111,40 @@
         $('#dell').click(function () {
             dell();
         });
+        getLocationAll();
     });
 
+    function getLocationAll() {
+        $.ajax({
+            url: "/rideweb//getLocationAll",
+            type: "POST",
+            dataType: "json",
+            success: function (data) {
+                // console.log(data);
+                var result = '';
+                var arrLen = data.length;
+                if (arrLen > 0) {
+                    for (i = 0; i < arrLen; i++) {
+                        result += "<tr id=" + data[i].Terminal + ">\n" +
+                            "        <td>" + data[i].Terminal + "</td>\n" +
+                            "        <td>" + data[i].Station + "</td>\n" +
+                            "        <td>" + data[i].Latitude + "</td>\n" +
+                            "        <td>" + data[i].Longitude + "</td>\n" +
+                            "        <td>" + data[i].Nbdocks + "</td>\n" +
+                            "        <td>\n" +
+                            "            <a href=\"edit.html\">编辑</a>\n" +
+                            "            <a href=\"#\" id=\"dell\">删除</a>\n" +
+                            "        </td>\n" +
+                            "    </tr>";
+                    }
+                }
+                $("body > table > tbody").html(result);
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+    }
 
 </script>
 
