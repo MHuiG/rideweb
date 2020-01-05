@@ -33,7 +33,7 @@ public class CassandraController {
         o.setLatitude(Latitude);
         o.setLongitude(Longitude);
         o.setNbdocks(Nbdocks);
-        CassandraService.insertLocation(o);
+        //CassandraService.insertLocation(o);
         return 1;
     }
 
