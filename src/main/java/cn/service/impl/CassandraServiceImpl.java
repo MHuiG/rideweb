@@ -74,12 +74,12 @@ public class CassandraServiceImpl implements CassandraService {
     */
 
     /**
-     * 插入Location
+     * 插入/更新Location
      */
     @Override
     public void insertLocation(Location o) {
         connectDB();
-        String cql = "INSERT INTO mydb.loca (Terminal,Station,Latitude,Longitude,Nbdocks) VALUES (" + "," + o.getTerminal() + "," + o.getStation() + "," + o.getLatitude() + "," + o.getLongitude() + "," + o.getNbdocks() + ");";
+        String cql = "INSERT INTO mydb.loca (Terminal,Station,Latitude,Longitude,Nbdocks) VALUES ('" + o.getTerminal() + "','" + o.getStation() + "','" + o.getLatitude() + "','" + o.getLongitude() + "','" + o.getNbdocks() + "');";
         session.execute(cql);
     }
 
@@ -115,10 +115,67 @@ public class CassandraServiceImpl implements CassandraService {
         return s;
     }
 
+    /**
+     * 查询LocationByStation
+     */
+    @Override
+    public List<Location> getLocationByStation(Location location) {
+        connectDB();
+        List<Location> s = new ArrayList<>();
+        String cql = "SELECT * FROM mydb.loca where Station='" + location.getStation() + "'allow filtering;";
+        ResultSet resultSet = session.execute(cql);
+        for (Row row : resultSet) {
+            Location o = new Location();
+            o.setTerminal(row.getString("Terminal"));
+            o.setStation(row.getString("Station"));
+            o.setLatitude(row.getString("Latitude"));
+            o.setLongitude(row.getString("Longitude"));
+            o.setNbdocks(row.getString("Nbdocks"));
+            s.add(o);
+        }
+        return s;
+    }
+
+    /**
+     * 查询LocationByTerminal
+     */
+    @Override
+    public List<Location> getLocationByTerminal(Location location) {
+        connectDB();
+        List<Location> s = new ArrayList<>();
+        String cql = "SELECT * FROM mydb.loca where Terminal='" + location.getTerminal() + "'allow filtering;";
+        ResultSet resultSet = session.execute(cql);
+        for (Row row : resultSet) {
+            Location o = new Location();
+            o.setTerminal(row.getString("Terminal"));
+            o.setStation(row.getString("Station"));
+            o.setLatitude(row.getString("Latitude"));
+            o.setLongitude(row.getString("Longitude"));
+            o.setNbdocks(row.getString("Nbdocks"));
+            s.add(o);
+        }
+        return s;
+    }
+
     @Test
     public void main() {
-//        connectDB(session);
-        List<Location> o = getLocationAll();
-        System.out.println(o.toString());
+        connectDB();
+        List<Location> s = new ArrayList<>();
+        String cql = "SELECT * FROM mydb.loca where Terminal='30036'allow filtering;";
+        ResultSet resultSet = session.execute(cql);
+        for (Row row : resultSet) {
+            Location o = new Location();
+            o.setTerminal(row.getString("Terminal"));
+            o.setStation(row.getString("Station"));
+            o.setLatitude(row.getString("Latitude"));
+            o.setLongitude(row.getString("Longitude"));
+            o.setNbdocks(row.getString("Nbdocks"));
+            System.out.println(row.getString("Terminal"));
+            s.add(o);
+        }
+
     }
+
+
 }
+

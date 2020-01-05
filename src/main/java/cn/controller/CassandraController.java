@@ -24,6 +24,26 @@ public class CassandraController {
         return o;
     }
 
+    @RequestMapping(value = "/getLocationByStation", produces = "application/json;charset=UTF-8")
+    @ResponseBody
+    public List<Location> getLocationByStation(String Station) {
+        Location o = new Location();
+        o.setStation(Station);
+        System.out.println("getLocationByStation " + o.getStation());
+        List<Location> s = CassandraService.getLocationByStation(o);
+        return s;
+    }
+
+    @RequestMapping(value = "/getLocationByTerminal", produces = "application/json;charset=UTF-8")
+    @ResponseBody
+    public List<Location> getLocationByTerminal(String Terminal) {
+        Location o = new Location();
+        o.setTerminal(Terminal);
+        System.out.println("getLocationByTerminal " + o.getTerminal());
+        List<Location> s = CassandraService.getLocationByTerminal(o);
+        return s;
+    }
+
     @RequestMapping(value = "/insertLocation", produces = "application/json;charset=UTF-8")
     @ResponseBody
     public int insertLocation(String Terminal, String Station, String Latitude, String Longitude, String Nbdocks) {
@@ -33,6 +53,7 @@ public class CassandraController {
         o.setLatitude(Latitude);
         o.setLongitude(Longitude);
         o.setNbdocks(Nbdocks);
+        System.out.println("insertLocation " + o.getTerminal());
         CassandraService.insertLocation(o);
         return 1;
     }
@@ -43,6 +64,7 @@ public class CassandraController {
         Location o = new Location();
         o.setTerminal(Terminal);
         CassandraService.deleteLocationByTerminal(o);
+        System.out.println("deleteLocationByTerminal " + o.getTerminal());
         return 1;
     }
 

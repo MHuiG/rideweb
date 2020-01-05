@@ -54,9 +54,9 @@ var myData = (function test() {
             },
             itemStyle: { //图形样式
                 normal: {
-                    barBorderRadius:0,
-                    borderWidth:1,
-                    borderColor:'#ddd',
+                    barBorderRadius: 0,
+                    borderWidth: 1,
+                    borderColor: '#ddd',
                     color: data.barColor[index]
                 },
             }
@@ -105,7 +105,7 @@ option1 = {
     },
     tooltip: {
         trigger: 'axis',
-        formatter: function(params) {
+        formatter: function (params) {
             var time = '';
             var str = '';
             for (var i of params) {
@@ -126,7 +126,7 @@ option1 = {
     legend: {
         right: data.legendRight || '30%',
         top: 0,
-        right:10,
+        right: 10,
         itemGap: 16,
         itemWidth: 10,
         itemHeight: 10,
@@ -158,11 +158,11 @@ option1 = {
             show: true,
             interval: '0',
             textStyle: {
-                lineHeight:5,
+                lineHeight: 5,
                 padding: [2, 2, 0, 2],
                 height: 50,
                 fontSize: 12,
-                color:'#fff',
+                color: '#fff',
             },
             rich: {
                 Sunny: {
@@ -172,7 +172,7 @@ option1 = {
                     align: 'center',
                 },
             },
-            formatter: function(params, index) {
+            formatter: function (params, index) {
                 var newParamsName = "";
                 var splitNumber = 5;
                 var paramsNameNumber = params && params.length;
@@ -239,7 +239,7 @@ option1 = {
 
 //交通工具流量
 option2 = {
-    
+
     tooltip: {//鼠标指上时的标线
         trigger: 'axis',
         axisPointer: {
@@ -277,7 +277,7 @@ option2 = {
         },
         axisLabel: {
             textStyle: {
-                color:'#fff',
+                color: '#fff',
             },
         },
         data: ['2010', '2010', '2011', '2011', '2012', '2012', '2013', '2013', '2014', '2014', '2015', '2015']
@@ -298,7 +298,7 @@ option2 = {
                 fontSize: 14
             },
             textStyle: {
-                color:'#fff',
+                color: '#fff',
             },
         },
         splitLine: {
@@ -334,7 +334,7 @@ option2 = {
                 color: 'rgb(137,189,27)'
             }
         },
-        data: [20,35,34,45,52,41,49,64,24,52.4,24,33]
+        data: [20, 35, 34, 45, 52, 41, 49, 64, 24, 52.4, 24, 33]
     }, {
         name: '临时车',
         type: 'line',
@@ -362,17 +362,17 @@ option2 = {
                 color: 'rgb(0,136,212)'
             }
         },
-        data: [97.3,99.2,99.3,100.0,99.6,90.6,80.0,91.5,69.8,67.5,90.4,84.9]
-    },  ]
+        data: [97.3, 99.2, 99.3, 100.0, 99.6, 90.6, 80.0, 91.5, 69.8, 67.5, 90.4, 84.9]
+    },]
 };
 //////////////////////交通工具流量 end
 
 //本月发生事件1
 var color = ['#e9df3d', '#f79c19', '#21fcd6', '#08c8ff', '#df4131'];
 var data = [{
-        "name": "车锁",
-        "value": 30
-    },
+    "name": "车锁",
+    "value": 30
+},
     {
         "name": "二维码",
         "value": 30
@@ -392,7 +392,7 @@ var data = [{
 ];
 
 var max = data[0].value;
-data.forEach(function(d) {
+data.forEach(function (d) {
     max = d.value > max ? d.value : max;
 });
 
@@ -422,10 +422,10 @@ var renderData = [{
 }];
 
 
-data.forEach(function(d, i) {
+data.forEach(function (d, i) {
     var value = ['', '', '', '', ''];
     value[i] = max,
-    renderData[0].value[i] = d.value;
+        renderData[0].value[i] = d.value;
     renderData.push({
         value: value,
         symbol: 'circle',
@@ -444,7 +444,7 @@ data.forEach(function(d, i) {
 })
 var indicator = [];
 
-data.forEach(function(d) {
+data.forEach(function (d) {
     indicator.push({
         name: d.name,
         max: max,
@@ -499,9 +499,9 @@ option3 = {
 //本月发生事件2
 var color = ['#e9df3d', '#f79c19', '#21fcd6', '#08c8ff', '#df4131'];
 var data = [{
-        "name": "车锁",
-        "value": 15
-    },
+    "name": "车锁",
+    "value": 15
+},
     {
         "name": "二维码",
         "value": 14
@@ -521,7 +521,7 @@ var data = [{
 ];
 
 var max = data[0].value;
-data.forEach(function(d) {
+data.forEach(function (d) {
     max = d.value > max ? d.value : max;
 });
 
@@ -551,10 +551,10 @@ var renderData = [{
 }];
 
 
-data.forEach(function(d, i) {
+data.forEach(function (d, i) {
     var value = ['', '', '', '', ''];
     value[i] = max,
-    renderData[0].value[i] = d.value;
+        renderData[0].value[i] = d.value;
     renderData.push({
         value: value,
         symbol: 'circle',
@@ -573,7 +573,7 @@ data.forEach(function(d, i) {
 })
 var indicator = [];
 
-data.forEach(function(d) {
+data.forEach(function (d) {
     indicator.push({
         name: d.name,
         max: max,
@@ -627,151 +627,150 @@ option31 = {
 //////////////////////本月发生事件2 end
 
 
-
 //收费站收费排行1
 var spirit = '../images/ksh45.png'; //gaigai--------------------------
 
 var maxData = 200;
 
 option4 = {
-   "title": {
-      "text": " ",
-      "left": "center",
-      "y": "10",
-      "textStyle": {
-        "color": "#fff"
-      }
+    "title": {
+        "text": " ",
+        "left": "center",
+        "y": "10",
+        "textStyle": {
+            "color": "#fff"
+        }
     },
-    
+
     "grid": {
-      "left": 30,
-      "top": 0,
-      "bottom": 10
+        "left": 30,
+        "top": 0,
+        "bottom": 10
     },
     "tooltip": {
-      "trigger": "item",
-      "textStyle": {
-        "fontSize": 16
-      },
-      "formatter": "{b0}:{c0}"
+        "trigger": "item",
+        "textStyle": {
+            "fontSize": 16
+        },
+        "formatter": "{b0}:{c0}"
     },
     "xAxis": {
-      "max": 100,
-      "splitLine": {
-        "show": false
-      },
-      "axisLine": {
-        "show": false
-      },
-      "axisLabel": {
-        "show": false
-      },
-      "axisTick": {
-        "show": false
-      }
-    },
-    "yAxis": [
-      {
-        "type": "category",
-        "inverse": false,
-        "data": [
-          "mCAD",
-          "boom",
-          "oak",
-          "midt",
-          "mcNa",
-        ],
-        "axisLine": {
-          "show": false
+        "max": 100,
+        "splitLine": {
+            "show": false
         },
-        "axisTick": {
-          "show": false
+        "axisLine": {
+            "show": false
         },
         "axisLabel": {
-          "margin": -4,
-          "textStyle": {
-            "color": "#fff",
-            "fontSize": 16
-          }
+            "show": false
+        },
+        "axisTick": {
+            "show": false
         }
-      },
-    
+    },
+    "yAxis": [
+        {
+            "type": "category",
+            "inverse": false,
+            "data": [
+                "mCAD",
+                "boom",
+                "oak",
+                "midt",
+                "mcNa",
+            ],
+            "axisLine": {
+                "show": false
+            },
+            "axisTick": {
+                "show": false
+            },
+            "axisLabel": {
+                "margin": -4,
+                "textStyle": {
+                    "color": "#fff",
+                    "fontSize": 16
+                }
+            }
+        },
+
     ],
     "series": [
-      {
-        "type": "pictorialBar",
-        "symbol": "image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAADYElEQVR4nO2dz0sUYRjHP7tIdAmxQ1LdlhCKMohAIsgiyEuHjkUEFQTlpejS/xCCBB06RBGBBKIG4cGyH0qHBKE9eKyFqBQPRQeNCt06vGNY7bq7szPfeZLnAwuzM+/zgw/DDvMu70wOIVveLscJOwycA44A24CfwAfgKXAbeFVvovlC/o/vuVwuTj+x0FWiYdGbgXvA8RrjHgAXgIVaCbMU3SKr1BhtwEtgZx1jTwI7gG7ga5pNNUO+9pBMuEN9klfYD9xMqZdEsCj6AHAiRtxZYFeyrSSHRdGnYsblCD8jJrEoek8TsbsT6yJhLIrelFFsqlgUPZtRbKpYFP2kidjxxLpIGIuiB4AvMeLmgJGEe0kMi6I/AVdjxPVSx91hVlgUDXAXuEaY16jFMnAJeJhqR01iVTTAdeAYUFxjzBRwCLgl6agJrM51rDAO7AP2EmbxthPO8vfAc2Ams84axLpoCGKLrH1mm8eC6KPAGaAL2Fpj7AZgY7T9DfhRY/wc4eflPmH+OjOynI8uEGbpukXlJ4Dz84V8aWWHcj46q4thFzCNTjJRren2UrlLWPM3WYjuAMYIk/tq2oCx9lK5Q11YLboFGARaxXVX0woMtpfK0uuTWvRFoFNcsxKdhF5kqEX3iuuthbQXtehG/gdMG2kvlm/B1xUuWoSLFmFF9CRwg2TnM4pRzskEc8bGiugR4ArhNjkpJqKcJv51sSJ63eOiRbhoES5ahIsW4aJFuGgRLlqEixbhokW4aBEuWoSLFuGiRbhoES5ahIsW4aJFuGgRLlqEWvTHKvs/p1izWu5qvaSCWvTlCvtmgeEUaw5TeUVtpV5SQy16COgBRoHXhMWb3aS7PnAhqjEQ1RwFeuYL+aEUa/5DFmtYHkefOEwQVmcBvKD+FQNvgNN/P+pHiV8MRbhoES5ahIsW4aJFuGgRLlqEixbhokW4aBEuWoSLFuGiRbhoES5ahIsW4aJFuGgRLlqEixbhokVYEx3nudGKXE1jTfS6xUWLcNEiXLQIFy3CRYtw0SJctAgXLcJFi3DRIv430eUq2+axJvp7jePPqmzHySXFmuhHwFKVYzNA/6rv/VR/s9BSlMsM1kTPEN4DPkU4I8vAO6APOAgsrhq7GO3ri8aUo5ipKIep1zv9AtipgOACGIrLAAAAAElFTkSuQmCC",
-        "symbolRepeat": "fixed",
-        "symbolMargin": "5%",
-        "symbolClip": true,
-        "symbolSize": 20.5,
-        "symbolPosition": "start",
-        "symbolOffset": [
-          20,
-          0
-        ],
-        "symbolBoundingData": 300,
-        "data": [
-          13,
-          42,
-          67,
-          81,
-          86,
-          
-        ],
-        "z": 10
-      },
-      {
-        "type": "pictorialBar",
-        "itemStyle": {
-          "normal": {
-            "opacity": 0.3
-          }
+        {
+            "type": "pictorialBar",
+            "symbol": "image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAADYElEQVR4nO2dz0sUYRjHP7tIdAmxQ1LdlhCKMohAIsgiyEuHjkUEFQTlpejS/xCCBB06RBGBBKIG4cGyH0qHBKE9eKyFqBQPRQeNCt06vGNY7bq7szPfeZLnAwuzM+/zgw/DDvMu70wOIVveLscJOwycA44A24CfwAfgKXAbeFVvovlC/o/vuVwuTj+x0FWiYdGbgXvA8RrjHgAXgIVaCbMU3SKr1BhtwEtgZx1jTwI7gG7ga5pNNUO+9pBMuEN9klfYD9xMqZdEsCj6AHAiRtxZYFeyrSSHRdGnYsblCD8jJrEoek8TsbsT6yJhLIrelFFsqlgUPZtRbKpYFP2kidjxxLpIGIuiB4AvMeLmgJGEe0kMi6I/AVdjxPVSx91hVlgUDXAXuEaY16jFMnAJeJhqR01iVTTAdeAYUFxjzBRwCLgl6agJrM51rDAO7AP2EmbxthPO8vfAc2Ams84axLpoCGKLrH1mm8eC6KPAGaAL2Fpj7AZgY7T9DfhRY/wc4eflPmH+OjOynI8uEGbpukXlJ4Dz84V8aWWHcj46q4thFzCNTjJRren2UrlLWPM3WYjuAMYIk/tq2oCx9lK5Q11YLboFGARaxXVX0woMtpfK0uuTWvRFoFNcsxKdhF5kqEX3iuuthbQXtehG/gdMG2kvlm/B1xUuWoSLFmFF9CRwg2TnM4pRzskEc8bGiugR4ArhNjkpJqKcJv51sSJ63eOiRbhoES5ahIsW4aJFuGgRLlqEixbhokW4aBEuWoSLFuGiRbhoES5ahIsW4aJFuGgRLlqEWvTHKvs/p1izWu5qvaSCWvTlCvtmgeEUaw5TeUVtpV5SQy16COgBRoHXhMWb3aS7PnAhqjEQ1RwFeuYL+aEUa/5DFmtYHkefOEwQVmcBvKD+FQNvgNN/P+pHiV8MRbhoES5ahIsW4aJFuGgRLlqEixbhokW4aBEuWoSLFuGiRbhoES5ahIsW4aJFuGgRLlqEixbhokVYEx3nudGKXE1jTfS6xUWLcNEiXLQIFy3CRYtw0SJctAgXLcJFi3DRIv430eUq2+axJvp7jePPqmzHySXFmuhHwFKVYzNA/6rv/VR/s9BSlMsM1kTPEN4DPkU4I8vAO6APOAgsrhq7GO3ri8aUo5ipKIep1zv9AtipgOACGIrLAAAAAElFTkSuQmCC",
+            "symbolRepeat": "fixed",
+            "symbolMargin": "5%",
+            "symbolClip": true,
+            "symbolSize": 20.5,
+            "symbolPosition": "start",
+            "symbolOffset": [
+                20,
+                0
+            ],
+            "symbolBoundingData": 300,
+            "data": [
+                13,
+                42,
+                67,
+                81,
+                86,
+
+            ],
+            "z": 10
         },
-        "label": {
-          "normal": {
-            "show": false
-          }
-        },
-        "animationDuration": 0,
-        "symbolRepeat": "fixed",
-        "symbolMargin": "5%",
-        "symbol": "image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAADYElEQVR4nO2dz0sUYRjHP7tIdAmxQ1LdlhCKMohAIsgiyEuHjkUEFQTlpejS/xCCBB06RBGBBKIG4cGyH0qHBKE9eKyFqBQPRQeNCt06vGNY7bq7szPfeZLnAwuzM+/zgw/DDvMu70wOIVveLscJOwycA44A24CfwAfgKXAbeFVvovlC/o/vuVwuTj+x0FWiYdGbgXvA8RrjHgAXgIVaCbMU3SKr1BhtwEtgZx1jTwI7gG7ga5pNNUO+9pBMuEN9klfYD9xMqZdEsCj6AHAiRtxZYFeyrSSHRdGnYsblCD8jJrEoek8TsbsT6yJhLIrelFFsqlgUPZtRbKpYFP2kidjxxLpIGIuiB4AvMeLmgJGEe0kMi6I/AVdjxPVSx91hVlgUDXAXuEaY16jFMnAJeJhqR01iVTTAdeAYUFxjzBRwCLgl6agJrM51rDAO7AP2EmbxthPO8vfAc2Ams84axLpoCGKLrH1mm8eC6KPAGaAL2Fpj7AZgY7T9DfhRY/wc4eflPmH+OjOynI8uEGbpukXlJ4Dz84V8aWWHcj46q4thFzCNTjJRren2UrlLWPM3WYjuAMYIk/tq2oCx9lK5Q11YLboFGARaxXVX0woMtpfK0uuTWvRFoFNcsxKdhF5kqEX3iuuthbQXtehG/gdMG2kvlm/B1xUuWoSLFmFF9CRwg2TnM4pRzskEc8bGiugR4ArhNjkpJqKcJv51sSJ63eOiRbhoES5ahIsW4aJFuGgRLlqEixbhokW4aBEuWoSLFuGiRbhoES5ahIsW4aJFuGgRLlqEWvTHKvs/p1izWu5qvaSCWvTlCvtmgeEUaw5TeUVtpV5SQy16COgBRoHXhMWb3aS7PnAhqjEQ1RwFeuYL+aEUa/5DFmtYHkefOEwQVmcBvKD+FQNvgNN/P+pHiV8MRbhoES5ahIsW4aJFuGgRLlqEixbhokW4aBEuWoSLFuGiRbhoES5ahIsW4aJFuGgRLlqEixbhokVYEx3nudGKXE1jTfS6xUWLcNEiXLQIFy3CRYtw0SJctAgXLcJFi3DRIv430eUq2+axJvp7jePPqmzHySXFmuhHwFKVYzNA/6rv/VR/s9BSlMsM1kTPEN4DPkU4I8vAO6APOAgsrhq7GO3ri8aUo5ipKIep1zv9AtipgOACGIrLAAAAAElFTkSuQmCC",
-        "symbolSize": 20.5,
-        "symbolBoundingData": 300,
-        "symbolPosition": "start",
-        "symbolOffset": [
-          20,
-          0
-        ],
-        "data": [
-          13,
-          42,
-          67,
-          81,
-          86,
-          
-        ],
-        "z": 5
-      }
+        {
+            "type": "pictorialBar",
+            "itemStyle": {
+                "normal": {
+                    "opacity": 0.3
+                }
+            },
+            "label": {
+                "normal": {
+                    "show": false
+                }
+            },
+            "animationDuration": 0,
+            "symbolRepeat": "fixed",
+            "symbolMargin": "5%",
+            "symbol": "image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAADYElEQVR4nO2dz0sUYRjHP7tIdAmxQ1LdlhCKMohAIsgiyEuHjkUEFQTlpejS/xCCBB06RBGBBKIG4cGyH0qHBKE9eKyFqBQPRQeNCt06vGNY7bq7szPfeZLnAwuzM+/zgw/DDvMu70wOIVveLscJOwycA44A24CfwAfgKXAbeFVvovlC/o/vuVwuTj+x0FWiYdGbgXvA8RrjHgAXgIVaCbMU3SKr1BhtwEtgZx1jTwI7gG7ga5pNNUO+9pBMuEN9klfYD9xMqZdEsCj6AHAiRtxZYFeyrSSHRdGnYsblCD8jJrEoek8TsbsT6yJhLIrelFFsqlgUPZtRbKpYFP2kidjxxLpIGIuiB4AvMeLmgJGEe0kMi6I/AVdjxPVSx91hVlgUDXAXuEaY16jFMnAJeJhqR01iVTTAdeAYUFxjzBRwCLgl6agJrM51rDAO7AP2EmbxthPO8vfAc2Ams84axLpoCGKLrH1mm8eC6KPAGaAL2Fpj7AZgY7T9DfhRY/wc4eflPmH+OjOynI8uEGbpukXlJ4Dz84V8aWWHcj46q4thFzCNTjJRren2UrlLWPM3WYjuAMYIk/tq2oCx9lK5Q11YLboFGARaxXVX0woMtpfK0uuTWvRFoFNcsxKdhF5kqEX3iuuthbQXtehG/gdMG2kvlm/B1xUuWoSLFmFF9CRwg2TnM4pRzskEc8bGiugR4ArhNjkpJqKcJv51sSJ63eOiRbhoES5ahIsW4aJFuGgRLlqEixbhokW4aBEuWoSLFuGiRbhoES5ahIsW4aJFuGgRLlqEWvTHKvs/p1izWu5qvaSCWvTlCvtmgeEUaw5TeUVtpV5SQy16COgBRoHXhMWb3aS7PnAhqjEQ1RwFeuYL+aEUa/5DFmtYHkefOEwQVmcBvKD+FQNvgNN/P+pHiV8MRbhoES5ahIsW4aJFuGgRLlqEixbhokW4aBEuWoSLFuGiRbhoES5ahIsW4aJFuGgRLlqEixbhokVYEx3nudGKXE1jTfS6xUWLcNEiXLQIFy3CRYtw0SJctAgXLcJFi3DRIv430eUq2+axJvp7jePPqmzHySXFmuhHwFKVYzNA/6rv/VR/s9BSlMsM1kTPEN4DPkU4I8vAO6APOAgsrhq7GO3ri8aUo5ipKIep1zv9AtipgOACGIrLAAAAAElFTkSuQmCC",
+            "symbolSize": 20.5,
+            "symbolBoundingData": 300,
+            "symbolPosition": "start",
+            "symbolOffset": [
+                20,
+                0
+            ],
+            "data": [
+                13,
+                42,
+                67,
+                81,
+                86,
+
+            ],
+            "z": 5
+        }
     ]
 };
 
 
 // Make dynamic data.
-function random() {
-    return +(Math.random() * (maxData - 10)).toFixed(1);
-}
-setInterval(function () {
-    var dynamicData = [random(), random(), random(), random(),random(), random(), random(), random(),random(),random()];
-    myChart.setOption({
-        series: [{
-            data: dynamicData.slice()
-        }, {
-            data: dynamicData.slice()
-        }]
-    })
-}, 3000)
+// function random() {
+//     return +(Math.random() * (maxData - 10)).toFixed(1);
+// }
+// setInterval(function () {
+//     var dynamicData = [random(), random(), random(), random(),random(), random(), random(), random(),random(),random()];
+//     myChart.setOption({
+//         series: [{
+//             data: dynamicData.slice()
+//         }, {
+//             data: dynamicData.slice()
+//         }]
+//     })
+// }, 3000)
 //////////////////////收费站收费排行2 end
 
 //收费站收费排行2
@@ -780,144 +779,144 @@ var spirit = '../images.ksh45.png';
 var maxData = 200;
 
 option41 = {
-   "title": {
-      "text": " ",
-      "left": "center",
-      "y": "10",
-      "textStyle": {
-        "color": "#fff"
-      }
+    "title": {
+        "text": " ",
+        "left": "center",
+        "y": "10",
+        "textStyle": {
+            "color": "#fff"
+        }
     },
-    
+
     "grid": {
-      "left": 30,
-      "top": 0,
-      "bottom": 10
+        "left": 30,
+        "top": 0,
+        "bottom": 10
     },
     "tooltip": {
-      "trigger": "item",
-      "textStyle": {
-        "fontSize": 16
-      },
-      "formatter": "{b0}:{c0}"
+        "trigger": "item",
+        "textStyle": {
+            "fontSize": 16
+        },
+        "formatter": "{b0}:{c0}"
     },
     "xAxis": {
-      "max": 100,
-      "splitLine": {
-        "show": false
-      },
-      "axisLine": {
-        "show": false
-      },
-      "axisLabel": {
-        "show": false
-      },
-      "axisTick": {
-        "show": false
-      }
-    },
-    "yAxis": [
-      {
-        "type": "category",
-        "inverse": false,
-        "data": [
-          "civi",
-          "hall",
-          "flat",
-          "pavi",
-          "park",
-        ],
-        "axisLine": {
-          "show": false
+        "max": 100,
+        "splitLine": {
+            "show": false
         },
-        "axisTick": {
-          "show": false
+        "axisLine": {
+            "show": false
         },
         "axisLabel": {
-          "margin": -4,
-          "textStyle": {
-            "color": "#fff",
-            "fontSize": 16
-          }
+            "show": false
+        },
+        "axisTick": {
+            "show": false
         }
-      },
-    
+    },
+    "yAxis": [
+        {
+            "type": "category",
+            "inverse": false,
+            "data": [
+                "civi",
+                "hall",
+                "flat",
+                "pavi",
+                "park",
+            ],
+            "axisLine": {
+                "show": false
+            },
+            "axisTick": {
+                "show": false
+            },
+            "axisLabel": {
+                "margin": -4,
+                "textStyle": {
+                    "color": "#fff",
+                    "fontSize": 16
+                }
+            }
+        },
+
     ],
     "series": [
-      {
-        "type": "pictorialBar",
-        "symbol": "image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAADYElEQVR4nO2dz0sUYRjHP7tIdAmxQ1LdlhCKMohAIsgiyEuHjkUEFQTlpejS/xCCBB06RBGBBKIG4cGyH0qHBKE9eKyFqBQPRQeNCt06vGNY7bq7szPfeZLnAwuzM+/zgw/DDvMu70wOIVveLscJOwycA44A24CfwAfgKXAbeFVvovlC/o/vuVwuTj+x0FWiYdGbgXvA8RrjHgAXgIVaCbMU3SKr1BhtwEtgZx1jTwI7gG7ga5pNNUO+9pBMuEN9klfYD9xMqZdEsCj6AHAiRtxZYFeyrSSHRdGnYsblCD8jJrEoek8TsbsT6yJhLIrelFFsqlgUPZtRbKpYFP2kidjxxLpIGIuiB4AvMeLmgJGEe0kMi6I/AVdjxPVSx91hVlgUDXAXuEaY16jFMnAJeJhqR01iVTTAdeAYUFxjzBRwCLgl6agJrM51rDAO7AP2EmbxthPO8vfAc2Ams84axLpoCGKLrH1mm8eC6KPAGaAL2Fpj7AZgY7T9DfhRY/wc4eflPmH+OjOynI8uEGbpukXlJ4Dz84V8aWWHcj46q4thFzCNTjJRren2UrlLWPM3WYjuAMYIk/tq2oCx9lK5Q11YLboFGARaxXVX0woMtpfK0uuTWvRFoFNcsxKdhF5kqEX3iuuthbQXtehG/gdMG2kvlm/B1xUuWoSLFmFF9CRwg2TnM4pRzskEc8bGiugR4ArhNjkpJqKcJv51sSJ63eOiRbhoES5ahIsW4aJFuGgRLlqEixbhokW4aBEuWoSLFuGiRbhoES5ahIsW4aJFuGgRLlqEWvTHKvs/p1izWu5qvaSCWvTlCvtmgeEUaw5TeUVtpV5SQy16COgBRoHXhMWb3aS7PnAhqjEQ1RwFeuYL+aEUa/5DFmtYHkefOEwQVmcBvKD+FQNvgNN/P+pHiV8MRbhoES5ahIsW4aJFuGgRLlqEixbhokW4aBEuWoSLFuGiRbhoES5ahIsW4aJFuGgRLlqEixbhokVYEx3nudGKXE1jTfS6xUWLcNEiXLQIFy3CRYtw0SJctAgXLcJFi3DRIv430eUq2+axJvp7jePPqmzHySXFmuhHwFKVYzNA/6rv/VR/s9BSlMsM1kTPEN4DPkU4I8vAO6APOAgsrhq7GO3ri8aUo5ipKIep1zv9AtipgOACGIrLAAAAAElFTkSuQmCC",
-        "symbolRepeat": "fixed",
-        "symbolMargin": "5%",
-        "symbolClip": true,
-        "symbolSize": 20.5,
-        "symbolPosition": "start",
-        "symbolOffset": [
-          20,
-          0
-        ],
-        "symbolBoundingData": 300,
-        "data": [
-          51,
-          32,
-          82,
-          42,
-          81,
-          
-        ],
-        "z": 10
-      },
-      {
-        "type": "pictorialBar",
-        "itemStyle": {
-          "normal": {
-            "opacity": 0.3
-          }
+        {
+            "type": "pictorialBar",
+            "symbol": "image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAADYElEQVR4nO2dz0sUYRjHP7tIdAmxQ1LdlhCKMohAIsgiyEuHjkUEFQTlpejS/xCCBB06RBGBBKIG4cGyH0qHBKE9eKyFqBQPRQeNCt06vGNY7bq7szPfeZLnAwuzM+/zgw/DDvMu70wOIVveLscJOwycA44A24CfwAfgKXAbeFVvovlC/o/vuVwuTj+x0FWiYdGbgXvA8RrjHgAXgIVaCbMU3SKr1BhtwEtgZx1jTwI7gG7ga5pNNUO+9pBMuEN9klfYD9xMqZdEsCj6AHAiRtxZYFeyrSSHRdGnYsblCD8jJrEoek8TsbsT6yJhLIrelFFsqlgUPZtRbKpYFP2kidjxxLpIGIuiB4AvMeLmgJGEe0kMi6I/AVdjxPVSx91hVlgUDXAXuEaY16jFMnAJeJhqR01iVTTAdeAYUFxjzBRwCLgl6agJrM51rDAO7AP2EmbxthPO8vfAc2Ams84axLpoCGKLrH1mm8eC6KPAGaAL2Fpj7AZgY7T9DfhRY/wc4eflPmH+OjOynI8uEGbpukXlJ4Dz84V8aWWHcj46q4thFzCNTjJRren2UrlLWPM3WYjuAMYIk/tq2oCx9lK5Q11YLboFGARaxXVX0woMtpfK0uuTWvRFoFNcsxKdhF5kqEX3iuuthbQXtehG/gdMG2kvlm/B1xUuWoSLFmFF9CRwg2TnM4pRzskEc8bGiugR4ArhNjkpJqKcJv51sSJ63eOiRbhoES5ahIsW4aJFuGgRLlqEixbhokW4aBEuWoSLFuGiRbhoES5ahIsW4aJFuGgRLlqEWvTHKvs/p1izWu5qvaSCWvTlCvtmgeEUaw5TeUVtpV5SQy16COgBRoHXhMWb3aS7PnAhqjEQ1RwFeuYL+aEUa/5DFmtYHkefOEwQVmcBvKD+FQNvgNN/P+pHiV8MRbhoES5ahIsW4aJFuGgRLlqEixbhokW4aBEuWoSLFuGiRbhoES5ahIsW4aJFuGgRLlqEixbhokVYEx3nudGKXE1jTfS6xUWLcNEiXLQIFy3CRYtw0SJctAgXLcJFi3DRIv430eUq2+axJvp7jePPqmzHySXFmuhHwFKVYzNA/6rv/VR/s9BSlMsM1kTPEN4DPkU4I8vAO6APOAgsrhq7GO3ri8aUo5ipKIep1zv9AtipgOACGIrLAAAAAElFTkSuQmCC",
+            "symbolRepeat": "fixed",
+            "symbolMargin": "5%",
+            "symbolClip": true,
+            "symbolSize": 20.5,
+            "symbolPosition": "start",
+            "symbolOffset": [
+                20,
+                0
+            ],
+            "symbolBoundingData": 300,
+            "data": [
+                51,
+                32,
+                82,
+                42,
+                81,
+
+            ],
+            "z": 10
         },
-        "label": {
-          "normal": {
-            "show": false
-          }
-        },
-        "animationDuration": 0,
-        "symbolRepeat": "fixed",
-        "symbolMargin": "5%",
-        "symbol": "image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAADYElEQVR4nO2dz0sUYRjHP7tIdAmxQ1LdlhCKMohAIsgiyEuHjkUEFQTlpejS/xCCBB06RBGBBKIG4cGyH0qHBKE9eKyFqBQPRQeNCt06vGNY7bq7szPfeZLnAwuzM+/zgw/DDvMu70wOIVveLscJOwycA44A24CfwAfgKXAbeFVvovlC/o/vuVwuTj+x0FWiYdGbgXvA8RrjHgAXgIVaCbMU3SKr1BhtwEtgZx1jTwI7gG7ga5pNNUO+9pBMuEN9klfYD9xMqZdEsCj6AHAiRtxZYFeyrSSHRdGnYsblCD8jJrEoek8TsbsT6yJhLIrelFFsqlgUPZtRbKpYFP2kidjxxLpIGIuiB4AvMeLmgJGEe0kMi6I/AVdjxPVSx91hVlgUDXAXuEaY16jFMnAJeJhqR01iVTTAdeAYUFxjzBRwCLgl6agJrM51rDAO7AP2EmbxthPO8vfAc2Ams84axLpoCGKLrH1mm8eC6KPAGaAL2Fpj7AZgY7T9DfhRY/wc4eflPmH+OjOynI8uEGbpukXlJ4Dz84V8aWWHcj46q4thFzCNTjJRren2UrlLWPM3WYjuAMYIk/tq2oCx9lK5Q11YLboFGARaxXVX0woMtpfK0uuTWvRFoFNcsxKdhF5kqEX3iuuthbQXtehG/gdMG2kvlm/B1xUuWoSLFmFF9CRwg2TnM4pRzskEc8bGiugR4ArhNjkpJqKcJv51sSJ63eOiRbhoES5ahIsW4aJFuGgRLlqEixbhokW4aBEuWoSLFuGiRbhoES5ahIsW4aJFuGgRLlqEWvTHKvs/p1izWu5qvaSCWvTlCvtmgeEUaw5TeUVtpV5SQy16COgBRoHXhMWb3aS7PnAhqjEQ1RwFeuYL+aEUa/5DFmtYHkefOEwQVmcBvKD+FQNvgNN/P+pHiV8MRbhoES5ahIsW4aJFuGgRLlqEixbhokW4aBEuWoSLFuGiRbhoES5ahIsW4aJFuGgRLlqEixbhokVYEx3nudGKXE1jTfS6xUWLcNEiXLQIFy3CRYtw0SJctAgXLcJFi3DRIv430eUq2+axJvp7jePPqmzHySXFmuhHwFKVYzNA/6rv/VR/s9BSlMsM1kTPEN4DPkU4I8vAO6APOAgsrhq7GO3ri8aUo5ipKIep1zv9AtipgOACGIrLAAAAAElFTkSuQmCC",
-        "symbolSize": 20.5,
-        "symbolBoundingData": 300,
-        "symbolPosition": "start",
-        "symbolOffset": [
-          20,
-          0
-        ],
-        "data": [
-          51,
-          32,
-          82,
-          42,
-          81,
-          
-        ],
-        "z": 5
-      }
+        {
+            "type": "pictorialBar",
+            "itemStyle": {
+                "normal": {
+                    "opacity": 0.3
+                }
+            },
+            "label": {
+                "normal": {
+                    "show": false
+                }
+            },
+            "animationDuration": 0,
+            "symbolRepeat": "fixed",
+            "symbolMargin": "5%",
+            "symbol": "image://data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAADYElEQVR4nO2dz0sUYRjHP7tIdAmxQ1LdlhCKMohAIsgiyEuHjkUEFQTlpejS/xCCBB06RBGBBKIG4cGyH0qHBKE9eKyFqBQPRQeNCt06vGNY7bq7szPfeZLnAwuzM+/zgw/DDvMu70wOIVveLscJOwycA44A24CfwAfgKXAbeFVvovlC/o/vuVwuTj+x0FWiYdGbgXvA8RrjHgAXgIVaCbMU3SKr1BhtwEtgZx1jTwI7gG7ga5pNNUO+9pBMuEN9klfYD9xMqZdEsCj6AHAiRtxZYFeyrSSHRdGnYsblCD8jJrEoek8TsbsT6yJhLIrelFFsqlgUPZtRbKpYFP2kidjxxLpIGIuiB4AvMeLmgJGEe0kMi6I/AVdjxPVSx91hVlgUDXAXuEaY16jFMnAJeJhqR01iVTTAdeAYUFxjzBRwCLgl6agJrM51rDAO7AP2EmbxthPO8vfAc2Ams84axLpoCGKLrH1mm8eC6KPAGaAL2Fpj7AZgY7T9DfhRY/wc4eflPmH+OjOynI8uEGbpukXlJ4Dz84V8aWWHcj46q4thFzCNTjJRren2UrlLWPM3WYjuAMYIk/tq2oCx9lK5Q11YLboFGARaxXVX0woMtpfK0uuTWvRFoFNcsxKdhF5kqEX3iuuthbQXtehG/gdMG2kvlm/B1xUuWoSLFmFF9CRwg2TnM4pRzskEc8bGiugR4ArhNjkpJqKcJv51sSJ63eOiRbhoES5ahIsW4aJFuGgRLlqEixbhokW4aBEuWoSLFuGiRbhoES5ahIsW4aJFuGgRLlqEWvTHKvs/p1izWu5qvaSCWvTlCvtmgeEUaw5TeUVtpV5SQy16COgBRoHXhMWb3aS7PnAhqjEQ1RwFeuYL+aEUa/5DFmtYHkefOEwQVmcBvKD+FQNvgNN/P+pHiV8MRbhoES5ahIsW4aJFuGgRLlqEixbhokW4aBEuWoSLFuGiRbhoES5ahIsW4aJFuGgRLlqEixbhokVYEx3nudGKXE1jTfS6xUWLcNEiXLQIFy3CRYtw0SJctAgXLcJFi3DRIv430eUq2+axJvp7jePPqmzHySXFmuhHwFKVYzNA/6rv/VR/s9BSlMsM1kTPEN4DPkU4I8vAO6APOAgsrhq7GO3ri8aUo5ipKIep1zv9AtipgOACGIrLAAAAAElFTkSuQmCC",
+            "symbolSize": 20.5,
+            "symbolBoundingData": 300,
+            "symbolPosition": "start",
+            "symbolOffset": [
+                20,
+                0
+            ],
+            "data": [
+                51,
+                32,
+                82,
+                42,
+                81,
+
+            ],
+            "z": 5
+        }
     ]
 };
 
 
 // Make dynamic data.
-function random() {
-    return +(Math.random() * (maxData - 10)).toFixed(1);
-}
-setInterval(function () {
-    var dynamicData = [random(), random(), random(), random(),random(), random(), random(), random(),random(),random()];
-    myChart.setOption({
-        series: [{
-            data: dynamicData.slice()
-        }, {
-            data: dynamicData.slice()
-        }]
-    })
-}, 3000)
+// function random() {
+//     return +(Math.random() * (maxData - 10)).toFixed(1);
+// }
+// setInterval(function () {
+//     var dynamicData = [random(), random(), random(), random(),random(), random(), random(), random(),random(),random()];
+//     myChart.setOption({
+//         series: [{
+//             data: dynamicData.slice()
+//         }, {
+//             data: dynamicData.slice()
+//         }]
+//     })
+// }, 3000)
 //////////////////////收费站收费排行2 end
 
 //今日实时收费
@@ -925,7 +924,7 @@ setInterval(function () {
 var shadowColor = '#374b86';
 var value = 80;
 option5 = {
-    
+
     title: {
         //text: `${value}万辆`,
         text: `车辆总数`,
@@ -968,7 +967,7 @@ option5 = {
             itemStyle: {
                 normal: {
                     borderWidth: 8,
-                    borderColor: { 
+                    borderColor: {
                         colorStops: [{
                             offset: 0,
                             color: '#1d54f7' || '#00cefc' // 0% 处的颜色
@@ -1017,7 +1016,7 @@ option5 = {
 var shadowColor = '#374b86';
 var value = 85;
 option6 = {
-    
+
     title: {
         //text: `${value}万辆`,
         text: `今日上线`,
@@ -1060,7 +1059,7 @@ option6 = {
             itemStyle: {
                 normal: {
                     borderWidth: 8,
-                    borderColor: { 
+                    borderColor: {
                         colorStops: [{
                             offset: 0,
                             color: '#02df94' || '#25d6bc' // 0% 处的颜色
@@ -1109,7 +1108,7 @@ option6 = {
 var shadowColor = '#374b86';
 var value = 46;
 option7 = {
-    
+
     title: {
         //text: `${value}万辆`,
         text: `今日报警`,
@@ -1152,8 +1151,8 @@ option7 = {
             itemStyle: {
                 normal: {
                     borderWidth: 8,
-                    borderColor: { 
-                    colorStops: [{
+                    borderColor: {
+                        colorStops: [{
                             offset: 0,
                             color: '#eb3600' || '#cc9a00' // 0% 处的颜色
                         }, {

@@ -31,47 +31,182 @@
             }
         }
     </style>
+
 </head>
 <body>
-<form class="form-inline definewidth m20" action="index.html" method="get">
-    用户名称：
-    <input type="text" name="username" id="username" class="abc input-default" placeholder="" value="">&nbsp;&nbsp;
-    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp;
-    <button type="button" class="btn btn-success" id="addnew">新增用户</button>
+<form class="form-inline definewidth m20">
+    车站名称：
+    <input type="text" name="username" id="TStation" class="abc input-default" placeholder="" value="">&nbsp;&nbsp;
+    <button onclick="getLocationByStation()" type="button" class="btn btn-primary">查询</button>&nbsp;&nbsp;
+    <button type="button" class="btn btn-success" id="addnew">新增车站</button>
 </form>
 <table class="table table-bordered table-hover definewidth m10">
     <thead>
     <tr>
-        <th>用户id</th>
-        <th>用户名称</th>
-        <th>真实姓名</th>
-        <th>最后登录时间</th>
+        <th>车站ID</th>
+        <th>车站名称</th>
+        <th>纬度</th>
+        <th>经度</th>
+        <th>车站自行车停靠点总数</th>
         <th>操作</th>
     </tr>
     </thead>
+    <tbody>
     <tr>
-        <td>2</td>
-        <td>admin</td>
-        <td>管理员</td>
-        <td></td>
+        <td>30000</td>
+        <td>100 Main Street SE</td>
+        <td>44.984892</td>
+        <td>-93.256551</td>
+        <td>27</td>
         <td>
             <a href="edit.html">编辑</a>
+            <a href="#" id="dell">删除</a>
         </td>
     </tr>
+    </tbody>
 </table>
 </body>
 </html>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css"/>
+<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
 <script>
     $(function () {
         $('#addnew').click(function () {
             window.location.href = "add.html";
         });
+        getLocationAll();
+
     });
 
-    function del(id) {
-        if (confirm("确定要删除吗？")) {
+    /*type: {'success', 'warning', 'error','loading'}*/
+    function showConfirm(type, info, action, showCancelButton, showConfirmButton) {
+        swal({
+            title: "消息提示",
+            text: info,
+            type: type,
+            showCancelButton: showCancelButton,
+            cancelButtonText: "取消",
+            cancelButtonColor: "#B9B9B9",
+            showConfirmButton: showConfirmButton,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "确认",
+            closeOnConfirm: true,
+            closeOnCancel: true
+        }, action);
+    };
+
+    function dell(obj) {
+        showConfirm("info", "确认删除?", function () {
+            Terminal = obj.parentNode.parentNode.id;
+            console.log(Terminal);
+            delone(Terminal);
+            // var url = "index.html";
+            // window.location.href = url;
+        }, false, true)
+
+    }
+
+    function edit(obj) {
+        Terminal = obj.parentNode.parentNode.id;
+        window.location.href = "edit.html?Terminal=" + Terminal;
+    }
+
+    function delone(Terminal) {
+        $.ajax({
+            url: "/rideweb/deleteLocationByTerminal",
+            type: "POST",
+            dataType: "json",
+            data: {
+                'Terminal': Terminal
+            },
+            success: function (data) {
+                // console.log(data);
+                if (data == 1) {
+                    setTimeout("Success()", "1000");
+
+                }
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+    }
+
+    function Success() {
+        showConfirm("success", "执行成功！", function () {
             var url = "index.html";
             window.location.href = url;
-        }
+        }, false, true)
+    }
+
+    function getLocationAll() {
+        $.ajax({
+            url: "/rideweb/getLocationAll",
+            type: "POST",
+            dataType: "json",
+            success: function (data) {
+                // console.log(data);
+                var result = '';
+                var arrLen = data.length;
+                if (arrLen > 0) {
+                    for (i = 0; i < arrLen; i++) {
+                        result += "<tr id=" + data[i].Terminal + ">\n" +
+                            "        <td>" + data[i].Terminal + "</td>\n" +
+                            "        <td>" + data[i].Station + "</td>\n" +
+                            "        <td>" + data[i].Latitude + "</td>\n" +
+                            "        <td>" + data[i].Longitude + "</td>\n" +
+                            "        <td>" + data[i].Nbdocks + "</td>\n" +
+                            "        <td>\n" +
+                            "            <a href=\"#\"onclick=\"edit(this)\">编辑</a>\n" +
+                            "            <a href=\"#\" onclick=\"dell(this)\">删除</a>\n" +
+                            "        </td>\n" +
+                            "    </tr>";
+                    }
+                }
+                $("body > table > tbody").html(result);
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+    }
+
+    function getLocationByStation() {
+        Station = $("#TStation").val();
+        $.ajax({
+            url: "/rideweb/getLocationByStation",
+            type: "POST",
+            dataType: "json",
+            data: {
+                'Station': Station
+            },
+            success: function (data) {
+                // console.log(data);
+                var result = '';
+                var arrLen = data.length;
+                if (arrLen > 0) {
+                    for (i = 0; i < arrLen; i++) {
+                        result += "<tr id=" + data[i].Terminal + ">\n" +
+                            "        <td>" + data[i].Terminal + "</td>\n" +
+                            "        <td>" + data[i].Station + "</td>\n" +
+                            "        <td>" + data[i].Latitude + "</td>\n" +
+                            "        <td>" + data[i].Longitude + "</td>\n" +
+                            "        <td>" + data[i].Nbdocks + "</td>\n" +
+                            "        <td>\n" +
+                            "            <a href=\"#\"onclick=\"edit(this)\">编辑</a>\n" +
+                            "            <a href=\"#\" onclick=\"dell(this)\">删除</a>\n" +
+                            "        </td>\n" +
+                            "    </tr>";
+                    }
+                }
+                $("body > table > tbody").html(result);
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
     }
 </script>
+
