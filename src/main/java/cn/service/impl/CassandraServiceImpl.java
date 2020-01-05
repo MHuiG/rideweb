@@ -79,7 +79,7 @@ public class CassandraServiceImpl implements CassandraService {
     @Override
     public void insertLocation(Location o) {
         connectDB();
-        String cql = "INSERT INTO mydb.loca (Terminal,Station,Latitude,Longitude,Nbdocks) VALUES (" + "," + o.getTerminal() + "," + o.getStation() + "," + o.getLatitude() + "," + o.getLongitude() + "," + o.getNbdocks() + ");";
+        String cql = "INSERT INTO mydb.loca (Terminal,Station,Latitude,Longitude,Nbdocks) VALUES ('" + o.getTerminal() + "','" + o.getStation() + "','" + o.getLatitude() + "','" + o.getLongitude() + "','" + o.getNbdocks() + "');";
         session.execute(cql);
     }
 

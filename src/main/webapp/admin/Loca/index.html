@@ -119,7 +119,8 @@
             success: function (data) {
                 // console.log(data);
                 if (data == 1) {
-                    Success();
+                    setTimeout("Success()", "1500");
+
                 }
             },
             error: function (err) {
@@ -132,7 +133,7 @@
         showConfirm("success", "执行成功！", function () {
             var url = "index.html";
             window.location.href = url;
-        }, true, true)
+        }, false, true)
     }
 
     function getLocationAll() {
