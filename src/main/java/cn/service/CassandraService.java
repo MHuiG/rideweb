@@ -14,4 +14,6 @@ public interface CassandraService {
 
     List<Location> getLocationByStation(Location o);
 
+    List<Location> getLocationByTerminal(Location o);
+
 }

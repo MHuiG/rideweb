@@ -34,6 +34,16 @@ public class CassandraController {
         return s;
     }
 
+    @RequestMapping(value = "/getLocationByTerminal", produces = "application/json;charset=UTF-8")
+    @ResponseBody
+    public List<Location> getLocationByTerminal(String Terminal) {
+        Location o = new Location();
+        o.setTerminal(Terminal);
+        System.out.println("getLocationByTerminal " + o.getTerminal());
+        List<Location> s = CassandraService.getLocationByTerminal(o);
+        return s;
+    }
+
     @RequestMapping(value = "/insertLocation", produces = "application/json;charset=UTF-8")
     @ResponseBody
     public int insertLocation(String Terminal, String Station, String Latitude, String Longitude, String Nbdocks) {

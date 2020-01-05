@@ -108,6 +108,11 @@
 
     }
 
+    function edit(obj) {
+        Terminal = obj.parentNode.parentNode.id;
+        window.location.href = "edit.html?Terminal=" + Terminal;
+    }
+
     function delone(Terminal) {
         $.ajax({
             url: "/rideweb/deleteLocationByTerminal",
@@ -119,7 +124,7 @@
             success: function (data) {
                 // console.log(data);
                 if (data == 1) {
-                    setTimeout("Success()", "1500");
+                    setTimeout("Success()", "1000");
 
                 }
             },
@@ -154,7 +159,7 @@
                             "        <td>" + data[i].Longitude + "</td>\n" +
                             "        <td>" + data[i].Nbdocks + "</td>\n" +
                             "        <td>\n" +
-                            "            <a href=\"edit.html\">编辑</a>\n" +
+                            "            <a href=\"#\"onclick=\"edit(this)\">编辑</a>\n" +
                             "            <a href=\"#\" onclick=\"dell(this)\">删除</a>\n" +
                             "        </td>\n" +
                             "    </tr>";
@@ -190,7 +195,7 @@
                             "        <td>" + data[i].Longitude + "</td>\n" +
                             "        <td>" + data[i].Nbdocks + "</td>\n" +
                             "        <td>\n" +
-                            "            <a href=\"edit.html\">编辑</a>\n" +
+                            "            <a href=\"#\"onclick=\"edit(this)\">编辑</a>\n" +
                             "            <a href=\"#\" onclick=\"dell(this)\">删除</a>\n" +
                             "        </td>\n" +
                             "    </tr>";
