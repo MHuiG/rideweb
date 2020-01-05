@@ -12,7 +12,6 @@
     <script type="text/javascript" src="../Js/ckform.js"></script>
     <script type="text/javascript" src="../Js/common.js"></script>
 
-
     <style type="text/css">
         body {
             padding-bottom: 40px;
@@ -33,46 +32,34 @@
     </style>
 </head>
 <body>
-<form action="{:U('User/edit')}" method="post" class="definewidth m20">
-    <input type="hidden" name="id" value="{$user.id}"/>
-    <table class="table table-bordered table-hover definewidth m10">
+<form action="index.html" method="post" class="definewidth m20">
+    <input type="hidden" name="id" value=""/>
+    <table class="table table-bordered table-hover ">
         <tr>
-            <td width="10%" class="tableleft">登录名</td>
-            <td><input type="text" name="username" value="{$user.username}"/></td>
+            <td width="10%" class="tableleft">车站ID</td>
+            <td><input type="text" name="Terminal"/></td>
         </tr>
         <tr>
-            <td class="tableleft">密码</td>
-            <td><input type="password" name="password"/></td>
+            <td class="tableleft">车站名称</td>
+            <td><input type="text" name="Station"/></td>
         </tr>
         <tr>
-            <td class="tableleft">真实姓名</td>
-            <td><input type="text" name="realname" value="{$user.realname}"/></td>
+            <td class="tableleft">纬度</td>
+            <td><input type="text" name="Latitude"/></td>
         </tr>
         <tr>
-            <td class="tableleft">邮箱</td>
-            <td><input type="text" name="email" value="{$user.email}"/></td>
+            <td class="tableleft">经度</td>
+            <td><input type="text" name="Longitude"/></td>
         </tr>
         <tr>
-            <td class="tableleft">状态</td>
-            <td>
-                <input type="radio" name="status" value="0"
-                <eq name="user.status" value='0'>checked</eq>
-                /> 启用
-                <input type="radio" name="status" value="1"
-                <eq name="user.status" value='1'>checked</eq>
-                /> 禁用
-            </td>
-        </tr>
-        <tr>
-            <td class="tableleft">角色</td>
-            <td>{$role_checkbox}</td>
+            <td class="tableleft">车站自行车停靠点总数</td>
+            <td><input type="text" name="Nbdocks"/></td>
         </tr>
         <tr>
             <td class="tableleft"></td>
             <td>
-                <button type="submit" class="btn btn-primary" type="button">保存</button> &nbsp;&nbsp;<button
-                    type="button" class="btn btn-success" name="backid" id="backid">返回列表
-            </button>
+                <button type="submit" class="btn btn-primary" type="button">保存</button> &nbsp;&nbsp;
+                <button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
             </td>
         </tr>
     </table>
@@ -82,7 +69,8 @@
 <script>
     $(function () {
         $('#backid').click(function () {
-            window.location.href = "{:U('User/index')}";
+            window.location.href = "index.html";
         });
     });
 </script>
+
