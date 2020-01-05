@@ -1,6 +1,6 @@
 package cn.controller;
 
-import cn.pojo.Location;
+import cn.pojo.Cassandra.Location;
 import cn.service.CassandraService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
