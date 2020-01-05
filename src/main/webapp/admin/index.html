@@ -12,7 +12,7 @@
 <div class="header">
     <div class="dl-log">
         欢迎<span class="dl-log-user">root</span>
-        <a href="/chinapost/index.php?m=Public&a=logout" title="退出系统" class="dl-log-quit">[退出]</a>
+        <a href="#" title="退出系统" class="dl-log-quit">[退出]</a>
     </div>
 </div>
 <div class="content">
@@ -26,6 +26,9 @@
             </li>
             <li class="nav-item dl-selected">
                 <div class="nav-item-inner nav-order">业务管理</div>
+            </li>
+            <li class="nav-item dl-selected">
+                <div class="nav-item-inner nav-order">运营管理</div>
             </li>
 
         </ul>
@@ -57,7 +60,16 @@
                     {id: '9', text: '查询业务', href: 'Node/index.html'}
                 ]
             }]
-        }];
+        }, {
+            id: '101', homePage: '102',
+            menu: [{
+                text: '运营管理',
+                items: [
+                    {id: '102', text: '车站管理', href: 'Loca/index.html'}
+                ]
+            }]
+        }
+        ];
         new PageUtil.MainPage({
             modulesConfig: config
         });
