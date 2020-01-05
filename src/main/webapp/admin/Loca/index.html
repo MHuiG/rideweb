@@ -34,10 +34,10 @@
 
 </head>
 <body>
-<form class="form-inline definewidth m20" action="index.html" method="get">
+<form class="form-inline definewidth m20">
     车站名称：
-    <input type="text" name="username" id="username" class="abc input-default" placeholder="" value="">&nbsp;&nbsp;
-    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp;
+    <input type="text" name="username" id="TStation" class="abc input-default" placeholder="" value="">&nbsp;&nbsp;
+    <button onclick="getLocationByStation()" type="button" class="btn btn-primary">查询</button>&nbsp;&nbsp;
     <button type="button" class="btn btn-success" id="addnew">新增车站</button>
 </form>
 <table class="table table-bordered table-hover definewidth m10">
@@ -168,5 +168,40 @@
         });
     }
 
+    function getLocationByStation() {
+        Station = $("#TStation").val();
+        $.ajax({
+            url: "/rideweb/getLocationByStation",
+            type: "POST",
+            dataType: "json",
+            data: {
+                'Station': Station
+            },
+            success: function (data) {
+                // console.log(data);
+                var result = '';
+                var arrLen = data.length;
+                if (arrLen > 0) {
+                    for (i = 0; i < arrLen; i++) {
+                        result += "<tr id=" + data[i].Terminal + ">\n" +
+                            "        <td>" + data[i].Terminal + "</td>\n" +
+                            "        <td>" + data[i].Station + "</td>\n" +
+                            "        <td>" + data[i].Latitude + "</td>\n" +
+                            "        <td>" + data[i].Longitude + "</td>\n" +
+                            "        <td>" + data[i].Nbdocks + "</td>\n" +
+                            "        <td>\n" +
+                            "            <a href=\"edit.html\">编辑</a>\n" +
+                            "            <a href=\"#\" onclick=\"dell(this)\">删除</a>\n" +
+                            "        </td>\n" +
+                            "    </tr>";
+                    }
+                }
+                $("body > table > tbody").html(result);
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+    }
 </script>
 

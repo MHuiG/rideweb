@@ -115,10 +115,34 @@ public class CassandraServiceImpl implements CassandraService {
         return s;
     }
 
+    /**
+     * 查询LocationByStation
+     */
+    @Override
+    public List<Location> getLocationByStation(Location location) {
+        connectDB();
+        List<Location> s = new ArrayList<>();
+        String cql = "SELECT * FROM mydb.loca where Station='" + location.getStation() + "'allow filtering;";
+        ResultSet resultSet = session.execute(cql);
+        for (Row row : resultSet) {
+            Location o = new Location();
+            o.setTerminal(row.getString("Terminal"));
+            o.setStation(row.getString("Station"));
+            o.setLatitude(row.getString("Latitude"));
+            o.setLongitude(row.getString("Longitude"));
+            o.setNbdocks(row.getString("Nbdocks"));
+            s.add(o);
+        }
+        return s;
+    }
+
     @Test
     public void main() {
 //        connectDB(session);
         List<Location> o = getLocationAll();
         System.out.println(o.toString());
     }
+
+
 }
+
