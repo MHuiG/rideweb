@@ -21,15 +21,22 @@ public class MongoDBServiceImpl implements MongoDBService {
         MongoClient mongo = MongoClients.create("mongodb://worker02:27017");
         MongoDatabase db = mongo.getDatabase("ywh");
         MongoCollection col = db.getCollection("season");
-        BasicDBObject query= new BasicDBObject();
-        query.append("Account type","Casual");
-        BasicDBObject match = new BasicDBObject("$match", query);
-        BasicDBObject group = new BasicDBObject("$group", new BasicDBObject("_id", "$Start station").append("num", new BasicDBObject("$sum", 1)));
+        BasicDBObject query1= new BasicDBObject(); //临时车
+        query1.append("Account type","Casual");
+        BasicDBObject match1 = new BasicDBObject("$match", query1);
+        BasicDBObject query2= new BasicDBObject(); //会员车
+        query2.append("Account type","Member");
+        BasicDBObject match2 = new BasicDBObject("$match", query2);
+
+        BasicDBObject group1 = new BasicDBObject("$group", new BasicDBObject("_id", "$Start station").append("num", new BasicDBObject("$sum", 1))); //进车站点
+
+        BasicDBObject group2 = new BasicDBObject("$group", new BasicDBObject("_id", "$End station").append("num", new BasicDBObject("$sum", 1))); //出车站点
+
         BasicDBObject sort = new BasicDBObject("$sort", new BasicDBObject("num", -1));
         BasicDBObject limit = new BasicDBObject("$limit",3);
         List<DBObject> queryList = new ArrayList<>();
-        queryList .add(match);
-        queryList .add(group);
+        queryList .add(match1);
+        queryList .add(group1);
         queryList .add(sort);
         queryList .add(limit);
         AggregateIterable<Document> iterable =  col.aggregate(queryList);
