@@ -2,6 +2,7 @@ package cn.service.impl;
 
 import cn.mapper.Mapper;
 import cn.service.MongoDBService;
+import org.aspectj.lang.annotation.Before;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
@@ -49,7 +50,6 @@ public class MongoDBServiceImpl implements MongoDBService {
         MongoCursor<Document> cursor = col.find().iterator();
         System.out.println("success!!!");
     }
-
 
 
 
