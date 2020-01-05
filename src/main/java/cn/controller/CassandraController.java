@@ -33,7 +33,8 @@ public class CassandraController {
         o.setLatitude(Latitude);
         o.setLongitude(Longitude);
         o.setNbdocks(Nbdocks);
-        //CassandraService.insertLocation(o);
+        CassandraService.insertLocation(o);
+//        System.out.println("insertLocation " + o.getTerminal());
         return 1;
     }
 
@@ -42,7 +43,8 @@ public class CassandraController {
     public int deleteLocationByTerminal(String Terminal) {
         Location o = new Location();
         o.setTerminal(Terminal);
-        CassandraService.deleteLocationByTerminal(o);
+//        CassandraService.deleteLocationByTerminal(o);
+        System.out.println("deleteLocationByTerminal " + o.getTerminal());
         return 1;
     }
 

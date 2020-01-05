@@ -73,12 +73,9 @@
 <script type="text/javascript" src="https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
 <script>
     $(function () {
-
-
         $('#addnew').click(function () {
             window.location.href = "add.html";
         });
-
         getLocationAll();
 
     });
@@ -100,12 +97,35 @@
         }, action);
     };
 
-    function dell() {
+    function dell(obj) {
         showConfirm("info", "确认删除?", function () {
-            var url = "index.html";
-            window.location.href = url;
+            Terminal = obj.parentNode.parentNode.id;
+            console.log(Terminal);
+            delone(Terminal);
+            // var url = "index.html";
+            // window.location.href = url;
         }, false, true)
 
+    }
+
+    function delone(Terminal) {
+        $.ajax({
+            url: "/rideweb/deleteLocationByTerminal",
+            type: "POST",
+            dataType: "json",
+            data: {
+                'Terminal': Terminal
+            },
+            success: function (data) {
+                // console.log(data);
+                if (data == 1) {
+                    Success();
+                }
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
     }
 
     function Success() {
@@ -134,7 +154,7 @@
                             "        <td>" + data[i].Nbdocks + "</td>\n" +
                             "        <td>\n" +
                             "            <a href=\"edit.html\">编辑</a>\n" +
-                            "            <a href=\"#\" onclick=\"dell()\">删除</a>\n" +
+                            "            <a href=\"#\" onclick=\"dell(this)\">删除</a>\n" +
                             "        </td>\n" +
                             "    </tr>";
                     }
