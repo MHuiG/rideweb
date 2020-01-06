@@ -170,6 +170,70 @@ $.ajax({
     success: function (data) {
         // console.log(data);
         aa = eval(data[0]);
+        option8 = {
+
+            title: {
+                text: '',
+                left: 'center',
+                textStyle: {
+                    color: '#fff'
+                }
+            },
+            legend: {
+                show: false,
+                orient: 'vertical',
+                top: 'bottom',
+                left: 'right',
+                data: ['地点', '线路'],
+                textStyle: {
+                    color: '#fff'
+                }
+            },
+            geo: {
+                map: 'world',
+                label: {
+                    emphasis: {
+                        show: false
+                    }
+                },
+                roam: true,
+                itemStyle: {
+                    normal: {
+                        areaColor: 'rgba(7,21,57,0.5)',
+                        borderColor: '#0177ff'
+                    },
+                    emphasis: {
+                        areaColor: '#071537'//鼠标指上市时的颜色
+                    }
+                }
+            },
+            series: [{
+                name: '地点',
+                type: 'effectScatter',
+                coordinateSystem: 'geo',
+                zlevel: 2,
+                rippleEffect: {
+                    brushType: 'stroke'
+                },
+                label: {
+                    emphasis: {
+                        show: true,
+                        position: 'right',
+                        formatter: '{b}'
+                    }
+                },
+                symbolSize: 2,
+                itemStyle: {
+                    showEffectOn: 'render',
+                    normal: {
+                        color: '#46bee9'
+                    }
+                },
+                data: aa
+            }
+
+            ]
+        };
         myChart8.setOption(option8);
     },
     error: function (err) {

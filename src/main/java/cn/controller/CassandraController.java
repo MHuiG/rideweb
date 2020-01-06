@@ -138,7 +138,7 @@ public class CassandraController {
                     "        \"name\": \"" + i.getStation() + "\",\n" +
                     "        \"value\": [" + i.getLongitude() + ", " + i.getLatitude() + ", " + i.getNbdocks() + "],\n" +
                     "        \"symbolSize\": " + i.getNbdocks() + ",\n" +
-                    "        \"itemStyle\": {\"normal\": {\"color\": \"#F58158\"}}\n" +
+                    "        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n" +
                     "    },";
         }
         Nbdocks = "[" + Nbdocks + "]";
