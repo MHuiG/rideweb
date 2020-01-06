@@ -24,9 +24,10 @@ public class MongoDBController {
         MongoDBServiceImpl service = new MongoDBServiceImpl();
         MongoCollection col = service.connection();
         service.casual_start_data(col);
-        service.casual_end_data(col);
-        service.member_start_data(col);
-        service.member_end_data(col);
+        System.out.println("--------------------------------");
+//        service.casual_end_data(col);
+//        System.out.println("--------------------------------");
+
     }
 
 
