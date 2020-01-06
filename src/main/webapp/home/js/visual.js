@@ -3,7 +3,7 @@ var data = {
     id: 'multipleBarsLines',
     legendBar: ['<=15min', '>15min'],
     symbol: ' ', //数值是否带百分号        --默认为空 ''
-    legendLine: ['环比', '同比'],
+    // legendLine: ['环比', '同比'],
     xAxis: ['2010', '2011', '2012', '2013', '2014',
         '2015'
     ],
@@ -11,12 +11,12 @@ var data = {
         [8, 10, 10, 11, 4, 13],
         [10, 7, 8, 8, 7, 9]
     ],
-    lines: [
-        [10, 10, 9, 11, 7, 4],
-        [6, 12, 12, 2, 4, 4]
-    ],
+    // lines: [
+    //     [10, 10, 9, 11, 7, 4],
+    //     [6, 12, 12, 2, 4, 4]
+    // ],
     barColor: ['#009883', '#e66922'], //柱子颜色 必填参数
-    lineColor: ['#fd6665', '#fba73b'], // 折线颜色
+    // lineColor: ['#fd6665', '#fba73b'], // 折线颜色
 
 }
 
@@ -64,38 +64,39 @@ var myData = (function test() {
     })
 
     lines && lines.forEach((item, index) => {
-        legendArr.push({
-            name: legendLine && legendLine.length > 0 && legendLine[index]
-        })
-        seriesArr.push({
-            name: legendLine && legendLine.length > 0 && legendLine[index],
-            type: 'line',
-            data: item,
-            itemStyle: {
-                normal: {
-                    color: data.lineColor[index],
-                    lineStyle: {
-                        width: 2,//折线宽度
-                        type: 'solid',
+            legendArr.push({
+                name: legendLine && legendLine.length > 0 && legendLine[index]
+            })
+            seriesArr.push({
+                name: legendLine && legendLine.length > 0 && legendLine[index],
+                type: 'line',
+                data: item,
+                itemStyle: {
+                    normal: {
+                        color: data.lineColor[index],
+                        lineStyle: {
+                            width: 2,//折线宽度
+                            type: 'solid',
+                        }
                     }
-                }
-            },
-            label: {
-                normal: {
-                    show: false, //折线上方label控制显示隐藏
-                    position: 'top',
-                }
-            },
-            symbol: 'circle',
-            symbolSize: 5
-        })
-    })
+                },
+                label: {
+                    normal: {
+                        show: false, //折线上方label控制显示隐藏
+                        position: 'top',
+                    }
+                },
+                symbol: 'circle',
+                symbolSize: 5
+            })
+        }
+    );
 
     return {
         seriesArr,
         legendArr
     }
-})()
+})();
 option1 = {
     title: {
         show: true,
@@ -571,7 +572,27 @@ data.forEach(function (d, i) {
         }
     })
 })
-var indicator = [];
+var indicator = [{
+    "name": "车锁",
+    "value": 15
+},
+    {
+        "name": "二维码",
+        "value": 14
+    },
+    {
+        "name": "链条",
+        "value": 23
+    },
+    {
+        "name": "刹车",
+        "value": 2
+    },
+    {
+        "name": "其他",
+        "value": 50
+    }
+];
 
 data.forEach(function (d) {
     indicator.push({
@@ -581,49 +602,49 @@ data.forEach(function (d) {
     })
 })
 
-
-option31 = {
-    tooltip: {
-        show: true,
-        trigger: "item"
-    },
-    radar: {
-        center: ["50%", "50%"],//偏移位置
-        radius: "80%",
-        startAngle: 40, // 起始角度
-        splitNumber: 4,
-        shape: "circle",
-        splitArea: {
-            areaStyle: {
-                color: 'transparent'
-            }
-        },
-        axisLabel: {
-            show: false,
-            fontSize: 10,
-            color: "#000",
-            fontStyle: "normal",
-            fontWeight: "normal"
-        },
-        axisLine: {
-            show: true,
-            lineStyle: {
-                color: "rgba(255, 255, 255, 0.5)"
-            }
-        },
-        splitLine: {
-            show: true,
-            lineStyle: {
-                color: "rgba(255, 255, 255, 0.5)"
-            }
-        },
-        indicator: indicator
-    },
-    series: [{
-        type: "radar",
-        data: renderData
-    }]
-}
+//
+// option31 = {
+//     tooltip: {
+//         show: true,
+//         trigger: "item"
+//     },
+//     radar: {
+//         center: ["50%", "50%"],//偏移位置
+//         radius: "80%",
+//         startAngle: 40, // 起始角度
+//         splitNumber: 4,
+//         shape: "circle",
+//         splitArea: {
+//             areaStyle: {
+//                 color: 'transparent'
+//             }
+//         },
+//         axisLabel: {
+//             show: false,
+//             fontSize: 10,
+//             color: "#000",
+//             fontStyle: "normal",
+//             fontWeight: "normal"
+//         },
+//         axisLine: {
+//             show: true,
+//             lineStyle: {
+//                 color: "rgba(255, 255, 255, 0.5)"
+//             }
+//         },
+//         splitLine: {
+//             show: true,
+//             lineStyle: {
+//                 color: "rgba(255, 255, 255, 0.5)"
+//             }
+//         },
+//         indicator: indicator
+//     },
+//     series: [{
+//         type: "radar",
+//         data: renderData
+//     }]
+// }
 //////////////////////本月发生事件2 end
 
 
