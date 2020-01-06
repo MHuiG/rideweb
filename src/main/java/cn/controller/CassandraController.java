@@ -124,6 +124,30 @@ public class CassandraController {
         return list;
     }
 
+    @RequestMapping(value = "/map", produces = "application/json;charset=UTF-8")
+    @ResponseBody
+    public List getmap() {
+        List list = new ArrayList();
+
+        String allData = "";
+        String Nbdocks = "";
+        List<Location> o = CassandraService.getLocationAll();
+
+        for (Location i : o) {
+            Nbdocks += "{\n" +
+                    "        \"name\": \"" + i.getStation() + "\",\n" +
+                    "        \"value\": [" + i.getLongitude() + ", " + i.getLatitude() + ", " + i.getNbdocks() + "],\n" +
+                    "        \"symbolSize\": " + i.getNbdocks() + ",\n" +
+                    "        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n" +
+                    "    },";
+        }
+        Nbdocks = "[" + Nbdocks + "]";
+
+        list.add(Nbdocks);
+
+        return list;
+    }
+
     @RequestMapping(value = "/getCassandraService", produces = "application/json;charset=UTF-8")
     @ResponseBody
     public int getCassandraService() {
