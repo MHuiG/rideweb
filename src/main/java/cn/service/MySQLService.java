@@ -1,8 +1,12 @@
 package cn.service;
 
+import cn.pojo.mysql.Rideyear;
+
+import java.util.List;
+
 public interface MySQLService {
 
-    String getRatingSum(int top);
+    List<Rideyear> selectrideyear();
 
 
 }

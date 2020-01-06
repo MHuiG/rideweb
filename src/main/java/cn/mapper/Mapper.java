@@ -1,10 +1,11 @@
 package cn.mapper;
 
-import cn.pojo.RatingSum;
+import cn.pojo.mysql.Rideyear;
 
 import java.util.List;
 
 public interface Mapper {
-    List<RatingSum> selectRatingSum(int top);
+    List<Rideyear> selectrideyear();
+
 
 }

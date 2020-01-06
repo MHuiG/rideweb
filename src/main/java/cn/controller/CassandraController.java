@@ -109,12 +109,18 @@ public class CassandraController {
     public List getsum() {
         List list = new ArrayList();
         int SumNbdocks = 0;
+//        double time = 0;
         List<Location> o = CassandraService.getLocationAll();
+        //List<Sea> sea = CassandraService.getSeaAll();
         for (Location i : o) {
             SumNbdocks += Integer.parseInt(i.getNbdocks());
         }
+//        for (Sea i : sea) {
+//            time += Double.parseDouble(i.getTotalDuration());
+//        }
         list.add(SumNbdocks);
         list.add(o.size());
+//        list.add((int) (time / 1000 / 60 / 60));
         return list;
     }
 

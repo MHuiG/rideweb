@@ -221,10 +221,10 @@ public class CassandraServiceImpl implements CassandraService {
             o.setEndDate(row.getString("EndDate"));
             o.setEndStation(row.getString("EndStation"));
             o.setEndStationNumber(row.getString("EndStationNumber"));
-            o.setTotalDuration(row.getString("Nbdocks"));
-            o.setAccountType(row.getString("Nbdocks"));
-            o.setStartDateTemp(row.getString("Nbdocks"));
-            o.setEndDateTemp(row.getString("Nbdocks"));
+            o.setTotalDuration(row.getString("TotalDuration"));
+            o.setAccountType(row.getString("AccountType"));
+            o.setStartDateTemp(row.getInt("StartDateTemp"));
+            o.setEndDateTemp(row.getInt("EndDateTemp"));
             s.add(o);
         }
         return s;

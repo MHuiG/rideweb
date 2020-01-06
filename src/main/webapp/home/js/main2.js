@@ -126,7 +126,7 @@ option2 = {
     },]
 };
 $.ajax({
-    url: "/rideweb/main2",
+    url: "/rideweb/main22",
     type: "POST",
     dataType: "json",
     success: function (data) {
@@ -143,6 +143,20 @@ $.ajax({
             },]
         };
         myChart2.setOption(option2);
+    },
+    error: function (err) {
+        console.log(err);
+    }
+});
+
+$.ajax({
+    url: "/rideweb/sum",
+    type: "POST",
+    dataType: "json",
+    success: function (data) {
+        // console.log(data);
+        $("body > div.visual > div.visual_con > div.visual_conTop > div:nth-child(1) > div > p").html(data[0]);
+        $("body > div.visual > div.visual_con > div.visual_conTop > div:nth-child(2) > div > p").html(data[1]);
     },
     error: function (err) {
         console.log(err);
