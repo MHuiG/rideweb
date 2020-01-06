@@ -11,7 +11,7 @@ import java.util.List;
 import org.bson.Document;
 import org.testng.annotations.Test;
 import cn.pojo.RatingSumToPageBean;
-import cn.pojo.RatingSum;
+
 @org.springframework.stereotype.Service
 @Test
 public class MongoDBServiceImpl implements MongoDBService {
@@ -26,7 +26,7 @@ public class MongoDBServiceImpl implements MongoDBService {
         MongoCollection col = db.getCollection("season");
         return col;
     }
-        public void casual_start_data (MongoCollection col){
+        public ArrayList casual_start_data (MongoCollection col){
 
             BasicDBObject query = new BasicDBObject(); //------------临时车+出发站
             query.append("Account type", "Casual");
@@ -51,14 +51,24 @@ public class MongoDBServiceImpl implements MongoDBService {
                 count[i] = Double.parseDouble(num.toString());
                 i++;
             }
-            i = 0;
-            RatingSumToPageBean title = new RatingSumToPageBean();
-            title.setTitle(name);
-            title.setSum(count);
-            String[] a = title.getTitle();
-            System.out.println(a[0]);
+                RatingSumToPageBean title = new RatingSumToPageBean();
+                title.setTitle(name);
+                String[] a = new String[3];
+                a = title.getTitle();
+                title.setSum(count);
+                double[] b = new double[3];
+                b= title.getSum();
+                ArrayList a1 = new ArrayList();
+                for(i=0;i<3;i++){
+                    a1.add(a[i]);
+                    a1.add(b[i]);
+                }
+                return a1;
+
+
+
         }
-        public void casual_end_data (MongoCollection col){
+        public ArrayList casual_end_data (MongoCollection col){
             BasicDBObject query = new BasicDBObject(); //--------------临时车+结束站
             query.append("Account type", "Casual");
             BasicDBObject match = new BasicDBObject("$match", query);
@@ -82,10 +92,20 @@ public class MongoDBServiceImpl implements MongoDBService {
                 count[i] = Double.parseDouble(num.toString());
                 i++;
             }
-            i = 0;
+
             RatingSumToPageBean title = new RatingSumToPageBean();
             title.setTitle(name);
+            String[] a = new String[3];
+            a = title.getTitle();
             title.setSum(count);
+            double[] b = new double[3];
+            b= title.getSum();
+            ArrayList a1 = new ArrayList();
+            for(i=0;i<3;i++){
+                a1.add(a[i]);
+                a1.add(b[i]);
+            }
+            return a1;
         }
 
     }
