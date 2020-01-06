@@ -21,7 +21,7 @@ public class MongoDBController {
     @Autowired
     private MongoDBService MongoDBService;
 
-    @RequestMapping(value = "/getMongoDBService", produces = "application/json;charset=UTF-8")
+    @RequestMapping(value = "/getMongoDBService")
     @ResponseBody
     @Test
     public List getMongoDBService() {
