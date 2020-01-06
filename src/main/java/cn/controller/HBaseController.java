@@ -1,10 +1,14 @@
 package cn.controller;
 
+import cn.pojo.Cassandra.Location;
+import cn.pojo.Cassandra.Season;
 import cn.service.HBaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.io.IOException;
 
 
 @Controller
@@ -20,6 +24,22 @@ public class HBaseController {
         System.out.println("getHBaseService..");
         return 1;
     }
-
-
+    //插入更新
+    @RequestMapping(value = "/getinsertHBase", produces = "application/json;charset=UTF-8")
+    @ResponseBody
+    public int getinsertHBase(String ID, String StartDate, String StartStation, String StartStationNumber, String EndDate,String EndStation,String EndStationNumber, String TotalDuration, String AccountType) throws IOException {
+        Season o = new Season();
+        o.setId(ID);
+        o.setStartDate(StartDate);
+        o.setStartStation(StartStation);
+        o.setStartStationNumber(StartStationNumber);
+        o.setEndDate(EndDate);
+        o.setEndStation(EndStation);
+        o.setEndStationNumber(EndStationNumber);
+        o.setTotalDuration(TotalDuration);
+        o.setAccountType(AccountType);
+        System.out.println("insertLocation " + o.getId());
+        HBaseService.addSeasonData(o);
+        return 1;
+    }
 }

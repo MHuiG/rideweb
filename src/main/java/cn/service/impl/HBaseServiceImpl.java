@@ -144,7 +144,8 @@ public class HBaseServiceImpl implements HBaseService {
     //根据行键get查询数据
     @Test
     public List<Season> getData(Season s) throws IOException {
-            getconncet();
+
+        getconncet();
             List<Season> p = new ArrayList<>();
             Table table_Name = connection.getTable(TableName.valueOf("season"));
             Get get1 = new Get(Bytes.toBytes(s.getId()));
@@ -194,12 +195,11 @@ public class HBaseServiceImpl implements HBaseService {
 //    插入数据
     @Test
     public void addSeasonData(Season o) throws IOException {
-        try {
             getconncet();
-            HTable table_Name = (HTable) connection.getTable(TableName.valueOf("ride"));
+            HTable tableName=(HTable)connection.getTable(TableName.valueOf("NEWTABLE"));
             //设置客户端缓存大小，即缓存为6MB时执行真正的put，在flushCommits时进行手动提交。若为true，则每次put操作都直接提交给regionserver，在大批量写入时效率较低。
-            table_Name.setWriteBufferSize(6 * 1024 * 1024);
-            table_Name.setAutoFlushTo(false);
+            tableName.setWriteBufferSize(6 * 1024 * 1024);
+            tableName.setAutoFlushTo(false);
             //关闭WAL写入
             Put put1 = new Put(Bytes.toBytes(o.getId())); //行键
             put1.setDurability(Durability.SKIP_WAL); //批量加载，关闭预写日志WAL，如果出现问题，可以重新运行批量负载，而不会有数据丢失的风险
@@ -212,14 +212,11 @@ public class HBaseServiceImpl implements HBaseService {
             put1.addColumn(Bytes.toBytes("info"), Bytes.toBytes("Endterminal"), Bytes.toBytes(o.getEndStationNumber()));
             put1.addColumn(Bytes.toBytes("info"), Bytes.toBytes("Totalduration"), Bytes.toBytes(o.getTotalDuration()));
             put1.addColumn(Bytes.toBytes("info"), Bytes.toBytes("Accounttype"), Bytes.toBytes(o.getAccountType()));
-            table_Name.put(put1);
-            table_Name.flushCommits();
+            tableName.put(put1);
+            tableName.flushCommits();
             System.out.println("添加数据成功");
-            table_Name.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.out.println("添加数据失败");
-        }
+            tableName.close();
+
     }
 //    删除行数据
     @Test
