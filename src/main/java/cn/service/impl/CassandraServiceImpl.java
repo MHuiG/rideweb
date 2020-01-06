@@ -38,10 +38,10 @@ public class CassandraServiceImpl implements CassandraService {
     }
 
     /**
-     * 创建表locations
+     * 创建表loca
      */
     @Test
-    public void createTablelocations() {
+    public void createTableloca() {
         connectDB();
         String cql = "CREATE TABLE if not exists mydb.loca (Terminal text,Station text,Latitude text,Longitude text,Nbdocks text,PRIMARY KEY (Terminal))";
         session.execute(cql);
