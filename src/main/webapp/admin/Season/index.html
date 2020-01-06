@@ -159,12 +159,16 @@
                 var arrLen = data.length;
                 if (arrLen > 0) {
                     for (i = 0; i < arrLen; i++) {
-                        result += "<tr id=" + data[i].Terminal + ">\n" +
-                            "        <td>" + data[i].Terminal + "</td>\n" +
-                            "        <td>" + data[i].Station + "</td>\n" +
-                            "        <td>" + data[i].Latitude + "</td>\n" +
-                            "        <td>" + data[i].Longitude + "</td>\n" +
-                            "        <td>" + data[i].Nbdocks + "</td>\n" +
+                        result += "<tr id=" + data[i].id + ">\n" +
+                            "        <td>" + data[i].id + "</td>\n" +
+                            "        <td>" + data[i].StartDate + "</td>\n" +
+                            "        <td>" + data[i].StartStation + "</td>\n" +
+                            "        <td>" + data[i].StartStationNumber + "</td>\n" +
+                            "        <td>" + data[i].EndDate + "</td>\n" +
+                            "        <td>" + data[i].EndStation + "</td>\n" +
+                            "        <td>" + data[i].EndStationNumber + "</td>\n" +
+                            "        <td>" + data[i].TotalDuration + "</td>\n" +
+                            "        <td>" + data[i].AccountType + "</td>\n" +
                             "        <td>\n" +
                             "            <a href=\"#\"onclick=\"edit(this)\">编辑</a>\n" +
                             "            <a href=\"#\" onclick=\"dell(this)\">删除</a>\n" +
@@ -181,13 +185,13 @@
     }
 
     function Selectone() {
-        Station = $("#TStation").val();
+        StartStation = $("#TStation").val();
         $.ajax({
             url: "/rideweb/getLocationByStation",
             type: "POST",
             dataType: "json",
             data: {
-                'Station': Station
+                'StartStation': StartStation
             },
             success: function (data) {
                 // console.log(data);
@@ -195,12 +199,16 @@
                 var arrLen = data.length;
                 if (arrLen > 0) {
                     for (i = 0; i < arrLen; i++) {
-                        result += "<tr id=" + data[i].Terminal + ">\n" +
-                            "        <td>" + data[i].Terminal + "</td>\n" +
-                            "        <td>" + data[i].Station + "</td>\n" +
-                            "        <td>" + data[i].Latitude + "</td>\n" +
-                            "        <td>" + data[i].Longitude + "</td>\n" +
-                            "        <td>" + data[i].Nbdocks + "</td>\n" +
+                        result += "<tr id=" + data[i].id + ">\n" +
+                            "        <td>" + data[i].id + "</td>\n" +
+                            "        <td>" + data[i].StartDate + "</td>\n" +
+                            "        <td>" + data[i].StartStation + "</td>\n" +
+                            "        <td>" + data[i].StartStationNumber + "</td>\n" +
+                            "        <td>" + data[i].EndDate + "</td>\n" +
+                            "        <td>" + data[i].EndStation + "</td>\n" +
+                            "        <td>" + data[i].EndStationNumber + "</td>\n" +
+                            "        <td>" + data[i].TotalDuration + "</td>\n" +
+                            "        <td>" + data[i].AccountType + "</td>\n" +
                             "        <td>\n" +
                             "            <a href=\"#\"onclick=\"edit(this)\">编辑</a>\n" +
                             "            <a href=\"#\" onclick=\"dell(this)\">删除</a>\n" +
