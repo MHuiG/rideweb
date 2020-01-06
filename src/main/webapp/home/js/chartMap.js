@@ -1,3 +1,111 @@
+aa = eval("[{\n        \"name\": \"Hiawatha Ave & E 50th Street\",\n        \"value\": [-93.2101402, 44.9129425, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"15th Ave SE & Como Ave SE\",\n        \"value\": [-93.230469, 44.987517, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Washington & Cedar\",\n        \"value\": [-93.24748, 44.97344, 20],\n        \"symbolSize\": 20,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"100 Main Street SE\",\n        \"value\": [-93.256551, 44.984892, 27],\n        \"symbolSize\": 27,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"18th Ave Trail & 2nd Street NE\",\n        \"value\": [-93.266553, 45.006321, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"10th Street E & Cedar Street\",\n        \"value\": [-93.09759, 44.950189, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"15th Ave SE & 4th Street SE\",\n        \"value\": [-93.234739, 44.979878, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Chicago Ave & S Washington Ave\",\n        \"value\": [-93.256736, 44.977521, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Fort Snelling State Park\",\n        \"value\": [-93.18237, 44.890527, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Marshall Street NE & Lowry Ave\",\n        \"value\": [-93.27166, 45.01312, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"S 5th Street & Nicollet Mall\",\n        \"value\": [-93.2705033, 44.9786652, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Riverside Ave & 23rd Ave S\",\n        \"value\": [-93.240149, 44.967115, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Downtown Library\",\n        \"value\": [-93.269217, 44.980199, 0],\n        \"symbolSize\": 0,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"North Mississippi Regional Park \",\n        \"value\": [-93.283734, 45.042435, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Boom Island Park\",\n        \"value\": [-93.270256, 44.99254, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Portland Ave & Washington Ave\",\n        \"value\": [-93.26023, 44.978068, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Hennepin County Government Center\",\n        \"value\": [-93.266701, 44.976602, 33],\n        \"symbolSize\": 33,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Lake Nokomis\",\n        \"value\": [-93.242761, 44.915957, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Lexington Pkwy & University Ave\",\n        \"value\": [-93.146379, 44.955363, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Upton Ave S & Sheridan Ave S\",\n        \"value\": [-93.314597, 44.92515, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Chicago & 27th Street\",\n        \"value\": [-93.26259, 44.95355, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Nice Ride World Headquarters\",\n        \"value\": [-93.220066, 44.953566, 3],\n        \"symbolSize\": 3,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"36th Ave N & Irving Ave N\",\n        \"value\": [-93.299329, 45.0202715, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"4th Street S & 19th Ave\",\n        \"value\": [-93.24519, 44.97003, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"27th Ave S & Minnehaha Ave\",\n        \"value\": [-93.233092, 44.947329, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"7th Street SE & 10th Ave SE\",\n        \"value\": [-93.238743, 44.985576, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Marshall Street NE & 18th Ave NE\",\n        \"value\": [-93.271571, 45.006229, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Lake Harriet Bandshell\",\n        \"value\": [-93.30713, 44.92936, 25],\n        \"symbolSize\": 25,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"University Ave & Western Ave\",\n        \"value\": [-93.11665, 44.95562, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"U of M St. Paul Student Center\",\n        \"value\": [-93.185029, 44.984527, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"22nd Ave NE & California Street NE\",\n        \"value\": [-93.268598, 45.010119, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"4th Street & 17th Ave SE\",\n        \"value\": [-93.23189, 44.97913, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Grand Ave & Fairview Ave\",\n        \"value\": [-93.177093, 44.940513, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"S 8th Street & 2nd Ave S\",\n        \"value\": [-93.270649, 44.974795, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"23rd Ave SE & University Ave SE\",\n        \"value\": [-93.223002, 44.974397, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"East Lake Street & 36th Ave S\",\n        \"value\": [-93.22106, 44.94826, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"N Milton Street & Summit Ave\",\n        \"value\": [-93.138832, 44.941599, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Shepard Road & Sibley Street\",\n        \"value\": [-93.0834326, 44.9463866, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Girard Ave N & W Broadway Ave\",\n        \"value\": [-93.297071, 44.99957, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"4th Street & 13th Ave SE\",\n        \"value\": [-93.23746, 44.98102, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Webber park\",\n        \"value\": [-93.29065, 45.033069, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Grant Street & Portland Ave\",\n        \"value\": [-93.2669, 44.96954, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Nicollet Island\",\n        \"value\": [-93.26145, 44.985388, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"9th Street N & Hawthorne Ave\",\n        \"value\": [-93.277505, 44.977128, 25],\n        \"symbolSize\": 25,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Pleasant Ave S &  Lake Street\",\n        \"value\": [-93.283163, 44.948556, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Lake Street & Knox Ave S\",\n        \"value\": [-93.305209, 44.9485, 33],\n        \"symbolSize\": 33,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Elliot Ave S & E 24th Street\",\n        \"value\": [-93.2610163, 44.9593738, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"11th Ave S & S 2nd Street\",\n        \"value\": [-93.252189, 44.97673, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Midtown Exchange\",\n        \"value\": [-93.2602, 44.94859, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"University & Bank Street SE\",\n        \"value\": [-93.25576, 44.98717, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Hague Ave & Dale Street\",\n        \"value\": [-93.12661, 44.945736, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Mayo Memorial Building\",\n        \"value\": [-93.23206, 44.97209, 25],\n        \"symbolSize\": 25,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Marshall Street NE & 8th Ave. NE\",\n        \"value\": [-93.266854, 44.995348, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Elliot Park\",\n        \"value\": [-93.26079, 44.970553, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Willey Hall\",\n        \"value\": [-93.242891, 44.972404, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Nicollet Mall & Grant Street\",\n        \"value\": [-93.278133, 44.96995, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Logan Park\",\n        \"value\": [-93.25276, 44.99882, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"7th Street E & Wacouta Street\",\n        \"value\": [-93.089245, 44.950766, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Franklin & Portland\",\n        \"value\": [-93.267526, 44.962846, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"University Ave SE & Bedford Street SE\",\n        \"value\": [-93.21003, 44.96876, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Lyndale Ave S & W 29th Street\",\n        \"value\": [-93.2882273, 44.9494847, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Dupont Ave & 22nd Street\",\n        \"value\": [-93.29303, 44.96146, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \" Grand & Cretin\",\n        \"value\": [-93.192758, 44.939936, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"9th Street & 4th Ave\",\n        \"value\": [-93.26872, 44.97265, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"3rd Ave S & E 38th Street\",\n        \"value\": [-93.2726088, 44.9338787, 11],\n        \"symbolSize\": 11,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Washington Ave S & 10th Ave S\",\n        \"value\": [-93.25535, 44.97654, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Landmark Plaza\",\n        \"value\": [-93.096114, 44.945267, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"28th Street & Nicollet Ave. S\",\n        \"value\": [-93.27831, 44.9519, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Kellogg Blvd W & Smith Ave\",\n        \"value\": [-93.103863, 44.945173, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Washington Ave SE & Union Street SE\",\n        \"value\": [-93.2321, 44.97394, 27],\n        \"symbolSize\": 27,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Malcolm Ave SE & 5th Street SE\",\n        \"value\": [-93.211264, 44.9733714, 24],\n        \"symbolSize\": 24,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"University Ave. NE & 12th Ave. NE\",\n        \"value\": [-93.26296, 44.999894, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"South 2nd Street & 3rd Ave S\",\n        \"value\": [-93.2634544, 44.9809267, 31],\n        \"symbolSize\": 31,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"North 2nd Street & 4th Ave N\",\n        \"value\": [-93.272459, 44.986087, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Lake Calhoun Center\",\n        \"value\": [-93.3172944, 44.9484672, 27],\n        \"symbolSize\": 27,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"10th Street & Nicollet Mall\",\n        \"value\": [-93.274544, 44.973839, 11],\n        \"symbolSize\": 11,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"38th Street Light Rail Station\",\n        \"value\": [-93.229338, 44.93434, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Glenwood Ave & N Morgan Ave\",\n        \"value\": [-93.304427, 44.981147, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Social Sciences\",\n        \"value\": [-93.243754, 44.971359, 29],\n        \"symbolSize\": 29,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Civil Engineering\",\n        \"value\": [-93.231958, 44.976096, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"3rd Street N & 8th Ave N\",\n        \"value\": [-93.279854, 44.987996, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Minnehaha Park\",\n        \"value\": [-93.213587, 44.916906, 27],\n        \"symbolSize\": 27,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Oak Street Ramp\",\n        \"value\": [-93.22697, 44.97202, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"West 34th Street  & Hennepin Ave S\",\n        \"value\": [-93.298634, 44.941388, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Union Depot\",\n        \"value\": [-93.086584, 44.948399, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"2nd Street SE & 5th Ave SE\",\n        \"value\": [-93.249653, 44.983321, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Sanford Hall\",\n        \"value\": [-93.240282, 44.980831, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Midtown YWCA\",\n        \"value\": [-93.24054, 44.94823, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Dupont Ave S & W 29th Street\",\n        \"value\": [-93.293129, 44.949699, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"West 32nd Street & Bryant Ave S\",\n        \"value\": [-93.29038, 44.94478, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"11th Street & Marquette\",\n        \"value\": [-93.27405, 44.97265, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Science Museum of Minnesota\",\n        \"value\": [-93.097836, 44.942846, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Cedar Street & Columbus Ave\",\n        \"value\": [-93.0995487, 44.952351, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Upper Landing\",\n        \"value\": [-93.098712, 44.940902, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Williamson Hall\",\n        \"value\": [-93.234911, 44.977406, 25],\n        \"symbolSize\": 25,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Wells Fargo Place\",\n        \"value\": [-93.09663, 44.94813, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"N Victoria Street & University Ave \",\n        \"value\": [-93.136556, 44.956052, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"7th Place & Jackson Street\",\n        \"value\": [-93.091207, 44.949433, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"5th Ave N & 4th Street N\",\n        \"value\": [-93.277234, 44.98446, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Loring Park\",\n        \"value\": [-93.284927, 44.9715, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"N Washington Ave & 9th Ave N\",\n        \"value\": [-93.2797837, 44.9898791, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"5th Street E & Minnesota Street N\",\n        \"value\": [-93.09231, 44.94683, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"2nd Street N & 8th Ave N\",\n        \"value\": [-93.27651, 44.989166, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"E 14th Street & N Robert Street \",\n        \"value\": [-93.097817, 44.954697, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Mpls Convention Center\",\n        \"value\": [-93.275861, 44.970041, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Harriet Island\",\n        \"value\": [-93.094532, 44.93768, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Washington & 2nd Ave N\",\n        \"value\": [-93.27099, 44.98383, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Coldwater Spring\",\n        \"value\": [-93.198283, 44.905043, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Curfew Street & Ellis Ave.\",\n        \"value\": [-93.20525, 44.96616, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Broadway & Marshall Street NE\",\n        \"value\": [-93.268633, 44.998613, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Portland Ave & 4th Street S\",\n        \"value\": [-93.261632, 44.976134, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Mariucci Arena\",\n        \"value\": [-93.226629, 44.977899, 25],\n        \"symbolSize\": 25,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Kellogg Blvd E & Jackson Street\",\n        \"value\": [-93.088802, 44.946191, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"SE 3rd Ave & University Ave SE\",\n        \"value\": [-93.252102, 44.985465, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Wabasha Street S & E Fillmore Ave\",\n        \"value\": [-93.0900067, 44.940657, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"West 36th Street & Bryant Ave S\",\n        \"value\": [-93.2912, 44.93775, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Sherburne Ave & Snelling Ave N\",\n        \"value\": [-93.16734, 44.956624, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"46th Street Light Rail Station\",\n        \"value\": [-93.21953, 44.920466, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Macalester College\",\n        \"value\": [-93.17022, 44.940218, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"MCAD\",\n        \"value\": [-93.274981, 44.957214, 17],\n        \"symbolSize\": 17,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"22nd Ave S & Franklin Ave\",\n        \"value\": [-93.241042, 44.96293, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"YWCA Uptown\",\n        \"value\": [-93.29853, 44.95131, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"5th Street NE & 1st Ave NE\",\n        \"value\": [-93.254295, 44.990328, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Hamline Ave N & University Ave\",\n        \"value\": [-93.1567025, 44.9559764, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Minnesota Dept. of Transportation\",\n        \"value\": [-93.10445, 44.95385, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"2nd Ave N & N 6th Street\",\n        \"value\": [-93.275626, 44.980536, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Lake Como Pavilion\",\n        \"value\": [-93.143383, 44.981914, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"University of St. Thomas\",\n        \"value\": [-93.191837, 44.943017, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Farview Park\",\n        \"value\": [-93.287559, 45.005994, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Carleton Street & University Ave \",\n        \"value\": [-93.195906, 44.963549, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Lake Street & Humboldt\",\n        \"value\": [-93.30077, 44.94865, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Weisman Art Museum\",\n        \"value\": [-93.237254, 44.973607, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Minnesota History Center\",\n        \"value\": [-93.10673, 44.949053, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"IDS Center\",\n        \"value\": [-93.272185, 44.975641, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"West 15th Street & Willow\",\n        \"value\": [-93.281991, 44.968237, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Wirth Beach\",\n        \"value\": [-93.322066, 44.9798, 11],\n        \"symbolSize\": 11,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Dale Street & Grand Ave.\",\n        \"value\": [-93.126261, 44.939779, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"23rd Ave SE & 6th Street SE\",\n        \"value\": [-93.221639, 44.977028, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"6th Ave SE & University Ave\",\n        \"value\": [-93.24812, 44.983281, 27],\n        \"symbolSize\": 27,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"7th Street W & Grand Ave\",\n        \"value\": [-93.10624, 44.94144, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Selby Ave & Virginia Street\",\n        \"value\": [-93.1151, 44.9467, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Como Park Conservatory\",\n        \"value\": [-93.1517, 44.98115, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Plymouth Ave N &  N Oliver Ave\",\n        \"value\": [-93.306269, 44.991412, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"26th Street & Hennepin\",\n        \"value\": [-93.297143, 44.9554734, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Groveland Ave & Clifton Place\",\n        \"value\": [-93.286294, 44.966145, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Central Ave. NE & 22nd Ave NE\",\n        \"value\": [-93.247114, 45.00994, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Walker Art Center\",\n        \"value\": [-93.2890749, 44.9671037, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Minneapolis Park & Recreation Board\",\n        \"value\": [-93.277037, 45.00095, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"W 36th Street & W Calhoun Parkway\",\n        \"value\": [-93.320212, 44.937817, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Nicollet Ave & W 37th Street\",\n        \"value\": [-93.2780778, 44.9353179, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Rice Street & University Ave W\",\n        \"value\": [-93.1057432, 44.9556215, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"5th Street NE & 3rd Ave NE\",\n        \"value\": [-93.255558, 44.991821, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Dale Street N & University Ave\",\n        \"value\": [-93.126088, 44.956066, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Coffman Union\",\n        \"value\": [-93.234762, 44.973378, 35],\n        \"symbolSize\": 35,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"McNamara Center\",\n        \"value\": [-93.22854, 44.9743, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Fairview Ave. & University Ave.\",\n        \"value\": [-93.17706, 44.95665, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"26th Street & Lyndale\",\n        \"value\": [-93.28775, 44.95548, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"E Franklin Ave & Bloomington Ave S\",\n        \"value\": [-93.252269, 44.96285, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Target Field Station\",\n        \"value\": [-93.2790381, 44.9841254, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Franklin & 28th Ave\",\n        \"value\": [-93.230893, 44.962701, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Minneapolis Farmers Market\",\n        \"value\": [-93.28542, 44.98052, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"7th Street & 4th Ave S\",\n        \"value\": [-93.266684, 44.97497, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Washington & Marquette\",\n        \"value\": [-93.2669252, 44.9808736, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"W 31st Street & Hennepin Ave S\",\n        \"value\": [-93.29736, 44.946687, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Englewood Ave & N Asbury Street\",\n        \"value\": [-93.165868, 44.964172, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"3rd Street NE & Lowry Ave NE\",\n        \"value\": [-93.264573, 45.01304, 11],\n        \"symbolSize\": 11,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"2nd Ave S & S 3rd Street\",\n        \"value\": [-93.26599, 44.97974, 27],\n        \"symbolSize\": 27,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"N 4th Ave & W River Parkway\",\n        \"value\": [-93.269087, 44.988461, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Fort Snelling Visitor Center\",\n        \"value\": [-93.187381, 44.894044, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Hennepin & Central Avenue NE\",\n        \"value\": [-93.25392, 44.98889, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Mississippi River Blvd & Summit Ave\",\n        \"value\": [-93.197997, 44.940288, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Franklin & 11th Ave\",\n        \"value\": [-93.2583, 44.96251, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Gateway Park\",\n        \"value\": [-93.2675139, 44.9825943, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Lake Street & West River Parkway\",\n        \"value\": [-93.206201, 44.948452, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Wilder Street & Marshall Ave\",\n        \"value\": [-93.185819, 44.948147, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"E 38th Street & 42nd Ave S\",\n        \"value\": [-93.2125, 44.9342, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Hennepin Ave & N 5th Street \",\n        \"value\": [-93.272883, 44.97955, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Bryant Ave N & West Broadway\",\n        \"value\": [-93.290941, 44.999341, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Broadway Street N & 4th Street E\",\n        \"value\": [-93.0845, 44.94965, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Cooke Hall\",\n        \"value\": [-93.230029, 44.976303, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Delaware Street SE & 26th Ave SE\",\n        \"value\": [-93.221021, 44.972128, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Midtown Greenway & 5th Ave S\",\n        \"value\": [-93.269278, 44.950371, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Elliot Hall\",\n        \"value\": [-93.23818, 44.97685, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Lyndale Ave S & 22nd Street \",\n        \"value\": [-93.28815, 44.960744, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Bohemian Flats\",\n        \"value\": [-93.2416, 44.976223, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Nicollet & Franklin\",\n        \"value\": [-93.277939, 44.96342, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"7th Street N & Plymouth Ave N\",\n        \"value\": [-93.293988, 44.991704, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"11th Street & Hennepin\",\n        \"value\": [-93.27869, 44.97534, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"YWCA Downtown\",\n        \"value\": [-93.276435, 44.972217, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Kowalski's Market\",\n        \"value\": [-93.1531513, 44.9401026, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Hennepin & Laurel Ave\",\n        \"value\": [-93.28305, 44.97391, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Hennepin Ave & S Washington Ave \",\n        \"value\": [-93.269195, 44.981895, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Como Ave SE & 29th Ave SE\",\n        \"value\": [-93.212892, 44.987934, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Cleveland Ave S & Highland Parkway\",\n        \"value\": [-93.187264, 44.919593, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"West Broadway & Logan Ave N\",\n        \"value\": [-93.305857, 45.002448, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Schmidt Brewery\",\n        \"value\": [-93.124281, 44.92898, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"27th Ave SE & University Ave.\",\n        \"value\": [-93.218919, 44.97259, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Currie Park\",\n        \"value\": [-93.251136, 44.969225, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"N Robert Street & E 10th Street\",\n        \"value\": [-93.094545, 44.951132, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"25th Street & 33rd Ave S\",\n        \"value\": [-93.223374, 44.957341, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Kellogg Blvd & Wabasha Street\",\n        \"value\": [-93.09227, 44.943846, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Washington Ave N & Cedar Lake Trail\",\n        \"value\": [-93.274031, 44.985406, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },]");
+option8 = {
+
+    title: {
+        text: '',
+        left: 'center',
+        textStyle: {
+            color: '#fff'
+        }
+    },
+    legend: {
+        show: false,
+        orient: 'vertical',
+        top: 'bottom',
+        left: 'right',
+        data: ['地点', '线路'],
+        textStyle: {
+            color: '#fff'
+        }
+    },
+    geo: {
+        map: 'world',
+        label: {
+            emphasis: {
+                show: false
+            }
+        },
+        roam: true,
+        itemStyle: {
+            normal: {
+                areaColor: 'rgba(7,21,57,0.5)',
+                borderColor: '#0177ff'
+            },
+            emphasis: {
+                areaColor: '#071537'//鼠标指上市时的颜色
+            }
+        }
+    },
+    series: [{
+        name: '地点',
+        type: 'effectScatter',
+        coordinateSystem: 'geo',
+        zlevel: 2,
+        rippleEffect: {
+            brushType: 'stroke'
+        },
+        label: {
+            emphasis: {
+                show: true,
+                position: 'right',
+                formatter: '{b}'
+            }
+        },
+        symbolSize: 2,
+        itemStyle: {
+            showEffectOn: 'render',
+            normal: {
+                color: '#46bee9'
+            }
+        },
+        data: aa
+        //data: allData.citys
+    },
+        {
+            name: '线路',
+            type:
+                'lines',
+            coordinateSystem:
+                'geo',
+            zlevel:
+                2,
+            large:
+                true,
+            effect:
+                {
+                    show: true,
+                    constantSpeed:
+                        30,
+                    symbol:
+                        'pin',
+                    symbolSize:
+                        3,
+                    trailLength:
+                        0,
+                }
+            ,
+            lineStyle: {
+                normal: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0, color: '#58B3CC'
+                    }, {
+                        offset: 1, color: '#F58158'
+                    }], false),
+                    width:
+                        1,
+                    opacity:
+                        0.2,
+                    curveness:
+                        0.1
+                }
+            }
+            ,
+            // data: allData.moveLines
+        }
+    ]
+}
+;
+
 // var allData = {
 //     "citys": [{
 //         "name": "延寿",
@@ -1888,587 +1996,481 @@
 //         "coords": [[126.549572, 43.837883], [113.392782, 22.517646]]
 //     }, {"fromName": "黑龙江", "toName": "胶州", "coords": [[126.661669, 45.742347], [120.033382, 36.26468]]}]
 // };
-aa = eval("[{\n        \"name\": \"Hiawatha Ave & E 50th Street\",\n        \"value\": [-93.2101402, 44.9129425, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"15th Ave SE & Como Ave SE\",\n        \"value\": [-93.230469, 44.987517, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Washington & Cedar\",\n        \"value\": [-93.24748, 44.97344, 20],\n        \"symbolSize\": 20,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"100 Main Street SE\",\n        \"value\": [-93.256551, 44.984892, 27],\n        \"symbolSize\": 27,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"18th Ave Trail & 2nd Street NE\",\n        \"value\": [-93.266553, 45.006321, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"10th Street E & Cedar Street\",\n        \"value\": [-93.09759, 44.950189, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"15th Ave SE & 4th Street SE\",\n        \"value\": [-93.234739, 44.979878, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Chicago Ave & S Washington Ave\",\n        \"value\": [-93.256736, 44.977521, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Fort Snelling State Park\",\n        \"value\": [-93.18237, 44.890527, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Marshall Street NE & Lowry Ave\",\n        \"value\": [-93.27166, 45.01312, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"S 5th Street & Nicollet Mall\",\n        \"value\": [-93.2705033, 44.9786652, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Riverside Ave & 23rd Ave S\",\n        \"value\": [-93.240149, 44.967115, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Downtown Library\",\n        \"value\": [-93.269217, 44.980199, 0],\n        \"symbolSize\": 0,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"North Mississippi Regional Park \",\n        \"value\": [-93.283734, 45.042435, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Boom Island Park\",\n        \"value\": [-93.270256, 44.99254, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Portland Ave & Washington Ave\",\n        \"value\": [-93.26023, 44.978068, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Hennepin County Government Center\",\n        \"value\": [-93.266701, 44.976602, 33],\n        \"symbolSize\": 33,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Lake Nokomis\",\n        \"value\": [-93.242761, 44.915957, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Lexington Pkwy & University Ave\",\n        \"value\": [-93.146379, 44.955363, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Upton Ave S & Sheridan Ave S\",\n        \"value\": [-93.314597, 44.92515, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Chicago & 27th Street\",\n        \"value\": [-93.26259, 44.95355, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Nice Ride World Headquarters\",\n        \"value\": [-93.220066, 44.953566, 3],\n        \"symbolSize\": 3,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"36th Ave N & Irving Ave N\",\n        \"value\": [-93.299329, 45.0202715, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"4th Street S & 19th Ave\",\n        \"value\": [-93.24519, 44.97003, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"27th Ave S & Minnehaha Ave\",\n        \"value\": [-93.233092, 44.947329, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"7th Street SE & 10th Ave SE\",\n        \"value\": [-93.238743, 44.985576, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Marshall Street NE & 18th Ave NE\",\n        \"value\": [-93.271571, 45.006229, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Lake Harriet Bandshell\",\n        \"value\": [-93.30713, 44.92936, 25],\n        \"symbolSize\": 25,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"University Ave & Western Ave\",\n        \"value\": [-93.11665, 44.95562, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"U of M St. Paul Student Center\",\n        \"value\": [-93.185029, 44.984527, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"22nd Ave NE & California Street NE\",\n        \"value\": [-93.268598, 45.010119, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"4th Street & 17th Ave SE\",\n        \"value\": [-93.23189, 44.97913, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Grand Ave & Fairview Ave\",\n        \"value\": [-93.177093, 44.940513, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"S 8th Street & 2nd Ave S\",\n        \"value\": [-93.270649, 44.974795, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"23rd Ave SE & University Ave SE\",\n        \"value\": [-93.223002, 44.974397, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"East Lake Street & 36th Ave S\",\n        \"value\": [-93.22106, 44.94826, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"N Milton Street & Summit Ave\",\n        \"value\": [-93.138832, 44.941599, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Shepard Road & Sibley Street\",\n        \"value\": [-93.0834326, 44.9463866, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Girard Ave N & W Broadway Ave\",\n        \"value\": [-93.297071, 44.99957, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"4th Street & 13th Ave SE\",\n        \"value\": [-93.23746, 44.98102, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Webber park\",\n        \"value\": [-93.29065, 45.033069, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Grant Street & Portland Ave\",\n        \"value\": [-93.2669, 44.96954, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Nicollet Island\",\n        \"value\": [-93.26145, 44.985388, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"9th Street N & Hawthorne Ave\",\n        \"value\": [-93.277505, 44.977128, 25],\n        \"symbolSize\": 25,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Pleasant Ave S &  Lake Street\",\n        \"value\": [-93.283163, 44.948556, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Lake Street & Knox Ave S\",\n        \"value\": [-93.305209, 44.9485, 33],\n        \"symbolSize\": 33,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Elliot Ave S & E 24th Street\",\n        \"value\": [-93.2610163, 44.9593738, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"11th Ave S & S 2nd Street\",\n        \"value\": [-93.252189, 44.97673, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Midtown Exchange\",\n        \"value\": [-93.2602, 44.94859, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"University & Bank Street SE\",\n        \"value\": [-93.25576, 44.98717, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Hague Ave & Dale Street\",\n        \"value\": [-93.12661, 44.945736, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Mayo Memorial Building\",\n        \"value\": [-93.23206, 44.97209, 25],\n        \"symbolSize\": 25,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Marshall Street NE & 8th Ave. NE\",\n        \"value\": [-93.266854, 44.995348, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Elliot Park\",\n        \"value\": [-93.26079, 44.970553, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Willey Hall\",\n        \"value\": [-93.242891, 44.972404, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Nicollet Mall & Grant Street\",\n        \"value\": [-93.278133, 44.96995, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Logan Park\",\n        \"value\": [-93.25276, 44.99882, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"7th Street E & Wacouta Street\",\n        \"value\": [-93.089245, 44.950766, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Franklin & Portland\",\n        \"value\": [-93.267526, 44.962846, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"University Ave SE & Bedford Street SE\",\n        \"value\": [-93.21003, 44.96876, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Lyndale Ave S & W 29th Street\",\n        \"value\": [-93.2882273, 44.9494847, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Dupont Ave & 22nd Street\",\n        \"value\": [-93.29303, 44.96146, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \" Grand & Cretin\",\n        \"value\": [-93.192758, 44.939936, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"9th Street & 4th Ave\",\n        \"value\": [-93.26872, 44.97265, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"3rd Ave S & E 38th Street\",\n        \"value\": [-93.2726088, 44.9338787, 11],\n        \"symbolSize\": 11,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Washington Ave S & 10th Ave S\",\n        \"value\": [-93.25535, 44.97654, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Landmark Plaza\",\n        \"value\": [-93.096114, 44.945267, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"28th Street & Nicollet Ave. S\",\n        \"value\": [-93.27831, 44.9519, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Kellogg Blvd W & Smith Ave\",\n        \"value\": [-93.103863, 44.945173, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Washington Ave SE & Union Street SE\",\n        \"value\": [-93.2321, 44.97394, 27],\n        \"symbolSize\": 27,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Malcolm Ave SE & 5th Street SE\",\n        \"value\": [-93.211264, 44.9733714, 24],\n        \"symbolSize\": 24,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"University Ave. NE & 12th Ave. NE\",\n        \"value\": [-93.26296, 44.999894, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"South 2nd Street & 3rd Ave S\",\n        \"value\": [-93.2634544, 44.9809267, 31],\n        \"symbolSize\": 31,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"North 2nd Street & 4th Ave N\",\n        \"value\": [-93.272459, 44.986087, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Lake Calhoun Center\",\n        \"value\": [-93.3172944, 44.9484672, 27],\n        \"symbolSize\": 27,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"10th Street & Nicollet Mall\",\n        \"value\": [-93.274544, 44.973839, 11],\n        \"symbolSize\": 11,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"38th Street Light Rail Station\",\n        \"value\": [-93.229338, 44.93434, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Glenwood Ave & N Morgan Ave\",\n        \"value\": [-93.304427, 44.981147, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Social Sciences\",\n        \"value\": [-93.243754, 44.971359, 29],\n        \"symbolSize\": 29,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Civil Engineering\",\n        \"value\": [-93.231958, 44.976096, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"3rd Street N & 8th Ave N\",\n        \"value\": [-93.279854, 44.987996, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Minnehaha Park\",\n        \"value\": [-93.213587, 44.916906, 27],\n        \"symbolSize\": 27,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Oak Street Ramp\",\n        \"value\": [-93.22697, 44.97202, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"West 34th Street  & Hennepin Ave S\",\n        \"value\": [-93.298634, 44.941388, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Union Depot\",\n        \"value\": [-93.086584, 44.948399, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"2nd Street SE & 5th Ave SE\",\n        \"value\": [-93.249653, 44.983321, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Sanford Hall\",\n        \"value\": [-93.240282, 44.980831, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Midtown YWCA\",\n        \"value\": [-93.24054, 44.94823, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Dupont Ave S & W 29th Street\",\n        \"value\": [-93.293129, 44.949699, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"West 32nd Street & Bryant Ave S\",\n        \"value\": [-93.29038, 44.94478, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"11th Street & Marquette\",\n        \"value\": [-93.27405, 44.97265, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Science Museum of Minnesota\",\n        \"value\": [-93.097836, 44.942846, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Cedar Street & Columbus Ave\",\n        \"value\": [-93.0995487, 44.952351, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Upper Landing\",\n        \"value\": [-93.098712, 44.940902, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Williamson Hall\",\n        \"value\": [-93.234911, 44.977406, 25],\n        \"symbolSize\": 25,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Wells Fargo Place\",\n        \"value\": [-93.09663, 44.94813, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"N Victoria Street & University Ave \",\n        \"value\": [-93.136556, 44.956052, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"7th Place & Jackson Street\",\n        \"value\": [-93.091207, 44.949433, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"5th Ave N & 4th Street N\",\n        \"value\": [-93.277234, 44.98446, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Loring Park\",\n        \"value\": [-93.284927, 44.9715, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"N Washington Ave & 9th Ave N\",\n        \"value\": [-93.2797837, 44.9898791, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"5th Street E & Minnesota Street N\",\n        \"value\": [-93.09231, 44.94683, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"2nd Street N & 8th Ave N\",\n        \"value\": [-93.27651, 44.989166, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"E 14th Street & N Robert Street \",\n        \"value\": [-93.097817, 44.954697, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Mpls Convention Center\",\n        \"value\": [-93.275861, 44.970041, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Harriet Island\",\n        \"value\": [-93.094532, 44.93768, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Washington & 2nd Ave N\",\n        \"value\": [-93.27099, 44.98383, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Coldwater Spring\",\n        \"value\": [-93.198283, 44.905043, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Curfew Street & Ellis Ave.\",\n        \"value\": [-93.20525, 44.96616, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Broadway & Marshall Street NE\",\n        \"value\": [-93.268633, 44.998613, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Portland Ave & 4th Street S\",\n        \"value\": [-93.261632, 44.976134, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Mariucci Arena\",\n        \"value\": [-93.226629, 44.977899, 25],\n        \"symbolSize\": 25,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Kellogg Blvd E & Jackson Street\",\n        \"value\": [-93.088802, 44.946191, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"SE 3rd Ave & University Ave SE\",\n        \"value\": [-93.252102, 44.985465, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Wabasha Street S & E Fillmore Ave\",\n        \"value\": [-93.0900067, 44.940657, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"West 36th Street & Bryant Ave S\",\n        \"value\": [-93.2912, 44.93775, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Sherburne Ave & Snelling Ave N\",\n        \"value\": [-93.16734, 44.956624, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"46th Street Light Rail Station\",\n        \"value\": [-93.21953, 44.920466, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Macalester College\",\n        \"value\": [-93.17022, 44.940218, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"MCAD\",\n        \"value\": [-93.274981, 44.957214, 17],\n        \"symbolSize\": 17,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"22nd Ave S & Franklin Ave\",\n        \"value\": [-93.241042, 44.96293, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"YWCA Uptown\",\n        \"value\": [-93.29853, 44.95131, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"5th Street NE & 1st Ave NE\",\n        \"value\": [-93.254295, 44.990328, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Hamline Ave N & University Ave\",\n        \"value\": [-93.1567025, 44.9559764, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Minnesota Dept. of Transportation\",\n        \"value\": [-93.10445, 44.95385, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"2nd Ave N & N 6th Street\",\n        \"value\": [-93.275626, 44.980536, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Lake Como Pavilion\",\n        \"value\": [-93.143383, 44.981914, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"University of St. Thomas\",\n        \"value\": [-93.191837, 44.943017, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Farview Park\",\n        \"value\": [-93.287559, 45.005994, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Carleton Street & University Ave \",\n        \"value\": [-93.195906, 44.963549, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Lake Street & Humboldt\",\n        \"value\": [-93.30077, 44.94865, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Weisman Art Museum\",\n        \"value\": [-93.237254, 44.973607, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Minnesota History Center\",\n        \"value\": [-93.10673, 44.949053, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"IDS Center\",\n        \"value\": [-93.272185, 44.975641, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"West 15th Street & Willow\",\n        \"value\": [-93.281991, 44.968237, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Wirth Beach\",\n        \"value\": [-93.322066, 44.9798, 11],\n        \"symbolSize\": 11,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Dale Street & Grand Ave.\",\n        \"value\": [-93.126261, 44.939779, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"23rd Ave SE & 6th Street SE\",\n        \"value\": [-93.221639, 44.977028, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"6th Ave SE & University Ave\",\n        \"value\": [-93.24812, 44.983281, 27],\n        \"symbolSize\": 27,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"7th Street W & Grand Ave\",\n        \"value\": [-93.10624, 44.94144, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Selby Ave & Virginia Street\",\n        \"value\": [-93.1151, 44.9467, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Como Park Conservatory\",\n        \"value\": [-93.1517, 44.98115, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Plymouth Ave N &  N Oliver Ave\",\n        \"value\": [-93.306269, 44.991412, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"26th Street & Hennepin\",\n        \"value\": [-93.297143, 44.9554734, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Groveland Ave & Clifton Place\",\n        \"value\": [-93.286294, 44.966145, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Central Ave. NE & 22nd Ave NE\",\n        \"value\": [-93.247114, 45.00994, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Walker Art Center\",\n        \"value\": [-93.2890749, 44.9671037, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Minneapolis Park & Recreation Board\",\n        \"value\": [-93.277037, 45.00095, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"W 36th Street & W Calhoun Parkway\",\n        \"value\": [-93.320212, 44.937817, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Nicollet Ave & W 37th Street\",\n        \"value\": [-93.2780778, 44.9353179, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Rice Street & University Ave W\",\n        \"value\": [-93.1057432, 44.9556215, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"5th Street NE & 3rd Ave NE\",\n        \"value\": [-93.255558, 44.991821, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Dale Street N & University Ave\",\n        \"value\": [-93.126088, 44.956066, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Coffman Union\",\n        \"value\": [-93.234762, 44.973378, 35],\n        \"symbolSize\": 35,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"McNamara Center\",\n        \"value\": [-93.22854, 44.9743, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Fairview Ave. & University Ave.\",\n        \"value\": [-93.17706, 44.95665, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"26th Street & Lyndale\",\n        \"value\": [-93.28775, 44.95548, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"E Franklin Ave & Bloomington Ave S\",\n        \"value\": [-93.252269, 44.96285, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Target Field Station\",\n        \"value\": [-93.2790381, 44.9841254, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Franklin & 28th Ave\",\n        \"value\": [-93.230893, 44.962701, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Minneapolis Farmers Market\",\n        \"value\": [-93.28542, 44.98052, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"7th Street & 4th Ave S\",\n        \"value\": [-93.266684, 44.97497, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Washington & Marquette\",\n        \"value\": [-93.2669252, 44.9808736, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"W 31st Street & Hennepin Ave S\",\n        \"value\": [-93.29736, 44.946687, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Englewood Ave & N Asbury Street\",\n        \"value\": [-93.165868, 44.964172, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"3rd Street NE & Lowry Ave NE\",\n        \"value\": [-93.264573, 45.01304, 11],\n        \"symbolSize\": 11,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"2nd Ave S & S 3rd Street\",\n        \"value\": [-93.26599, 44.97974, 27],\n        \"symbolSize\": 27,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"N 4th Ave & W River Parkway\",\n        \"value\": [-93.269087, 44.988461, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Fort Snelling Visitor Center\",\n        \"value\": [-93.187381, 44.894044, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Hennepin & Central Avenue NE\",\n        \"value\": [-93.25392, 44.98889, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Mississippi River Blvd & Summit Ave\",\n        \"value\": [-93.197997, 44.940288, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Franklin & 11th Ave\",\n        \"value\": [-93.2583, 44.96251, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Gateway Park\",\n        \"value\": [-93.2675139, 44.9825943, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Lake Street & West River Parkway\",\n        \"value\": [-93.206201, 44.948452, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Wilder Street & Marshall Ave\",\n        \"value\": [-93.185819, 44.948147, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"E 38th Street & 42nd Ave S\",\n        \"value\": [-93.2125, 44.9342, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Hennepin Ave & N 5th Street \",\n        \"value\": [-93.272883, 44.97955, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Bryant Ave N & West Broadway\",\n        \"value\": [-93.290941, 44.999341, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Broadway Street N & 4th Street E\",\n        \"value\": [-93.0845, 44.94965, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Cooke Hall\",\n        \"value\": [-93.230029, 44.976303, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Delaware Street SE & 26th Ave SE\",\n        \"value\": [-93.221021, 44.972128, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Midtown Greenway & 5th Ave S\",\n        \"value\": [-93.269278, 44.950371, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Elliot Hall\",\n        \"value\": [-93.23818, 44.97685, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Lyndale Ave S & 22nd Street \",\n        \"value\": [-93.28815, 44.960744, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Bohemian Flats\",\n        \"value\": [-93.2416, 44.976223, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Nicollet & Franklin\",\n        \"value\": [-93.277939, 44.96342, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"7th Street N & Plymouth Ave N\",\n        \"value\": [-93.293988, 44.991704, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"11th Street & Hennepin\",\n        \"value\": [-93.27869, 44.97534, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"YWCA Downtown\",\n        \"value\": [-93.276435, 44.972217, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Kowalski's Market\",\n        \"value\": [-93.1531513, 44.9401026, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Hennepin & Laurel Ave\",\n        \"value\": [-93.28305, 44.97391, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Hennepin Ave & S Washington Ave \",\n        \"value\": [-93.269195, 44.981895, 23],\n        \"symbolSize\": 23,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Como Ave SE & 29th Ave SE\",\n        \"value\": [-93.212892, 44.987934, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Cleveland Ave S & Highland Parkway\",\n        \"value\": [-93.187264, 44.919593, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"West Broadway & Logan Ave N\",\n        \"value\": [-93.305857, 45.002448, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Schmidt Brewery\",\n        \"value\": [-93.124281, 44.92898, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"27th Ave SE & University Ave.\",\n        \"value\": [-93.218919, 44.97259, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Currie Park\",\n        \"value\": [-93.251136, 44.969225, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"N Robert Street & E 10th Street\",\n        \"value\": [-93.094545, 44.951132, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"25th Street & 33rd Ave S\",\n        \"value\": [-93.223374, 44.957341, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Kellogg Blvd & Wabasha Street\",\n        \"value\": [-93.09227, 44.943846, 15],\n        \"symbolSize\": 15,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },{\n        \"name\": \"Washington Ave N & Cedar Lake Trail\",\n        \"value\": [-93.274031, 44.985406, 19],\n        \"symbolSize\": 19,\n        \"itemStyle\": {\"normal\": {\"color\": \"blue\"}}\n    },]");
-option8 = {
-
-    title: {
-        text: '',
-        left: 'center',
-        textStyle: {
-            color: '#fff'
-        }
-    },
-    legend: {
-        show: false,
-        orient: 'vertical',
-        top: 'bottom',
-        left: 'right',
-        data: ['地点', '线路'],
-        textStyle: {
-            color: '#fff'
-        }
-    },
-    geo: {
-        map: 'world',
-        label: {
-            emphasis: {
-                show: false
-            }
-        },
-        roam: true,
-        itemStyle: {
-            normal: {
-                areaColor: 'rgba(7,21,57,0.5)',
-                borderColor: '#0177ff'
-            },
-            emphasis: {
-                areaColor: '#071537'//鼠标指上市时的颜色
-            }
-        }
-    },
-    series: [{
-        name: '地点',
-        type: 'effectScatter',
-        coordinateSystem: 'geo',
-        zlevel: 2,
-        rippleEffect: {
-            brushType: 'stroke'
-        },
-        label: {
-            emphasis: {
-                show: true,
-                position: 'right',
-                formatter: '{b}'
-            }
-        },
-        symbolSize: 2,
-        itemStyle: {
-            showEffectOn: 'render',
-            normal: {
-                color: '#46bee9'
-            }
-        },
-        data: aa
-        //data: allData.citys
-    },
-        {
-            name: '线路',
-            type:
-                'lines',
-            coordinateSystem:
-                'geo',
-            zlevel:
-                2,
-            large:
-                true,
-            effect:
-                {
-                    show: true,
-                    constantSpeed:
-                        30,
-                    symbol:
-                        'pin',
-                    symbolSize:
-                        3,
-                    trailLength:
-                        0,
-                }
-            ,
-            lineStyle: {
-                normal: {
-                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                        offset: 0, color: '#58B3CC'
-                    }, {
-                        offset: 1, color: '#F58158'
-                    }], false),
-                    width:
-                        1,
-                    opacity:
-                        0.2,
-                    curveness:
-                        0.1
-                }
-            }
-            ,
-            // data: allData.moveLines
-        }
-    ]
-}
-;
 
 
-//收费站收费量
-var geoCoordMap = {
-    "海门": [121.15, 31.89],
-    "鄂尔多斯": [109.781327, 39.608266],
-    "招远": [120.38, 37.35],
-    "舟山": [122.207216, 29.985295],
-    "齐齐哈尔": [123.97, 47.33],
-    "盐城": [120.13, 33.38],
-    "赤峰": [118.87, 42.28],
-    "青岛": [120.33, 36.07],
-    "乳山": [121.52, 36.89],
-    "金昌": [102.188043, 38.520089],
-    "泉州": [118.58, 24.93],
-    "莱西": [120.53, 36.86],
-    "日照": [119.46, 35.42],
-    "胶南": [119.97, 35.88],
-    "南通": [121.05, 32.08],
-    "拉萨": [91.11, 29.97],
-    "云浮": [112.02, 22.93],
-    "梅州": [116.1, 24.55],
-    "文登": [122.05, 37.2],
-    "上海": [121.48, 31.22],
-    "攀枝花": [101.718637, 26.582347],
-    "威海": [122.1, 37.5],
-    "承德": [117.93, 40.97],
-    "厦门": [118.1, 24.46],
-    "汕尾": [115.375279, 22.786211],
-    "潮州": [116.63, 23.68],
-    "丹东": [124.37, 40.13],
-    "太仓": [121.1, 31.45],
-    "曲靖": [103.79, 25.51],
-    "烟台": [121.39, 37.52],
-    "福州": [119.3, 26.08],
-    "瓦房店": [121.979603, 39.627114],
-    "即墨": [120.45, 36.38],
-    "抚顺": [123.97, 41.97],
-    "玉溪": [102.52, 24.35],
-    "张家口": [114.87, 40.82],
-    "阳泉": [113.57, 37.85],
-    "莱州": [119.942327, 37.177017],
-    "湖州": [120.1, 30.86],
-    "汕头": [116.69, 23.39],
-    "昆山": [120.95, 31.39],
-    "宁波": [121.56, 29.86],
-    "湛江": [110.359377, 21.270708],
-    "揭阳": [116.35, 23.55],
-    "荣成": [122.41, 37.16],
-    "连云港": [119.16, 34.59],
-    "葫芦岛": [120.836932, 40.711052],
-    "常熟": [120.74, 31.64],
-    "东莞": [113.75, 23.04],
-    "河源": [114.68, 23.73],
-    "淮安": [119.15, 33.5],
-    "泰州": [119.9, 32.49],
-    "南宁": [108.33, 22.84],
-    "营口": [122.18, 40.65],
-    "惠州": [114.4, 23.09],
-    "江阴": [120.26, 31.91],
-    "蓬莱": [120.75, 37.8],
-    "韶关": [113.62, 24.84],
-    "嘉峪关": [98.289152, 39.77313],
-    "广州": [113.23, 23.16],
-    "延安": [109.47, 36.6],
-    "太原": [112.53, 37.87],
-    "清远": [113.01, 23.7],
-    "中山": [113.38, 22.52],
-    "昆明": [102.73, 25.04],
-    "寿光": [118.73, 36.86],
-    "盘锦": [122.070714, 41.119997],
-    "长治": [113.08, 36.18],
-    "深圳": [114.07, 22.62],
-    "珠海": [113.52, 22.3],
-    "宿迁": [118.3, 33.96],
-    "咸阳": [108.72, 34.36],
-    "铜川": [109.11, 35.09],
-    "平度": [119.97, 36.77],
-    "佛山": [113.11, 23.05],
-    "海口": [110.35, 20.02],
-    "江门": [113.06, 22.61],
-    "章丘": [117.53, 36.72],
-    "肇庆": [112.44, 23.05],
-    "大连": [121.62, 38.92],
-    "临汾": [111.5, 36.08],
-    "吴江": [120.63, 31.16],
-    "石嘴山": [106.39, 39.04],
-    "沈阳": [123.38, 41.8],
-    "苏州": [120.62, 31.32],
-    "茂名": [110.88, 21.68],
-    "嘉兴": [120.76, 30.77],
-    "长春": [125.35, 43.88],
-    "胶州": [120.03336, 36.264622],
-    "银川": [106.27, 38.47],
-    "张家港": [120.555821, 31.875428],
-    "三门峡": [111.19, 34.76],
-    "锦州": [121.15, 41.13],
-    "南昌": [115.89, 28.68],
-    "柳州": [109.4, 24.33],
-    "三亚": [109.511909, 18.252847],
-    "自贡": [104.778442, 29.33903],
-    "吉林": [126.57, 43.87],
-    "阳江": [111.95, 21.85],
-    "泸州": [105.39, 28.91],
-    "西宁": [101.74, 36.56],
-    "宜宾": [104.56, 29.77],
-    "呼和浩特": [111.65, 40.82],
-    "成都": [104.06, 30.67],
-    "大同": [113.3, 40.12],
-    "镇江": [119.44, 32.2],
-    "桂林": [110.28, 25.29],
-    "张家界": [110.479191, 29.117096],
-    "宜兴": [119.82, 31.36],
-    "北海": [109.12, 21.49],
-    "西安": [108.95, 34.27],
-    "金坛": [119.56, 31.74],
-    "东营": [118.49, 37.46],
-    "牡丹江": [129.58, 44.6],
-    "遵义": [106.9, 27.7],
-    "绍兴": [120.58, 30.01],
-    "扬州": [119.42, 32.39],
-    "常州": [119.95, 31.79],
-    "潍坊": [119.1, 36.62],
-    "重庆": [106.54, 29.59],
-    "台州": [121.420757, 28.656386],
-    "南京": [118.78, 32.04],
-    "滨州": [118.03, 37.36],
-    "贵阳": [106.71, 26.57],
-    "无锡": [120.29, 31.59],
-    "本溪": [123.73, 41.3],
-    "克拉玛依": [84.77, 45.59],
-    "渭南": [109.5, 34.52],
-    "马鞍山": [118.48, 31.56],
-    "宝鸡": [107.15, 34.38],
-    "焦作": [113.21, 35.24],
-    "句容": [119.16, 31.95],
-    "北京": [116.46, 39.92],
-    "徐州": [117.2, 34.26],
-    "衡水": [115.72, 37.72],
-    "包头": [110, 40.58],
-    "绵阳": [104.73, 31.48],
-    "乌鲁木齐": [87.68, 43.77],
-    "枣庄": [117.57, 34.86],
-    "杭州": [120.19, 30.26],
-    "淄博": [118.05, 36.78],
-    "鞍山": [122.85, 41.12],
-    "溧阳": [119.48, 31.43],
-    "库尔勒": [86.06, 41.68],
-    "安阳": [114.35, 36.1],
-    "开封": [114.35, 34.79],
-    "济南": [117, 36.65],
-    "德阳": [104.37, 31.13],
-    "温州": [120.65, 28.01],
-    "九江": [115.97, 29.71],
-    "邯郸": [114.47, 36.6],
-    "临安": [119.72, 30.23],
-    "兰州": [103.73, 36.03],
-    "沧州": [116.83, 38.33],
-    "临沂": [118.35, 35.05],
-    "南充": [106.110698, 30.837793],
-    "天津": [117.2, 39.13],
-    "富阳": [119.95, 30.07],
-    "泰安": [117.13, 36.18],
-    "诸暨": [120.23, 29.71],
-    "郑州": [113.65, 34.76],
-    "哈尔滨": [126.63, 45.75],
-    "聊城": [115.97, 36.45],
-    "芜湖": [118.38, 31.33],
-    "唐山": [118.02, 39.63],
-    "平顶山": [113.29, 33.75],
-    "邢台": [114.48, 37.05],
-    "德州": [116.29, 37.45],
-    "济宁": [116.59, 35.38],
-    "荆州": [112.239741, 30.335165],
-    "宜昌": [111.3, 30.7],
-    "义乌": [120.06, 29.32],
-    "丽水": [119.92, 28.45],
-    "洛阳": [112.44, 34.7],
-    "秦皇岛": [119.57, 39.95],
-    "株洲": [113.16, 27.83],
-    "石家庄": [114.48, 38.03],
-    "莱芜": [117.67, 36.19],
-    "常德": [111.69, 29.05],
-    "保定": [115.48, 38.85],
-    "湘潭": [112.91, 27.87],
-    "金华": [119.64, 29.12],
-    "岳阳": [113.09, 29.37],
-    "长沙": [113, 28.21],
-    "衢州": [118.88, 28.97],
-    "廊坊": [116.7, 39.53],
-    "菏泽": [115.480656, 35.23375],
-    "合肥": [117.27, 31.86],
-    "武汉": [114.31, 30.52],
-    "大庆": [125.03, 46.58]
-};
-
-var convertData = function (data) {
-    var res = [];
-    for (var i = 0; i < data.length; i++) {
-        var geoCoord = geoCoordMap[data[i].name];
-        if (geoCoord) {
-            res.push({
-                name: data[i].name,
-                value: geoCoord.concat(data[i].value)
-            });
-        }
-    }
-    return res;
-};
-
-option9 = {
-
-    title: {
-        text: ' ',
-        sublink: ' ',
-        x: 'center',
-        textStyle: {
-            color: '#fff'
-        }
-    },
-    tooltip: {
-        trigger: 'item',
-        formatter: function (params) {
-            return params.name + ' : ' + params.value[2];
-        }
-    },
-    legend: {
-        orient: 'vertical',
-        y: 'bottom',
-        x: 'right',
-        data: ['pm2.5'],
-        textStyle: {
-            color: '#fff'
-        }
-    },
-    visualMap: {
-        min: 0,
-        max: 200,
-        calculable: true,
-        color: ['#d94e5d', '#eac736', '#50a3ba'],
-        textStyle: {
-            color: '#fff'
-        }
-    },
-    geo: {
-        map: 'china',
-        label: {
-            emphasis: {
-                show: false
-            }
-        },
-        itemStyle: {
-            normal: {
-                areaColor: 'rgba(127,199,221,0.1)',
-                borderColor: '#0177ff'
-            },
-            emphasis: {
-                areaColor: '#071537'//鼠标指上市时的颜色
-            }
-        }
-    },
-    series: [
-        {
-            name: ' ',
-            type: 'scatter',
-            coordinateSystem: 'geo',
-            data: convertData([
-                {name: "海门", value: 9},
-                {name: "鄂尔多斯", value: 12},
-                {name: "招远", value: 12},
-                {name: "舟山", value: 12},
-                {name: "齐齐哈尔", value: 14},
-                {name: "盐城", value: 15},
-                {name: "赤峰", value: 16},
-                {name: "青岛", value: 18},
-                {name: "乳山", value: 18},
-                {name: "金昌", value: 19},
-                {name: "泉州", value: 21},
-                {name: "莱西", value: 21},
-                {name: "日照", value: 21},
-                {name: "胶南", value: 22},
-                {name: "南通", value: 23},
-                {name: "拉萨", value: 24},
-                {name: "云浮", value: 24},
-                {name: "梅州", value: 25},
-                {name: "文登", value: 25},
-                {name: "上海", value: 25},
-                {name: "攀枝花", value: 25},
-                {name: "威海", value: 25},
-                {name: "承德", value: 25},
-                {name: "厦门", value: 26},
-                {name: "汕尾", value: 26},
-                {name: "潮州", value: 26},
-                {name: "丹东", value: 27},
-                {name: "太仓", value: 27},
-                {name: "曲靖", value: 27},
-                {name: "烟台", value: 28},
-                {name: "福州", value: 29},
-                {name: "瓦房店", value: 30},
-                {name: "即墨", value: 30},
-                {name: "抚顺", value: 31},
-                {name: "玉溪", value: 31},
-                {name: "张家口", value: 31},
-                {name: "阳泉", value: 31},
-                {name: "莱州", value: 32},
-                {name: "湖州", value: 32},
-                {name: "汕头", value: 32},
-                {name: "昆山", value: 33},
-                {name: "宁波", value: 33},
-                {name: "湛江", value: 33},
-                {name: "揭阳", value: 34},
-                {name: "荣成", value: 34},
-                {name: "连云港", value: 35},
-                {name: "葫芦岛", value: 35},
-                {name: "常熟", value: 36},
-                {name: "东莞", value: 36},
-                {name: "河源", value: 36},
-                {name: "淮安", value: 36},
-                {name: "泰州", value: 36},
-                {name: "南宁", value: 37},
-                {name: "营口", value: 37},
-                {name: "惠州", value: 37},
-                {name: "江阴", value: 37},
-                {name: "蓬莱", value: 37},
-                {name: "韶关", value: 38},
-                {name: "嘉峪关", value: 38},
-                {name: "广州", value: 38},
-                {name: "延安", value: 38},
-                {name: "太原", value: 39},
-                {name: "清远", value: 39},
-                {name: "中山", value: 39},
-                {name: "昆明", value: 39},
-                {name: "寿光", value: 40},
-                {name: "盘锦", value: 40},
-                {name: "长治", value: 41},
-                {name: "深圳", value: 41},
-                {name: "珠海", value: 42},
-                {name: "宿迁", value: 43},
-                {name: "咸阳", value: 43},
-                {name: "铜川", value: 44},
-                {name: "平度", value: 44},
-                {name: "佛山", value: 44},
-                {name: "海口", value: 44},
-                {name: "江门", value: 45},
-                {name: "章丘", value: 45},
-                {name: "肇庆", value: 46},
-                {name: "大连", value: 47},
-                {name: "临汾", value: 47},
-                {name: "吴江", value: 47},
-                {name: "石嘴山", value: 49},
-                {name: "沈阳", value: 50},
-                {name: "苏州", value: 50},
-                {name: "茂名", value: 50},
-                {name: "嘉兴", value: 51},
-                {name: "长春", value: 51},
-                {name: "胶州", value: 52},
-                {name: "银川", value: 52},
-                {name: "张家港", value: 52},
-                {name: "三门峡", value: 53},
-                {name: "锦州", value: 54},
-                {name: "南昌", value: 54},
-                {name: "柳州", value: 54},
-                {name: "三亚", value: 54},
-                {name: "自贡", value: 56},
-                {name: "吉林", value: 56},
-                {name: "阳江", value: 57},
-                {name: "泸州", value: 57},
-                {name: "西宁", value: 57},
-                {name: "宜宾", value: 58},
-                {name: "呼和浩特", value: 58},
-                {name: "成都", value: 58},
-                {name: "大同", value: 58},
-                {name: "镇江", value: 59},
-                {name: "桂林", value: 59},
-                {name: "张家界", value: 59},
-                {name: "宜兴", value: 59},
-                {name: "北海", value: 60},
-                {name: "西安", value: 61},
-                {name: "金坛", value: 62},
-                {name: "东营", value: 62},
-                {name: "牡丹江", value: 63},
-                {name: "遵义", value: 63},
-                {name: "绍兴", value: 63},
-                {name: "扬州", value: 64},
-                {name: "常州", value: 64},
-                {name: "潍坊", value: 65},
-                {name: "重庆", value: 66},
-                {name: "台州", value: 67},
-                {name: "南京", value: 67},
-                {name: "滨州", value: 70},
-                {name: "贵阳", value: 71},
-                {name: "无锡", value: 71},
-                {name: "本溪", value: 71},
-                {name: "克拉玛依", value: 72},
-                {name: "渭南", value: 72},
-                {name: "马鞍山", value: 72},
-                {name: "宝鸡", value: 72},
-                {name: "焦作", value: 75},
-                {name: "句容", value: 75},
-                {name: "北京", value: 79},
-                {name: "徐州", value: 79},
-                {name: "衡水", value: 80},
-                {name: "包头", value: 80},
-                {name: "绵阳", value: 80},
-                {name: "乌鲁木齐", value: 84},
-                {name: "枣庄", value: 84},
-                {name: "杭州", value: 84},
-                {name: "淄博", value: 85},
-                {name: "鞍山", value: 86},
-                {name: "溧阳", value: 86},
-                {name: "库尔勒", value: 86},
-                {name: "安阳", value: 90},
-                {name: "开封", value: 90},
-                {name: "济南", value: 92},
-                {name: "德阳", value: 93},
-                {name: "温州", value: 95},
-                {name: "九江", value: 96},
-                {name: "邯郸", value: 98},
-                {name: "临安", value: 99},
-                {name: "兰州", value: 99},
-                {name: "沧州", value: 100},
-                {name: "临沂", value: 103},
-                {name: "南充", value: 104},
-                {name: "天津", value: 105},
-                {name: "富阳", value: 106},
-                {name: "泰安", value: 112},
-                {name: "诸暨", value: 112},
-                {name: "郑州", value: 113},
-                {name: "哈尔滨", value: 114},
-                {name: "聊城", value: 116},
-                {name: "芜湖", value: 117},
-                {name: "唐山", value: 119},
-                {name: "平顶山", value: 119},
-                {name: "邢台", value: 119},
-                {name: "德州", value: 120},
-                {name: "济宁", value: 120},
-                {name: "荆州", value: 127},
-                {name: "宜昌", value: 130},
-                {name: "义乌", value: 132},
-                {name: "丽水", value: 133},
-                {name: "洛阳", value: 134},
-                {name: "秦皇岛", value: 136},
-                {name: "株洲", value: 143},
-                {name: "石家庄", value: 147},
-                {name: "莱芜", value: 148},
-                {name: "常德", value: 152},
-                {name: "保定", value: 153},
-                {name: "湘潭", value: 154},
-                {name: "金华", value: 157},
-                {name: "岳阳", value: 169},
-                {name: "长沙", value: 175},
-                {name: "衢州", value: 177},
-                {name: "廊坊", value: 193},
-                {name: "菏泽", value: 194},
-                {name: "合肥", value: 229},
-                {name: "武汉", value: 273},
-                {name: "大庆", value: 279}
-            ]),
-            symbolSize: 12,
-            label: {
-                normal: {
-                    show: false
-                },
-                emphasis: {
-                    show: false
-                }
-            },
-            itemStyle: {
-                emphasis: {
-                    borderColor: '#fff',
-                    borderWidth: 1
-                }
-            }
-        }
-    ]
-}
+//
+// //收费站收费量
+// var geoCoordMap = {
+//     "海门": [121.15, 31.89],
+//     "鄂尔多斯": [109.781327, 39.608266],
+//     "招远": [120.38, 37.35],
+//     "舟山": [122.207216, 29.985295],
+//     "齐齐哈尔": [123.97, 47.33],
+//     "盐城": [120.13, 33.38],
+//     "赤峰": [118.87, 42.28],
+//     "青岛": [120.33, 36.07],
+//     "乳山": [121.52, 36.89],
+//     "金昌": [102.188043, 38.520089],
+//     "泉州": [118.58, 24.93],
+//     "莱西": [120.53, 36.86],
+//     "日照": [119.46, 35.42],
+//     "胶南": [119.97, 35.88],
+//     "南通": [121.05, 32.08],
+//     "拉萨": [91.11, 29.97],
+//     "云浮": [112.02, 22.93],
+//     "梅州": [116.1, 24.55],
+//     "文登": [122.05, 37.2],
+//     "上海": [121.48, 31.22],
+//     "攀枝花": [101.718637, 26.582347],
+//     "威海": [122.1, 37.5],
+//     "承德": [117.93, 40.97],
+//     "厦门": [118.1, 24.46],
+//     "汕尾": [115.375279, 22.786211],
+//     "潮州": [116.63, 23.68],
+//     "丹东": [124.37, 40.13],
+//     "太仓": [121.1, 31.45],
+//     "曲靖": [103.79, 25.51],
+//     "烟台": [121.39, 37.52],
+//     "福州": [119.3, 26.08],
+//     "瓦房店": [121.979603, 39.627114],
+//     "即墨": [120.45, 36.38],
+//     "抚顺": [123.97, 41.97],
+//     "玉溪": [102.52, 24.35],
+//     "张家口": [114.87, 40.82],
+//     "阳泉": [113.57, 37.85],
+//     "莱州": [119.942327, 37.177017],
+//     "湖州": [120.1, 30.86],
+//     "汕头": [116.69, 23.39],
+//     "昆山": [120.95, 31.39],
+//     "宁波": [121.56, 29.86],
+//     "湛江": [110.359377, 21.270708],
+//     "揭阳": [116.35, 23.55],
+//     "荣成": [122.41, 37.16],
+//     "连云港": [119.16, 34.59],
+//     "葫芦岛": [120.836932, 40.711052],
+//     "常熟": [120.74, 31.64],
+//     "东莞": [113.75, 23.04],
+//     "河源": [114.68, 23.73],
+//     "淮安": [119.15, 33.5],
+//     "泰州": [119.9, 32.49],
+//     "南宁": [108.33, 22.84],
+//     "营口": [122.18, 40.65],
+//     "惠州": [114.4, 23.09],
+//     "江阴": [120.26, 31.91],
+//     "蓬莱": [120.75, 37.8],
+//     "韶关": [113.62, 24.84],
+//     "嘉峪关": [98.289152, 39.77313],
+//     "广州": [113.23, 23.16],
+//     "延安": [109.47, 36.6],
+//     "太原": [112.53, 37.87],
+//     "清远": [113.01, 23.7],
+//     "中山": [113.38, 22.52],
+//     "昆明": [102.73, 25.04],
+//     "寿光": [118.73, 36.86],
+//     "盘锦": [122.070714, 41.119997],
+//     "长治": [113.08, 36.18],
+//     "深圳": [114.07, 22.62],
+//     "珠海": [113.52, 22.3],
+//     "宿迁": [118.3, 33.96],
+//     "咸阳": [108.72, 34.36],
+//     "铜川": [109.11, 35.09],
+//     "平度": [119.97, 36.77],
+//     "佛山": [113.11, 23.05],
+//     "海口": [110.35, 20.02],
+//     "江门": [113.06, 22.61],
+//     "章丘": [117.53, 36.72],
+//     "肇庆": [112.44, 23.05],
+//     "大连": [121.62, 38.92],
+//     "临汾": [111.5, 36.08],
+//     "吴江": [120.63, 31.16],
+//     "石嘴山": [106.39, 39.04],
+//     "沈阳": [123.38, 41.8],
+//     "苏州": [120.62, 31.32],
+//     "茂名": [110.88, 21.68],
+//     "嘉兴": [120.76, 30.77],
+//     "长春": [125.35, 43.88],
+//     "胶州": [120.03336, 36.264622],
+//     "银川": [106.27, 38.47],
+//     "张家港": [120.555821, 31.875428],
+//     "三门峡": [111.19, 34.76],
+//     "锦州": [121.15, 41.13],
+//     "南昌": [115.89, 28.68],
+//     "柳州": [109.4, 24.33],
+//     "三亚": [109.511909, 18.252847],
+//     "自贡": [104.778442, 29.33903],
+//     "吉林": [126.57, 43.87],
+//     "阳江": [111.95, 21.85],
+//     "泸州": [105.39, 28.91],
+//     "西宁": [101.74, 36.56],
+//     "宜宾": [104.56, 29.77],
+//     "呼和浩特": [111.65, 40.82],
+//     "成都": [104.06, 30.67],
+//     "大同": [113.3, 40.12],
+//     "镇江": [119.44, 32.2],
+//     "桂林": [110.28, 25.29],
+//     "张家界": [110.479191, 29.117096],
+//     "宜兴": [119.82, 31.36],
+//     "北海": [109.12, 21.49],
+//     "西安": [108.95, 34.27],
+//     "金坛": [119.56, 31.74],
+//     "东营": [118.49, 37.46],
+//     "牡丹江": [129.58, 44.6],
+//     "遵义": [106.9, 27.7],
+//     "绍兴": [120.58, 30.01],
+//     "扬州": [119.42, 32.39],
+//     "常州": [119.95, 31.79],
+//     "潍坊": [119.1, 36.62],
+//     "重庆": [106.54, 29.59],
+//     "台州": [121.420757, 28.656386],
+//     "南京": [118.78, 32.04],
+//     "滨州": [118.03, 37.36],
+//     "贵阳": [106.71, 26.57],
+//     "无锡": [120.29, 31.59],
+//     "本溪": [123.73, 41.3],
+//     "克拉玛依": [84.77, 45.59],
+//     "渭南": [109.5, 34.52],
+//     "马鞍山": [118.48, 31.56],
+//     "宝鸡": [107.15, 34.38],
+//     "焦作": [113.21, 35.24],
+//     "句容": [119.16, 31.95],
+//     "北京": [116.46, 39.92],
+//     "徐州": [117.2, 34.26],
+//     "衡水": [115.72, 37.72],
+//     "包头": [110, 40.58],
+//     "绵阳": [104.73, 31.48],
+//     "乌鲁木齐": [87.68, 43.77],
+//     "枣庄": [117.57, 34.86],
+//     "杭州": [120.19, 30.26],
+//     "淄博": [118.05, 36.78],
+//     "鞍山": [122.85, 41.12],
+//     "溧阳": [119.48, 31.43],
+//     "库尔勒": [86.06, 41.68],
+//     "安阳": [114.35, 36.1],
+//     "开封": [114.35, 34.79],
+//     "济南": [117, 36.65],
+//     "德阳": [104.37, 31.13],
+//     "温州": [120.65, 28.01],
+//     "九江": [115.97, 29.71],
+//     "邯郸": [114.47, 36.6],
+//     "临安": [119.72, 30.23],
+//     "兰州": [103.73, 36.03],
+//     "沧州": [116.83, 38.33],
+//     "临沂": [118.35, 35.05],
+//     "南充": [106.110698, 30.837793],
+//     "天津": [117.2, 39.13],
+//     "富阳": [119.95, 30.07],
+//     "泰安": [117.13, 36.18],
+//     "诸暨": [120.23, 29.71],
+//     "郑州": [113.65, 34.76],
+//     "哈尔滨": [126.63, 45.75],
+//     "聊城": [115.97, 36.45],
+//     "芜湖": [118.38, 31.33],
+//     "唐山": [118.02, 39.63],
+//     "平顶山": [113.29, 33.75],
+//     "邢台": [114.48, 37.05],
+//     "德州": [116.29, 37.45],
+//     "济宁": [116.59, 35.38],
+//     "荆州": [112.239741, 30.335165],
+//     "宜昌": [111.3, 30.7],
+//     "义乌": [120.06, 29.32],
+//     "丽水": [119.92, 28.45],
+//     "洛阳": [112.44, 34.7],
+//     "秦皇岛": [119.57, 39.95],
+//     "株洲": [113.16, 27.83],
+//     "石家庄": [114.48, 38.03],
+//     "莱芜": [117.67, 36.19],
+//     "常德": [111.69, 29.05],
+//     "保定": [115.48, 38.85],
+//     "湘潭": [112.91, 27.87],
+//     "金华": [119.64, 29.12],
+//     "岳阳": [113.09, 29.37],
+//     "长沙": [113, 28.21],
+//     "衢州": [118.88, 28.97],
+//     "廊坊": [116.7, 39.53],
+//     "菏泽": [115.480656, 35.23375],
+//     "合肥": [117.27, 31.86],
+//     "武汉": [114.31, 30.52],
+//     "大庆": [125.03, 46.58]
+// };
+//
+// var convertData = function (data) {
+//     var res = [];
+//     for (var i = 0; i < data.length; i++) {
+//         var geoCoord = geoCoordMap[data[i].name];
+//         if (geoCoord) {
+//             res.push({
+//                 name: data[i].name,
+//                 value: geoCoord.concat(data[i].value)
+//             });
+//         }
+//     }
+//     return res;
+// };
+//
+// option9 = {
+//
+//     title: {
+//         text: ' ',
+//         sublink: ' ',
+//         x: 'center',
+//         textStyle: {
+//             color: '#fff'
+//         }
+//     },
+//     tooltip: {
+//         trigger: 'item',
+//         formatter: function (params) {
+//             return params.name + ' : ' + params.value[2];
+//         }
+//     },
+//     legend: {
+//         orient: 'vertical',
+//         y: 'bottom',
+//         x: 'right',
+//         data: ['pm2.5'],
+//         textStyle: {
+//             color: '#fff'
+//         }
+//     },
+//     visualMap: {
+//         min: 0,
+//         max: 200,
+//         calculable: true,
+//         color: ['#d94e5d', '#eac736', '#50a3ba'],
+//         textStyle: {
+//             color: '#fff'
+//         }
+//     },
+//     geo: {
+//         map: 'china',
+//         label: {
+//             emphasis: {
+//                 show: false
+//             }
+//         },
+//         itemStyle: {
+//             normal: {
+//                 areaColor: 'rgba(127,199,221,0.1)',
+//                 borderColor: '#0177ff'
+//             },
+//             emphasis: {
+//                 areaColor: '#071537'//鼠标指上市时的颜色
+//             }
+//         }
+//     },
+//     series: [
+//         {
+//             name: ' ',
+//             type: 'scatter',
+//             coordinateSystem: 'geo',
+//             data: convertData([
+//                 {name: "海门", value: 9},
+//                 {name: "鄂尔多斯", value: 12},
+//                 {name: "招远", value: 12},
+//                 {name: "舟山", value: 12},
+//                 {name: "齐齐哈尔", value: 14},
+//                 {name: "盐城", value: 15},
+//                 {name: "赤峰", value: 16},
+//                 {name: "青岛", value: 18},
+//                 {name: "乳山", value: 18},
+//                 {name: "金昌", value: 19},
+//                 {name: "泉州", value: 21},
+//                 {name: "莱西", value: 21},
+//                 {name: "日照", value: 21},
+//                 {name: "胶南", value: 22},
+//                 {name: "南通", value: 23},
+//                 {name: "拉萨", value: 24},
+//                 {name: "云浮", value: 24},
+//                 {name: "梅州", value: 25},
+//                 {name: "文登", value: 25},
+//                 {name: "上海", value: 25},
+//                 {name: "攀枝花", value: 25},
+//                 {name: "威海", value: 25},
+//                 {name: "承德", value: 25},
+//                 {name: "厦门", value: 26},
+//                 {name: "汕尾", value: 26},
+//                 {name: "潮州", value: 26},
+//                 {name: "丹东", value: 27},
+//                 {name: "太仓", value: 27},
+//                 {name: "曲靖", value: 27},
+//                 {name: "烟台", value: 28},
+//                 {name: "福州", value: 29},
+//                 {name: "瓦房店", value: 30},
+//                 {name: "即墨", value: 30},
+//                 {name: "抚顺", value: 31},
+//                 {name: "玉溪", value: 31},
+//                 {name: "张家口", value: 31},
+//                 {name: "阳泉", value: 31},
+//                 {name: "莱州", value: 32},
+//                 {name: "湖州", value: 32},
+//                 {name: "汕头", value: 32},
+//                 {name: "昆山", value: 33},
+//                 {name: "宁波", value: 33},
+//                 {name: "湛江", value: 33},
+//                 {name: "揭阳", value: 34},
+//                 {name: "荣成", value: 34},
+//                 {name: "连云港", value: 35},
+//                 {name: "葫芦岛", value: 35},
+//                 {name: "常熟", value: 36},
+//                 {name: "东莞", value: 36},
+//                 {name: "河源", value: 36},
+//                 {name: "淮安", value: 36},
+//                 {name: "泰州", value: 36},
+//                 {name: "南宁", value: 37},
+//                 {name: "营口", value: 37},
+//                 {name: "惠州", value: 37},
+//                 {name: "江阴", value: 37},
+//                 {name: "蓬莱", value: 37},
+//                 {name: "韶关", value: 38},
+//                 {name: "嘉峪关", value: 38},
+//                 {name: "广州", value: 38},
+//                 {name: "延安", value: 38},
+//                 {name: "太原", value: 39},
+//                 {name: "清远", value: 39},
+//                 {name: "中山", value: 39},
+//                 {name: "昆明", value: 39},
+//                 {name: "寿光", value: 40},
+//                 {name: "盘锦", value: 40},
+//                 {name: "长治", value: 41},
+//                 {name: "深圳", value: 41},
+//                 {name: "珠海", value: 42},
+//                 {name: "宿迁", value: 43},
+//                 {name: "咸阳", value: 43},
+//                 {name: "铜川", value: 44},
+//                 {name: "平度", value: 44},
+//                 {name: "佛山", value: 44},
+//                 {name: "海口", value: 44},
+//                 {name: "江门", value: 45},
+//                 {name: "章丘", value: 45},
+//                 {name: "肇庆", value: 46},
+//                 {name: "大连", value: 47},
+//                 {name: "临汾", value: 47},
+//                 {name: "吴江", value: 47},
+//                 {name: "石嘴山", value: 49},
+//                 {name: "沈阳", value: 50},
+//                 {name: "苏州", value: 50},
+//                 {name: "茂名", value: 50},
+//                 {name: "嘉兴", value: 51},
+//                 {name: "长春", value: 51},
+//                 {name: "胶州", value: 52},
+//                 {name: "银川", value: 52},
+//                 {name: "张家港", value: 52},
+//                 {name: "三门峡", value: 53},
+//                 {name: "锦州", value: 54},
+//                 {name: "南昌", value: 54},
+//                 {name: "柳州", value: 54},
+//                 {name: "三亚", value: 54},
+//                 {name: "自贡", value: 56},
+//                 {name: "吉林", value: 56},
+//                 {name: "阳江", value: 57},
+//                 {name: "泸州", value: 57},
+//                 {name: "西宁", value: 57},
+//                 {name: "宜宾", value: 58},
+//                 {name: "呼和浩特", value: 58},
+//                 {name: "成都", value: 58},
+//                 {name: "大同", value: 58},
+//                 {name: "镇江", value: 59},
+//                 {name: "桂林", value: 59},
+//                 {name: "张家界", value: 59},
+//                 {name: "宜兴", value: 59},
+//                 {name: "北海", value: 60},
+//                 {name: "西安", value: 61},
+//                 {name: "金坛", value: 62},
+//                 {name: "东营", value: 62},
+//                 {name: "牡丹江", value: 63},
+//                 {name: "遵义", value: 63},
+//                 {name: "绍兴", value: 63},
+//                 {name: "扬州", value: 64},
+//                 {name: "常州", value: 64},
+//                 {name: "潍坊", value: 65},
+//                 {name: "重庆", value: 66},
+//                 {name: "台州", value: 67},
+//                 {name: "南京", value: 67},
+//                 {name: "滨州", value: 70},
+//                 {name: "贵阳", value: 71},
+//                 {name: "无锡", value: 71},
+//                 {name: "本溪", value: 71},
+//                 {name: "克拉玛依", value: 72},
+//                 {name: "渭南", value: 72},
+//                 {name: "马鞍山", value: 72},
+//                 {name: "宝鸡", value: 72},
+//                 {name: "焦作", value: 75},
+//                 {name: "句容", value: 75},
+//                 {name: "北京", value: 79},
+//                 {name: "徐州", value: 79},
+//                 {name: "衡水", value: 80},
+//                 {name: "包头", value: 80},
+//                 {name: "绵阳", value: 80},
+//                 {name: "乌鲁木齐", value: 84},
+//                 {name: "枣庄", value: 84},
+//                 {name: "杭州", value: 84},
+//                 {name: "淄博", value: 85},
+//                 {name: "鞍山", value: 86},
+//                 {name: "溧阳", value: 86},
+//                 {name: "库尔勒", value: 86},
+//                 {name: "安阳", value: 90},
+//                 {name: "开封", value: 90},
+//                 {name: "济南", value: 92},
+//                 {name: "德阳", value: 93},
+//                 {name: "温州", value: 95},
+//                 {name: "九江", value: 96},
+//                 {name: "邯郸", value: 98},
+//                 {name: "临安", value: 99},
+//                 {name: "兰州", value: 99},
+//                 {name: "沧州", value: 100},
+//                 {name: "临沂", value: 103},
+//                 {name: "南充", value: 104},
+//                 {name: "天津", value: 105},
+//                 {name: "富阳", value: 106},
+//                 {name: "泰安", value: 112},
+//                 {name: "诸暨", value: 112},
+//                 {name: "郑州", value: 113},
+//                 {name: "哈尔滨", value: 114},
+//                 {name: "聊城", value: 116},
+//                 {name: "芜湖", value: 117},
+//                 {name: "唐山", value: 119},
+//                 {name: "平顶山", value: 119},
+//                 {name: "邢台", value: 119},
+//                 {name: "德州", value: 120},
+//                 {name: "济宁", value: 120},
+//                 {name: "荆州", value: 127},
+//                 {name: "宜昌", value: 130},
+//                 {name: "义乌", value: 132},
+//                 {name: "丽水", value: 133},
+//                 {name: "洛阳", value: 134},
+//                 {name: "秦皇岛", value: 136},
+//                 {name: "株洲", value: 143},
+//                 {name: "石家庄", value: 147},
+//                 {name: "莱芜", value: 148},
+//                 {name: "常德", value: 152},
+//                 {name: "保定", value: 153},
+//                 {name: "湘潭", value: 154},
+//                 {name: "金华", value: 157},
+//                 {name: "岳阳", value: 169},
+//                 {name: "长沙", value: 175},
+//                 {name: "衢州", value: 177},
+//                 {name: "廊坊", value: 193},
+//                 {name: "菏泽", value: 194},
+//                 {name: "合肥", value: 229},
+//                 {name: "武汉", value: 273},
+//                 {name: "大庆", value: 279}
+//             ]),
+//             symbolSize: 12,
+//             label: {
+//                 normal: {
+//                     show: false
+//                 },
+//                 emphasis: {
+//                     show: false
+//                 }
+//             },
+//             itemStyle: {
+//                 emphasis: {
+//                     borderColor: '#fff',
+//                     borderWidth: 1
+//                 }
+//             }
+//         }
+//     ]
+// }
 //////////////////////收费站收费量 end
