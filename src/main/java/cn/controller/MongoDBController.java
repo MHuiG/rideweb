@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 @Controller
@@ -23,7 +24,7 @@ public class MongoDBController {
     @RequestMapping(value = "/getMongoDBService", produces = "application/json;charset=UTF-8")
     @ResponseBody
     @Test
-    public ArrayList getMongoDBService() {
+    public List getMongoDBService() {
         MongoDBServiceImpl service = new MongoDBServiceImpl();
         MongoCollection col = service.connection();
         RatingSumToPageBean title = new RatingSumToPageBean();
@@ -32,9 +33,9 @@ public class MongoDBController {
         ArrayList c1 = new ArrayList();
         a1 = service.casual_start_data(col);
         b1 = service.casual_end_data(col);
-        double one = (double) a1.get(3)+(double) b1.get(1);
-        double two = (double) a1.get(1)+(double) b1.get(3);
-        double three = (double) a1.get(5)+(double) b1.get(5);
+        double one = (double) a1.get(3) + (double) b1.get(1);
+        double two = (double) a1.get(1) + (double) b1.get(3);
+        double three = (double) a1.get(5) + (double) b1.get(5);
         c1.add(a1.get(2));
         c1.add(one);
         c1.add(a1.get(0));

@@ -20,6 +20,7 @@
     <!--界面样式-->
     <script src="js/visual.js"></script>
     <script src="js/china.js"></script>
+    <script src="js/world.js"></script>
     <script src="js/chartMap.js"></script>
     <link rel="stylesheet" type="text/css" href="css/visual.css">
 
@@ -69,7 +70,8 @@
                         <img class="sfzcll_bkJk" src="images/ksh34.png">
                         <img class="sfzcll_bkJk" src="images/ksh34.png">
                         <img class="sfzcll_bkJk" src="images/ksh34.png">
-                        <label style="width: 65%;text-align : left;"id="first_name"><img src="images/ksh35.png">Lake Street & Knox Ave S</label>
+                        <label style="width: 65%;text-align : left;" id="first_name"><img src="images/ksh35.png">Lake
+                            Street & Knox Ave S</label>
                         <div class="sfzcll_smallBk">
                             <div class="ygl">
                                 <span id="first_data">85787</span>车次
@@ -83,7 +85,8 @@
                         <img class="sfzcll_bkJk" src="images/ksh34.png">
                         <img class="sfzcll_bkJk" src="images/ksh34.png">
                         <img class="sfzcll_bkJk" src="images/ksh34.png">
-                        <label  style="width: 65%;text-align : left;" id="second_name"><img src="images/ksh35.png">100 Main Street SE</label>
+                        <label style="width: 65%;text-align : left;" id="second_name"><img src="images/ksh35.png">100
+                            Main Street SE</label>
                         <div class="sfzcll_smallBk">
                             <div class="ygl">
                                 <span id="second_data">85148</span>车次
@@ -97,7 +100,8 @@
                         <img class="sfzcll_bkJk" src="images/ksh34.png">
                         <img class="sfzcll_bkJk" src="images/ksh34.png">
                         <img class="sfzcll_bkJk" src="images/ksh34.png">
-                        <label  style="width: 65%;text-align : left;"id="third_name"><img src="images/ksh35.png">Lake Calhoun Center</label>
+                        <label style="width: 65%;text-align : left;" id="third_name"><img src="images/ksh35.png">Lake
+                            Calhoun Center</label>
                         <div class="sfzcll_smallBk">
                             <div class="ygl">
                                 <span id="third_data">70564</span>车次
@@ -113,10 +117,10 @@
     </div>
     <script type="text/javascript">
         $.ajax({
-            url:"/rideweb/getMongoDBService",
+            url: "/rideweb/getMongoDBService",
             type: 'GET',
             dataType: 'json',
-            success:function(result) {
+            success: function (result) {
                 console.log(result);
             }
         })
