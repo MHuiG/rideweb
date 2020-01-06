@@ -26,6 +26,9 @@
 
 </head>
 <body class="ksh">
+<div class="dl-log" style="height: 10px">
+    <a href="/rideweb/admin/" title="Home" class="dl-log-quit">[Admin]</a>
+</div>
 <div id="load">
     <div class="load_img"><!-- 加载动画 -->
         <img class="jzxz1" src="images/jzxz1.png">
@@ -85,7 +88,7 @@
                         <img class="sfzcll_bkJk" src="images/ksh34.png">
                         <img class="sfzcll_bkJk" src="images/ksh34.png">
                         <img class="sfzcll_bkJk" src="images/ksh34.png">
-                        <label style="width: 65%;text-align : left;" ><img src="images/ksh35.png">
+                        <label style="width: 65%;text-align : left;"><img src="images/ksh35.png">
                             <span id="second_name">wwww</span></label>
                         <div class="sfzcll_smallBk">
                             <div class="ygl">
@@ -121,7 +124,7 @@
             dataType: 'json',
             success: function (data) {
                 var first_name = document.getElementById("first_name");
-                first_name.innerHTML=data[0];
+                first_name.innerHTML = data[0];
                 var first_data = document.getElementById("first_data");
                 first_data.innerHTML = data[1];
                 var second_name = document.getElementById("second_name");
