@@ -70,11 +70,11 @@
                         <img class="sfzcll_bkJk" src="images/ksh34.png">
                         <img class="sfzcll_bkJk" src="images/ksh34.png">
                         <img class="sfzcll_bkJk" src="images/ksh34.png">
-                        <label style="width: 65%;text-align : left;" id="first_name"><img src="images/ksh35.png">Lake
-                            Street & Knox Ave S</label>
+                        <label style="width: 65%;text-align : left;"><img src="images/ksh35.png">
+                            <span id="first_name">yyyy</span></label>
                         <div class="sfzcll_smallBk">
                             <div class="ygl">
-                                <span id="first_data">85787</span>车次
+                                <span id="first_data">1</span>车次
                             </div>
                         </div>
 
@@ -85,11 +85,11 @@
                         <img class="sfzcll_bkJk" src="images/ksh34.png">
                         <img class="sfzcll_bkJk" src="images/ksh34.png">
                         <img class="sfzcll_bkJk" src="images/ksh34.png">
-                        <label style="width: 65%;text-align : left;" id="second_name"><img src="images/ksh35.png">100
-                            Main Street SE</label>
+                        <label style="width: 65%;text-align : left;" ><img src="images/ksh35.png">
+                            <span id="second_name">wwww</span></label>
                         <div class="sfzcll_smallBk">
                             <div class="ygl">
-                                <span id="second_data">85148</span>车次
+                                <span id="second_data">1</span>车次
                             </div>
                         </div>
 
@@ -100,11 +100,10 @@
                         <img class="sfzcll_bkJk" src="images/ksh34.png">
                         <img class="sfzcll_bkJk" src="images/ksh34.png">
                         <img class="sfzcll_bkJk" src="images/ksh34.png">
-                        <label style="width: 65%;text-align : left;" id="third_name"><img src="images/ksh35.png">Lake
-                            Calhoun Center</label>
+                        <label style="width: 65%;text-align : left;"><img src="images/ksh35.png"><span id="third_name">hhhhhhh</span></label>
                         <div class="sfzcll_smallBk">
                             <div class="ygl">
-                                <span id="third_data">70564</span>车次
+                                <span id="third_data">1</span>车次
                             </div>
                         </div>
 
@@ -115,13 +114,26 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript">
+    <script>
         $.ajax({
             url: "/rideweb/getMongoDBService",
-            type: 'GET',
+            type: 'POST',
             dataType: 'json',
-            success: function (result) {
-                console.log(result);
+            success: function (data) {
+                var first_name = document.getElementById("first_name");
+                first_name.innerHTML=data[0];
+                var first_data = document.getElementById("first_data");
+                first_data.innerHTML = data[1];
+                var second_name = document.getElementById("second_name");
+                second_name.innerHTML = data[2];
+                var second_data = document.getElementById("second_data");
+                second_data.innerHTML = data[3];
+                var third_name = document.getElementById("third_name");
+                third_name.innerHTML = data[4];
+                var third_data = document.getElementById("third_data");
+                third_data.innerHTML = data[5];
+
+
             }
         })
     </script>
