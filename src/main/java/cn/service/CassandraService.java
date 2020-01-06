@@ -16,4 +16,5 @@ public interface CassandraService {
 
     List<Location> getLocationByTerminal(Location o);
 
+    String seacountyear(String y1, String y2, String AccountType);
 }

@@ -56,10 +56,10 @@ public class CassandraServiceImpl implements CassandraService {
     */
 
     /**
-     * 创建表seasons
+     * 创建表season
      */
     @Test
-    public void createTableseasons() {
+    public void createTableseason() {
         connectDB();
         String cql = "CREATE TABLE if not exists mydb.season (id text,StartDate text,StartStation text,StartStationNumber text,EndDate text,EndStation text,EndStationNumber text,TotalDuration text,AccountType text,PRIMARY KEY (id))";
         session.execute(cql);
@@ -71,6 +71,24 @@ public class CassandraServiceImpl implements CassandraService {
 
     /*
     COPY mydb.season(id,StartDate,StartStation,StartStationNumber,EndDate,EndStation,EndStationNumber,TotalDuration,AccountType) FROM '/export/data/ride/seasons' WITH HEADER = false;
+    */
+
+    /**
+     * 创建表sea
+     */
+    @Test
+    public void createTablesea() {
+        connectDB();
+        String cql = "CREATE TABLE if not exists mydb.sea (id text,StartDate text,StartStation text,StartStationNumber text,EndDate text,EndStation text,EndStationNumber text,TotalDuration text,AccountType text,StartDateTemp int,EndDateTemp int,PRIMARY KEY (id))";
+        session.execute(cql);
+    }
+
+    /**
+     * 导入数据
+     */
+
+    /*
+    COPY mydb.sea(id,StartDate,StartStation,StartStationNumber,EndDate,EndStation,EndStationNumber,TotalDuration,AccountType,StartDateTemp,EndDateTemp) FROM '/export/data/ride/seasons1' WITH HEADER = false;
     */
 
     /**
@@ -157,25 +175,53 @@ public class CassandraServiceImpl implements CassandraService {
         return s;
     }
 
+    public String seacountyear(String y1, String y2, String AccountType) {
+        connectDB();
+        String c = "0";
+        List<Location> s = new ArrayList<>();
+        String cql = "select count(*) from mydb.sea WHERE StartDateTemp > " + y1 + " and  StartDateTemp < " + y2 + " and AccountType='" + AccountType + "'   ALLOW FILTERING;";
+        ResultSet resultSet = session.execute(cql);
+        for (Row row : resultSet) {
+            c = row.getToken(0).toString();
+            System.out.println(c);
+        }
+        return c;
+
+    }
+
     @Test
     public void main() {
         connectDB();
         List<Location> s = new ArrayList<>();
-        String cql = "SELECT * FROM mydb.loca where Terminal='30036'allow filtering;";
+        String cql = "select count(*) from mydb.sea WHERE StartDateTemp > 1262275200 and  StartDateTemp < 1293811200 and AccountType='Casual'   ALLOW FILTERING;";
         ResultSet resultSet = session.execute(cql);
         for (Row row : resultSet) {
-            Location o = new Location();
-            o.setTerminal(row.getString("Terminal"));
-            o.setStation(row.getString("Station"));
-            o.setLatitude(row.getString("Latitude"));
-            o.setLongitude(row.getString("Longitude"));
-            o.setNbdocks(row.getString("Nbdocks"));
-            System.out.println(row.getString("Terminal"));
-            s.add(o);
+            System.out.println(row.getToken(0));
         }
 
     }
-
-
+/*
+    public String id;
+    public String StartDate;
+    public String StartStation;
+    public String StartStationNumber;
+    public String EndDate;
+    public String EndStation;
+    public String EndStationNumber;
+    public String TotalDuration;
+    public String AccountType;
+    public int StartDateTemp;
+    public int EndDateTemp;
+ */
+/*
+ChangeTime('1/01/2010 00:00')#1262275200
+ChangeTime('1/01/2011 00:00')#1293811200
+ChangeTime('1/01/2012 00:00')#1325347200
+ChangeTime('1/01/2013 00:00')#1356969600
+ChangeTime('1/01/2014 00:00')#1388505600
+ChangeTime('1/01/2015 00:00')#1420041600
+ChangeTime('1/01/2016 00:00')#1451577600
+ChangeTime('1/01/2017 00:00')#1483200000
+ */
 }
 
