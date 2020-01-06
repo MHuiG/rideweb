@@ -2,6 +2,7 @@ package cn.service.impl;
 
 import cn.mapper.Mapper;
 import cn.pojo.Cassandra.Location;
+import cn.pojo.Cassandra.Sea;
 import cn.service.CassandraService;
 import com.datastax.driver.core.Cluster;
 import com.datastax.driver.core.ResultSet;
@@ -188,18 +189,6 @@ public class CassandraServiceImpl implements CassandraService {
         return c;
 
     }
-
-    @Test
-    public void main() {
-        connectDB();
-        List<Location> s = new ArrayList<>();
-        String cql = "select count(*) from mydb.sea WHERE StartDateTemp > 1262275200 and  StartDateTemp < 1293811200 and AccountType='Casual'   ALLOW FILTERING;";
-        ResultSet resultSet = session.execute(cql);
-        for (Row row : resultSet) {
-            System.out.println(row.getToken(0));
-        }
-
-    }
 /*
     public String id;
     public String StartDate;
@@ -213,6 +202,46 @@ public class CassandraServiceImpl implements CassandraService {
     public int StartDateTemp;
     public int EndDateTemp;
  */
+
+    /**
+     * 查询Sea
+     */
+    @Override
+    public List<Sea> getSeaAll() {
+        connectDB();
+        List<Sea> s = new ArrayList<>();
+        String cql = "SELECT * FROM mydb.sea;";
+        ResultSet resultSet = session.execute(cql);
+        for (Row row : resultSet) {
+            Sea o = new Sea();
+            o.setId(row.getString("id"));
+            o.setStartDate(row.getString("StartDate"));
+            o.setStartStation(row.getString("StartStation"));
+            o.setStartStationNumber(row.getString("StartStationNumber"));
+            o.setEndDate(row.getString("EndDate"));
+            o.setEndStation(row.getString("EndStation"));
+            o.setEndStationNumber(row.getString("EndStationNumber"));
+            o.setTotalDuration(row.getString("Nbdocks"));
+            o.setAccountType(row.getString("Nbdocks"));
+            o.setStartDateTemp(row.getString("Nbdocks"));
+            o.setEndDateTemp(row.getString("Nbdocks"));
+            s.add(o);
+        }
+        return s;
+    }
+
+    @Test
+    public void main() {
+        connectDB();
+        List<Location> s = new ArrayList<>();
+        String cql = "select count(*) from mydb.sea WHERE StartDateTemp > 1262275200 and  StartDateTemp < 1293811200 and AccountType='Casual'   ALLOW FILTERING;";
+        ResultSet resultSet = session.execute(cql);
+        for (Row row : resultSet) {
+            System.out.println(row.getToken(0));
+        }
+
+    }
+
 /*
 ChangeTime('1/01/2010 00:00')#1262275200
 ChangeTime('1/01/2011 00:00')#1293811200

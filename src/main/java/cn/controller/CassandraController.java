@@ -104,6 +104,20 @@ public class CassandraController {
         return list;
     }
 
+    @RequestMapping(value = "/sum", produces = "application/json;charset=UTF-8")
+    @ResponseBody
+    public List getsum() {
+        List list = new ArrayList();
+        int SumNbdocks = 0;
+        List<Location> o = CassandraService.getLocationAll();
+        for (Location i : o) {
+            SumNbdocks += Integer.parseInt(i.getNbdocks());
+        }
+        list.add(SumNbdocks);
+        list.add(o.size());
+        return list;
+    }
+
     @RequestMapping(value = "/getCassandraService", produces = "application/json;charset=UTF-8")
     @ResponseBody
     public int getCassandraService() {
