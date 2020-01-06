@@ -36,29 +36,46 @@
     <input type="hidden" name="id" value=""/>
     <table class="table table-bordered table-hover ">
         <tr>
-            <td width="10%" class="tableleft">车站ID</td>
-            <td><input id="Terminal" type="text" name="Terminal" disabled="disabled"/></td>
+            <td width="10%" class="tableleft">ID</td>
+            <td><input id="ID" type="text" name="ID" disabled="disabled"/></td>
         </tr>
         <tr>
-            <td class="tableleft">车站名称</td>
-            <td><input id="Station" type="text" name="Station"/></td>
+            <td width="10%" class="tableleft">开始日期</td>
+            <td><input id="StartDate" type="text" name="StartDate"/></td>
         </tr>
         <tr>
-            <td class="tableleft">纬度</td>
-            <td><input id="Latitude" type="text" name="Latitude"/></td>
+            <td class="tableleft">起始站</td>
+            <td><input id="StartStation" type="text" name="StartStation"/></td>
         </tr>
         <tr>
-            <td class="tableleft">经度</td>
-            <td><input id="Longitude" type="text" name="Longitude"/></td>
+            <td class="tableleft">起始站ID</td>
+            <td><input id="StartStationNumber" type="text" name="StartStationNumber"/></td>
         </tr>
         <tr>
-            <td class="tableleft">车站自行车停靠点总数</td>
-            <td><input id="Nbdocks" type="text" name="Nbdocks"/></td>
+            <td class="tableleft">结束日期</td>
+            <td><input id="EndDate" type="text" name="EndDate"/></td>
         </tr>
+        <tr>
+            <td class="tableleft">终点站</td>
+            <td><input id="EndStation" type="text" name="EndStation"/></td>
+        </tr>
+        <tr>
+            <td class="tableleft">终点站ID</td>
+            <td><input id="EndStationNumber" type="text" name="EndStationNumber"/></td>
+        </tr>
+        <tr>
+            <td class="tableleft">总持续时间</td>
+            <td><input id="TotalDuration" type="text" name="TotalDuration"/></td>
+        </tr>
+        <tr>
+            <td class="tableleft">账户类型</td>
+            <td><input id="AccountType" type="text" name="AccountType"/></td>
+        </tr>
+
         <tr>
             <td class="tableleft"></td>
             <td>
-                <button onclick="add()" class="btn btn-primary" type="button">保存</button> &nbsp;&nbsp;
+                <button onclick="add()" class="btn btn-primary" type="button">保存</button>
                 <button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
             </td>
         </tr>
@@ -118,21 +135,25 @@
         return (false);
     }
 
-    console.log(getQueryVariable("Terminal"));
+    console.log(getQueryVariable("ID"));
     $.ajax({
-        url: "/rideweb/getLocationByTerminal",
+        url: "/rideweb/getSeasonByID",
         type: "POST",
         dataType: "json",
         data: {
-            'Terminal': getQueryVariable("Terminal")
+            'ID': getQueryVariable("ID")
         },
         success: function (data) {
             // console.log(data);
-            $("#Terminal").attr("value", data[0].Terminal);
-            $("#Station").attr("value", data[0].Station);
-            $("#Latitude").attr("value", data[0].Latitude);
-            $("#Longitude").attr("value", data[0].Longitude);
-            $("#Nbdocks").attr("value", data[0].Nbdocks);
+            $("#ID").attr("value", data[0].id);
+            $("#StartDate").attr("value", data[0].StartDate);
+            $("#StartStation").attr("value", data[0].StartStation);
+            $("#StartStationNumber").attr("value", data[0].StartStationNumber);
+            $("#EndDate").attr("value", data[0].EndDate);
+            $("#EndStation").attr("value", data[0].EndStation);
+            $("#EndStationNumber").attr("value", data[0].EndStationNumber);
+            $("#TotalDuration").attr("value", data[0].TotalDuration);
+            $("#AccountType").attr("value", data[0].AccountType);
         },
         error: function (err) {
             console.log(err);
@@ -140,26 +161,34 @@
     });
 
     function add() {
-        Terminal = $("#Terminal").val();
-        Station = $("#Station").val();
-        Latitude = $("#Latitude").val();
-        Longitude = $("#Longitude").val();
-        Nbdocks = $("#Nbdocks").val();
+        ID = $("#ID").val();
+        StartDate = $("#StartDate").val();
+        StartStation = $("#StartStation").val();
+        StartStationNumber = $("#StartStationNumber").val();
+        EndDate = $("#EndDate").val();
+        EndStation = $("#EndStation").val();
+        EndStationNumber = $("#EndStationNumber").val();
+        TotalDuration = $("#TotalDuration").val();
+        AccountType = $("#AccountType").val();
         // console.log(Terminal);
-        if (Terminal == '' | Station == '' | Latitude == '' | Longitude == '' | Nbdocks == '') {
+        if (ID == '' | StartDate == '' | StartStation == '' | StartStationNumber == '' | EndDate == '' | EndStation == '' | EndStationNumber == '' | TotalDuration == '' | AccountType == '') {
             nullinfo();
             return;
         }
         $.ajax({
-            url: "/rideweb/insertLocation",
+            url: "/rideweb/updateseason",
             type: "POST",
             dataType: "json",
             data: {
-                'Terminal': Terminal,
-                'Station': Station,
-                'Latitude': Latitude,
-                'Longitude': Longitude,
-                'Nbdocks': Nbdocks
+                "ID": ID,
+                "StartDate": StartDate,
+                "StartStation": StartStation,
+                "StartStationNumber": StartStationNumber,
+                "EndDate": EndDate,
+                "EndStation": EndStation,
+                "EndStationNumber": EndStationNumber,
+                "TotalDuration": TotalDuration,
+                "AccountType": AccountType
             },
             success: function (data) {
                 // console.log(data);
