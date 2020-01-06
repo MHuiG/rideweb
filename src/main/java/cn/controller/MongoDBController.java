@@ -1,10 +1,13 @@
 package cn.controller;
 
 import cn.service.MongoDBService;
+import cn.service.impl.MongoDBServiceImpl;
+import com.mongodb.client.MongoCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.testng.annotations.Test;
 
 
 @Controller
@@ -16,9 +19,14 @@ public class MongoDBController {
 
     @RequestMapping(value = "/getMongoDBService", produces = "application/json;charset=UTF-8")
     @ResponseBody
-    public int getMongoDBService() {
-        System.out.println("getMongoDBService..");
-        return 1;
+    @Test
+    public void getMongoDBService() {
+        MongoDBServiceImpl service = new MongoDBServiceImpl();
+        MongoCollection col = service.connection();
+        service.casual_start_data(col);
+        service.casual_end_data(col);
+        service.member_start_data(col);
+        service.member_end_data(col);
     }
 
 
