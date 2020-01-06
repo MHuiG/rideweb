@@ -162,3 +162,17 @@ $.ajax({
         console.log(err);
     }
 });
+
+$.ajax({
+    url: "/rideweb/map",
+    type: "POST",
+    dataType: "json",
+    success: function (data) {
+        // console.log(data);
+        aa = eval(data[0]);
+        myChart8.setOption(option8);
+    },
+    error: function (err) {
+        console.log(err);
+    }
+});
