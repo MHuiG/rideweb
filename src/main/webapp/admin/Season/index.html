@@ -37,27 +37,35 @@
 <form class="form-inline definewidth m20">
     车站名称：
     <input type="text" name="username" id="TStation" class="abc input-default" placeholder="" value="">&nbsp;&nbsp;
-    <button onclick="getLocationByStation()" type="button" class="btn btn-primary">查询</button>&nbsp;&nbsp;
+    <button onclick="Selectone()" type="button" class="btn btn-primary">查询</button>&nbsp;&nbsp;
     <button type="button" class="btn btn-success" id="addnew">新增车站</button>
 </form>
 <table class="table table-bordered table-hover definewidth m10">
     <thead>
     <tr>
-        <th>车站ID</th>
-        <th>车站名称</th>
-        <th>纬度</th>
-        <th>经度</th>
-        <th>车站自行车停靠点总数</th>
+        <th>ID</th>
+        <th>开始日期</th>
+        <th>起始站</th>
+        <th>起始站ID</th>
+        <th>结束日期</th>
+        <th>终点站</th>
+        <th>终点站ID</th>
+        <th>总持续时间</th>
+        <th>账户类型</th>
         <th>操作</th>
     </tr>
     </thead>
     <tbody>
     <tr>
-        <td>30000</td>
+        <td>25</td>
+        <td>6/11/2010 21:06</td>
         <td>100 Main Street SE</td>
-        <td>44.984892</td>
-        <td>-93.256551</td>
-        <td>27</td>
+        <td>30029</td>
+        <td>6/11/2010 21:25</td>
+        <td>5th Street & 3rd Ave. S</td>
+        <td>30029</td>
+        <td>1122796.0</td>
+        <td>Casual</td>
         <td>
             <a href="edit.html">编辑</a>
             <a href="#" id="dell">删除</a>
@@ -99,9 +107,9 @@
 
     function dell(obj) {
         showConfirm("info", "确认删除?", function () {
-            Terminal = obj.parentNode.parentNode.id;
-            console.log(Terminal);
-            delone(Terminal);
+            ID = obj.parentNode.parentNode.id;
+            console.log(ID);
+            delone(ID);
             // var url = "index.html";
             // window.location.href = url;
         }, false, true)
@@ -109,17 +117,17 @@
     }
 
     function edit(obj) {
-        Terminal = obj.parentNode.parentNode.id;
-        window.location.href = "edit.html?Terminal=" + Terminal;
+        ID = obj.parentNode.parentNode.id;
+        window.location.href = "edit.html?Terminal=" + ID;
     }
 
-    function delone(Terminal) {
+    function delone(ID) {
         $.ajax({
-            url: "/rideweb/deleteLocationByTerminal",
+            url: "/rideweb/deleteSeasonByID",
             type: "POST",
             dataType: "json",
             data: {
-                'Terminal': Terminal
+                'ID': ID
             },
             success: function (data) {
                 // console.log(data);
@@ -143,7 +151,7 @@
 
     function getLocationAll() {
         $.ajax({
-            url: "/rideweb/getLocationAll",
+            url: "/rideweb/getSeasonAll",
             type: "POST",
             dataType: "json",
             success: function (data) {
@@ -152,12 +160,16 @@
                 var arrLen = data.length;
                 if (arrLen > 0) {
                     for (i = 0; i < arrLen; i++) {
-                        result += "<tr id=" + data[i].Terminal + ">\n" +
-                            "        <td>" + data[i].Terminal + "</td>\n" +
-                            "        <td>" + data[i].Station + "</td>\n" +
-                            "        <td>" + data[i].Latitude + "</td>\n" +
-                            "        <td>" + data[i].Longitude + "</td>\n" +
-                            "        <td>" + data[i].Nbdocks + "</td>\n" +
+                        result += "<tr id=" + data[i].id + ">\n" +
+                            "        <td>" + data[i].id + "</td>\n" +
+                            "        <td>" + data[i].StartDate + "</td>\n" +
+                            "        <td>" + data[i].StartStation + "</td>\n" +
+                            "        <td>" + data[i].StartStationNumber + "</td>\n" +
+                            "        <td>" + data[i].EndDate + "</td>\n" +
+                            "        <td>" + data[i].EndStation + "</td>\n" +
+                            "        <td>" + data[i].EndStationNumber + "</td>\n" +
+                            "        <td>" + data[i].TotalDuration + "</td>\n" +
+                            "        <td>" + data[i].AccountType + "</td>\n" +
                             "        <td>\n" +
                             "            <a href=\"#\"onclick=\"edit(this)\">编辑</a>\n" +
                             "            <a href=\"#\" onclick=\"dell(this)\">删除</a>\n" +
@@ -173,14 +185,14 @@
         });
     }
 
-    function getLocationByStation() {
-        Station = $("#TStation").val();
+    function Selectone() {
+        StartStation = $("#TStation").val();
         $.ajax({
             url: "/rideweb/getLocationByStation",
             type: "POST",
             dataType: "json",
             data: {
-                'Station': Station
+                'StartStation': StartStation
             },
             success: function (data) {
                 // console.log(data);
@@ -188,12 +200,16 @@
                 var arrLen = data.length;
                 if (arrLen > 0) {
                     for (i = 0; i < arrLen; i++) {
-                        result += "<tr id=" + data[i].Terminal + ">\n" +
-                            "        <td>" + data[i].Terminal + "</td>\n" +
-                            "        <td>" + data[i].Station + "</td>\n" +
-                            "        <td>" + data[i].Latitude + "</td>\n" +
-                            "        <td>" + data[i].Longitude + "</td>\n" +
-                            "        <td>" + data[i].Nbdocks + "</td>\n" +
+                        result += "<tr id=" + data[i].id + ">\n" +
+                            "        <td>" + data[i].id + "</td>\n" +
+                            "        <td>" + data[i].StartDate + "</td>\n" +
+                            "        <td>" + data[i].StartStation + "</td>\n" +
+                            "        <td>" + data[i].StartStationNumber + "</td>\n" +
+                            "        <td>" + data[i].EndDate + "</td>\n" +
+                            "        <td>" + data[i].EndStation + "</td>\n" +
+                            "        <td>" + data[i].EndStationNumber + "</td>\n" +
+                            "        <td>" + data[i].TotalDuration + "</td>\n" +
+                            "        <td>" + data[i].AccountType + "</td>\n" +
                             "        <td>\n" +
                             "            <a href=\"#\"onclick=\"edit(this)\">编辑</a>\n" +
                             "            <a href=\"#\" onclick=\"dell(this)\">删除</a>\n" +
