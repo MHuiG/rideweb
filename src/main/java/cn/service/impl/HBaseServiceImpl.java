@@ -36,6 +36,7 @@ public class HBaseServiceImpl implements HBaseService {
         conf.set("hbase.zookeeper.quorum","worker03");
         conf.set("hbase.zookeeper.property.clientPort","2181");
         conf.set("zookeeper.znode.parent","/hbase");
+        conf.set("hbase.master", "worker03:16000");
         try{
             connection=ConnectionFactory.createConnection(conf);
         } catch (IOException e) {
@@ -89,7 +90,6 @@ public class HBaseServiceImpl implements HBaseService {
         }
     }
 // 查询整表
-    @Test
     public List<Season> queryTable() throws IOException {
             getconncet();
             List<Season> p = new ArrayList<>();
@@ -136,7 +136,7 @@ public class HBaseServiceImpl implements HBaseService {
 //                        System.out.println(new String(CellUtil.cloneValue(cell)));
                     }
                 }
-//                System.out.println(o.getTerminal()+" "+o.getStation()+" "+o.getLatitude()+" "+o.getLongitude()+" "+o.getNbdocks());
+                System.out.println(o.getId()+" "+o.getStartDate()+" "+o.getStartStation()+" "+o.getStartStationNumber()+" "+o.getEndDate()+" "+o.getEndStation()+" "+o.getEndStationNumber()+" "+o.getTotalDuration()+" "+o.getAccountType());
                 p.add(o);
                 a=a+1;
                 if (a==20) break;
@@ -241,22 +241,29 @@ public class HBaseServiceImpl implements HBaseService {
     }
 
     @Test
-    public void hh(){
-        try{
-            deleteTable("season");
-            createTable("season","info");
-//            deleteRow("locations","4000") ;
-//            addData("locations","4000","wfc","400","500","50");
-//            updatedata("locations","4000","Station","www");
-//            getData("locations","4000");
-//            queryTable("locations");
-//              getData("locations","30000");
-//            addSeasonData("season","3000000",)
-        }catch (IOException e){
-            e.printStackTrace();
-        }
+    public void hh() throws IOException {
+        List<Season> o= queryTable();
+//        createTable("hhh","fff");
     }
 
+    @Test
+    public void createtable() throws IOException {
+        getconncet();
+        TableName tableName =TableName.valueOf("NEWTABLE");
+        Admin admin = connection.getAdmin();
+        if (admin.tableExists(tableName)){
+            admin.disableTable(tableName);
+            admin.deleteTable(tableName);
+            System.out.println(tableName.toString()+"is exists, delete it..............");
+        }
+        HTableDescriptor descriptor = new HTableDescriptor(tableName);
+        HColumnDescriptor columnDescriptor = new HColumnDescriptor("cf1");
+        columnDescriptor.setBloomFilterType(BloomType.ROWCOL);
+        descriptor.addFamily(columnDescriptor);
+        descriptor.addFamily(new HColumnDescriptor("cf2"));
+        admin.createTable(descriptor);
+        admin.close();
+    }
 
 
 }
