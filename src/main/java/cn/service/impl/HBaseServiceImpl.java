@@ -93,9 +93,10 @@ public class HBaseServiceImpl implements HBaseService {
     public List<Season> queryTable() throws IOException {
             getconncet();
             List<Season> p = new ArrayList<>();
-            Table table =connection.getTable(TableName.valueOf("season"));
+            Table table =connection.getTable(TableName.valueOf("ride"));
             Scan scan=new Scan();
             ResultScanner results=table.getScanner(scan);
+            int a=0;
             for (Result result:results){
                 Season o = new Season();
 //                System.out.println(new String(result.getRow()));
@@ -137,6 +138,8 @@ public class HBaseServiceImpl implements HBaseService {
                 }
 //                System.out.println(o.getTerminal()+" "+o.getStation()+" "+o.getLatitude()+" "+o.getLongitude()+" "+o.getNbdocks());
                 p.add(o);
+                a=a+1;
+                if (a==20) break;
             }
             return p;
     }
@@ -147,7 +150,7 @@ public class HBaseServiceImpl implements HBaseService {
 
         getconncet();
             List<Season> p = new ArrayList<>();
-            Table table_Name = connection.getTable(TableName.valueOf("season"));
+            Table table_Name = connection.getTable(TableName.valueOf("ride"));
             Get get1 = new Get(Bytes.toBytes(s.getId()));
             Result result = table_Name.get(get1);
             Season o = new Season();
@@ -196,7 +199,7 @@ public class HBaseServiceImpl implements HBaseService {
     @Test
     public void addSeasonData(Season o) throws IOException {
             getconncet();
-            HTable tableName=(HTable)connection.getTable(TableName.valueOf("NEWTABLE"));
+            HTable tableName=(HTable)connection.getTable(TableName.valueOf("ride"));
             //设置客户端缓存大小，即缓存为6MB时执行真正的put，在flushCommits时进行手动提交。若为true，则每次put操作都直接提交给regionserver，在大批量写入时效率较低。
             tableName.setWriteBufferSize(6 * 1024 * 1024);
             tableName.setAutoFlushTo(false);
@@ -223,13 +226,13 @@ public class HBaseServiceImpl implements HBaseService {
     public void deleteRow(String... rows) throws IOException {
         try {
             getconncet();
-            TableName table_Name = TableName.valueOf("season");
+            TableName table_Name = TableName.valueOf("ride");
             HTable table = (HTable) connection.getTable(table_Name);
             for (int i = 0; i < rows.length; i++) {
                 Delete delete = new Delete(Bytes.toBytes(rows[i]));
                 table.delete(delete);
             }
-            System.out.println("删除行成功");
+//            System.out.println("删除行成功");
             table.close();
         } catch (IOException e) {
             e.printStackTrace();

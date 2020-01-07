@@ -137,7 +137,7 @@
 
     console.log(getQueryVariable("ID"));
     $.ajax({
-        url: "/rideweb/getSeasonByID",
+        url: "/rideweb/getHBaseDatabyID",
         type: "POST",
         dataType: "json",
         data: {
@@ -176,7 +176,7 @@
             return;
         }
         $.ajax({
-            url: "/rideweb/updateseason",
+            url: "/rideweb/getinsertHBase",
             type: "POST",
             dataType: "json",
             data: {

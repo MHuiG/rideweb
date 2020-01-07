@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.IOException;
+import java.util.List;
 
 
 @Controller
@@ -42,4 +43,33 @@ public class HBaseController {
         HBaseService.addSeasonData(o);
         return 1;
     }
+//删除
+    @RequestMapping(value = "/getdeleteHBase", produces = "application/json;charset=UTF-8")
+    @ResponseBody
+    public int getdeleteHBase(String ID) throws IOException {
+
+        HBaseService.deleteRow(ID);
+        System.out.println("deleterowByID " +ID);
+        return 1;
+    }
+
+//    根据ID查
+    @RequestMapping(value = "/getHBaseDatabyID", produces = "application/json;charset=UTF-8")
+    @ResponseBody
+    public int getHBaseDatabyID(String ID) throws IOException {
+        Season o = new Season();
+        o.setId(ID);
+        HBaseService.getData(o);
+        System.out.println("getHBaseDatabyID " + o.getId());
+        return 1;
+    }
+
+//    查整表
+    @RequestMapping(value = "/getHBaseAll", produces = "application/json;charset=UTF-8")
+    @ResponseBody
+    public List<Season> getHBaseAll() throws IOException {
+        List<Season> o =HBaseService.queryTable();
+        return o;
+    }
+
 }

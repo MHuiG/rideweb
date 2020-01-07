@@ -123,7 +123,7 @@
 
     function delone(ID) {
         $.ajax({
-            url: "/rideweb/deleteSeasonByID",
+            url: "/rideweb/getdeleteHBase",
             type: "POST",
             dataType: "json",
             data: {
@@ -151,7 +151,7 @@
 
     function getLocationAll() {
         $.ajax({
-            url: "/rideweb/getSeasonAll",
+            url: "/rideweb/getHBaseAll",
             type: "POST",
             dataType: "json",
             success: function (data) {
@@ -188,11 +188,11 @@
     function Selectone() {
         StartStation = $("#TStation").val();
         $.ajax({
-            url: "/rideweb/getLocationByStation",
+            url: "/rideweb/getHBaseDatabyID",
             type: "POST",
             dataType: "json",
             data: {
-                'StartStation': StartStation
+                'ID': ID
             },
             success: function (data) {
                 // console.log(data);
