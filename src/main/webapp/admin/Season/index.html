@@ -186,7 +186,7 @@
     }
 
     function Selectone() {
-        StartStation = $("#TStation").val();
+        ID = $("#TStation").val();
         $.ajax({
             url: "/rideweb/getHBaseDatabyID",
             type: "POST",
