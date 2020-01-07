@@ -229,24 +229,50 @@
                         <td>临时会员</td>
                     </tr>
                     <tr>
-                        <td>2486万</td>
-                        <td>2486万</td>
+                        <td><span id="one">2486</span>元</td>
+                        <td><span id="two">2486</span>元</td>
                     </tr>
                     <tr>
-                        <td>2486万</td>
-                        <td>2486万</td>
+                        <td><span id="three">2486</span>元</td>
+                        <td><span id="four">2486</span>元</td>
                     </tr>
                     <tr>
-                        <td>2486万</td>
-                        <td>2486万</td>
+                        <td><span id="five">2486</span>元</td>
+                        <td><span id="six">2486</span>元</td>
                     </tr>
                     <tr>
-                        <td>2486万</td>
-                        <td>2486万</td>
+                        <td><span id="seven">2486</span>元</td>
+                        <td><span id="eight">2486</span>元</td>
                     </tr>
                 </table>
             </div>
         </div>
+        <script>
+            $.ajax({
+                url: "/rideweb/getList",
+                type: 'POST',
+                dataType: 'json',
+                success: function (data) {
+                    var one = document.getElementById("one");
+                    one.innerHTML = data[0];
+                    var two = document.getElementById("two");
+                    two.innerHTML = data[4];
+                    var three = document.getElementById("three");
+                    three.innerHTML = data[1];
+                    var four = document.getElementById("four");
+                    four.innerHTML = data[5];
+                    var five = document.getElementById("five");
+                    five.innerHTML = data[2];
+                    var six = document.getElementById("six");
+                    six.innerHTML = data[6];
+                    var seven = document.getElementById("seven");
+                    seven.innerHTML = data[3];
+                    var eight = document.getElementById("eight");
+                    eight.innerHTML = data[7];
+
+                }
+            })
+        </script>
         <div class="visual_box">
             <div class="visual_title">
                 <span>站点收费排行</span>
