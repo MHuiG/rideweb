@@ -1,22 +1,14 @@
 //交通流量
 var data = {
     id: 'multipleBarsLines',
+    barColor: ['#009883', '#e66922'], //柱子颜色 必填参数
     legendBar: ['<=15min', '>15min'],
-    // symbol: '', //数值是否带百分号        --默认为空 ''
-    // legendLine: ['环比', '同比'],
     xAxis: ['2010', '2011', '2012', '2013', '2014', '2015', '2016'],
     yAxis: [
         [128, 130, 160, 121, 134, 173, 125],
         [130, 157, 168, 178, 207, 193, 165]
     ],
-    // lines: [
-    //     [10, 10, 9, 11, 7, 4],
-    //     [6, 12, 12, 2, 4, 4]
-    // ],
-    barColor: ['#009883', '#e66922'], //柱子颜色 必填参数
-    // lineColor: ['#fd6665', '#fba73b'], // 折线颜色
-
-}
+};
 
 var myData = (function test() {
     let yAxis = data.yAxis || [];
@@ -29,7 +21,7 @@ var myData = (function test() {
     yAxis && yAxis.forEach((item, index) => {
         legendArr.push({
             name: legendBar && legendBar.length > 0 && legendBar[index]
-        })
+        });
         seriesArr.push({
             name: legendBar && legendBar.length > 0 && legendBar[index],
             type: 'bar',
@@ -59,12 +51,12 @@ var myData = (function test() {
                 },
             }
         })
-    })
+    });
 
     lines && lines.forEach((item, index) => {
             legendArr.push({
                 name: legendLine && legendLine.length > 0 && legendLine[index]
-            })
+            });
             seriesArr.push({
                 name: legendLine && legendLine.length > 0 && legendLine[index],
                 type: 'line',
@@ -114,6 +106,7 @@ option1 = {
                 } else {
                     str += i.seriesName + '：' + i.data + '<br/>'
                 }
+                ;
 
             }
             return time + str;
@@ -186,7 +179,6 @@ option1 = {
                 } else {
                     params = params && params.slice(0, 15);
                 }
-
                 var provideNumber = splitNumber; //一行显示几个字
                 var rowNumber = Math.ceil(paramsNameNumber / provideNumber) || 0;
                 if (paramsNameNumber > provideNumber) {
@@ -233,7 +225,7 @@ option1 = {
         splitNumber: 4,
     },
     series: myData.seriesArr
-}
+};
 
 //本月发生事件1
 var color = ['#e9df3d', '#f79c19', '#21fcd6', '#08c8ff', '#df4131'];
@@ -309,7 +301,7 @@ data.forEach(function (d, i) {
             }
         }
     })
-})
+});
 var indicator = [];
 
 data.forEach(function (d) {
@@ -318,7 +310,7 @@ data.forEach(function (d) {
         max: max,
         color: '#fff'
     })
-})
+});
 
 
 option3 = {
@@ -362,7 +354,7 @@ option3 = {
         type: "radar",
         data: renderData
     }]
-}
+};
 //////////////////////本月发生事件1 end
 //本月发生事件2
 
@@ -469,51 +461,6 @@ data.forEach(function (d) {
         color: '#fff'
     })
 })
-
-//
-// option31 = {
-//     tooltip: {
-//         show: true,
-//         trigger: "item"
-//     },
-//     radar: {
-//         center: ["50%", "50%"],//偏移位置
-//         radius: "80%",
-//         startAngle: 40, // 起始角度
-//         splitNumber: 4,
-//         shape: "circle",
-//         splitArea: {
-//             areaStyle: {
-//                 color: 'transparent'
-//             }
-//         },
-//         axisLabel: {
-//             show: false,
-//             fontSize: 10,
-//             color: "#000",
-//             fontStyle: "normal",
-//             fontWeight: "normal"
-//         },
-//         axisLine: {
-//             show: true,
-//             lineStyle: {
-//                 color: "rgba(255, 255, 255, 0.5)"
-//             }
-//         },
-//         splitLine: {
-//             show: true,
-//             lineStyle: {
-//                 color: "rgba(255, 255, 255, 0.5)"
-//             }
-//         },
-//         indicator: indicator
-//     },
-//     series: [{
-//         type: "radar",
-//         data: renderData
-//     }]
-// }
-//////////////////////本月发生事件2 end
 
 
 //收费站收费排行1
@@ -625,21 +572,6 @@ option4 = {
     ]
 };
 
-
-// Make dynamic data.
-// function random() {
-//     return +(Math.random() * (maxData - 10)).toFixed(1);
-// }
-// setInterval(function () {
-//     var dynamicData = [random(), random(), random(), random(),random(), random(), random(), random(),random(),random()];
-//     myChart.setOption({
-//         series: [{
-//             data: dynamicData.slice()
-//         }, {
-//             data: dynamicData.slice()
-//         }]
-//     })
-// }, 3000)
 //////////////////////收费站收费排行2 end
 
 //收费站收费排行2
@@ -771,22 +703,6 @@ option41 = {
     ]
 };
 
-
-// Make dynamic data.
-// function random() {
-//     return +(Math.random() * (maxData - 10)).toFixed(1);
-// }
-// setInterval(function () {
-//     var dynamicData = [random(), random(), random(), random(),random(), random(), random(), random(),random(),random()];
-//     myChart.setOption({
-//         series: [{
-//             data: dynamicData.slice()
-//         }, {
-//             data: dynamicData.slice()
-//         }]
-//     })
-// }, 3000)
-//////////////////////收费站收费排行2 end
 
 //今日实时收费
 
@@ -1064,153 +980,5 @@ option7 = {
             }
         }]
     }]
-}
+};
 //////////////////////今日实时收费 end
-
-//////////////////////交通流量 end
-
-//交通工具流量
-// option2 = {
-//
-//     tooltip: {//鼠标指上时的标线
-//         trigger: 'axis',
-//         axisPointer: {
-//             lineStyle: {
-//                 color: '#fff'
-//             }
-//         }
-//     },
-//     legend: {
-//         icon: 'rect',
-//         itemWidth: 14,
-//         itemHeight: 5,
-//         itemGap: 13,
-//         data: ['会员车', '临时车'],
-//         right: '10px',
-//         top: '0px',
-//         textStyle: {
-//             fontSize: 12,
-//             color: '#fff'
-//         }
-//     },
-//     grid: {
-//         x: 35,
-//         y: 25,
-//         x2: 8,
-//         y2: 25,
-//     },
-//     xAxis: [{
-//         type: 'category',
-//         boundaryGap: false,
-//         axisLine: {
-//             lineStyle: {
-//                 color: '#57617B'
-//             }
-//         },
-//         axisLabel: {
-//             textStyle: {
-//                 color: '#fff',
-//             },
-//         },
-//         data: ['2010', '2010', '2011', '2011', '2012', '2012', '2013', '2013', '2014', '2014', '2015', '2015']
-//     }],
-//     yAxis: [{
-//         type: 'value',
-//         axisTick: {
-//             show: false
-//         },
-//         axisLine: {
-//             lineStyle: {
-//                 color: '#57617B'
-//             }
-//         },
-//         axisLabel: {
-//             margin: 10,
-//             textStyle: {
-//                 fontSize: 14
-//             },
-//             textStyle: {
-//                 color: '#fff',
-//             },
-//         },
-//         splitLine: {
-//             lineStyle: {
-//                 color: '#57617B'
-//             }
-//         }
-//     }],
-//     series: [{
-//         name: '会员车',
-//         type: 'line',
-//         smooth: true,
-//         lineStyle: {
-//             normal: {
-//                 width: 2
-//             }
-//         },
-//         areaStyle: {
-//             normal: {
-//                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-//                     offset: 0,
-//                     color: 'rgba(137, 189, 27, 0.3)'
-//                 }, {
-//                     offset: 0.8,
-//                     color: 'rgba(137, 189, 27, 0)'
-//                 }], false),
-//                 shadowColor: 'rgba(0, 0, 0, 0.1)',
-//                 shadowBlur: 10
-//             }
-//         },
-//         itemStyle: {
-//             normal: {
-//                 color: 'rgb(137,189,27)'
-//             }
-//         },
-//         data: [20, 35, 34, 45, 52, 41, 49, 64, 24, 52.4, 24, 33]
-//     }, {
-//         name: '临时车',
-//         type: 'line',
-//         smooth: true,
-//         lineStyle: {
-//             normal: {
-//                 width: 2
-//             }
-//         },
-//         areaStyle: {
-//             normal: {
-//                 color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-//                     offset: 0,
-//                     color: 'rgba(0, 136, 212, 0.3)'
-//                 }, {
-//                     offset: 0.8,
-//                     color: 'rgba(0, 136, 212, 0)'
-//                 }], false),
-//                 shadowColor: 'rgba(0, 0, 0, 0.1)',
-//                 shadowBlur: 10
-//             }
-//         },
-//         itemStyle: {
-//             normal: {
-//                 color: 'rgb(0,136,212)'
-//             }
-//         },
-//         data: [97.3, 99.2, 99.3, 100.0, 99.6, 90.6, 80.0, 91.5, 69.8, 67.5, 90.4, 84.9]
-//     },]
-// };
-//////////////////////交通工具流量 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

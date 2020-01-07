@@ -1,5 +1,4 @@
 option2 = {
-
     tooltip: {//鼠标指上时的标线
         trigger: 'axis',
         axisPointer: {

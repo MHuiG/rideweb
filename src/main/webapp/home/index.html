@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>共享单车大数据分析平台</title>
@@ -291,7 +291,7 @@
 <script src="js/main2.js"></script>
 <script type="text/javascript">
     $(function () {
-        var a = $('.visualSssf_left a')
+        var a = $('.visualSssf_left a');
         for (var i = 0; i < a.length; i++) {
             a[i].index = i;
             a[i].onclick = function () {
@@ -302,18 +302,18 @@
             }
         }
 
-        var sfzcllH = $('.sfzcll_box').height()
-        var sfzcllHtwo = sfzcllH - 2
-        $('.sfzcll_box').css('line-height', sfzcllH + 'px')
-        $('.sfzcll_smallBk>div').css('line-height', sfzcllHtwo + 'px')
+        var sfzcllH = $('.sfzcll_box').height();
+        var sfzcllHtwo = sfzcllH - 2;
+        $('.sfzcll_box').css('line-height', sfzcllH + 'px');
+        $('.sfzcll_smallBk>div').css('line-height', sfzcllHtwo + 'px');
 
         //删除加载动画
-        $('#load').fadeOut(1000)
+        $('#load').fadeOut(1000);
         setTimeout(function () {
                 $('#load').remove()
             }
             , 1100);
-    })
+    });
 
     //交通流量
     var myChart1 = echarts.init(document.getElementById('main1'));
@@ -332,7 +332,7 @@
         autoplay: {
             delay: 5000,//1秒切换一次
         },
-    })
+    });
     //收费站收费排行
     var myChart4 = echarts.init(document.getElementById('main4'));
     myChart4.setOption(option4);
@@ -342,7 +342,7 @@
         autoplay: true,//可选选项，自动滑动
         direction: 'vertical',//可选选项，滑动方向
         speed: 2000,//可选选项，滑动速度
-    })
+    });
     //今日实时收费
     var myChart5 = echarts.init(document.getElementById('main5'));
     myChart5.setOption(option5);
