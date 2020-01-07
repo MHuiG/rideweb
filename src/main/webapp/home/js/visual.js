@@ -9,7 +9,27 @@ var data = {
         [130, 157, 168, 178, 207, 193, 165]
     ],
 };
-
+$.ajax({
+    url: "/rideweb/main33",
+    type: "POST",
+    dataType: "json",
+    success: function (data) {
+        options = {
+            yAxis:[
+                [data[0][0],data[0][1],data[0][2],data[0][3],data[0][4],data[0][5],data[0][6]],
+                [data[1][0],data[1][1],data[1][2],data[1][3],data[1][4],data[1][5],data[1][6]]
+            ]
+        };
+        // console.log(data);
+        var option = myChart1.getOption();
+        option.series[0].data.yAxis = options.yAxis;
+        myChart1.setOption(option);
+        //myChart1.setOption(option1);
+    },
+    error: function (err) {
+        console.log(err);
+    }
+});
 var myData = (function test() {
     let yAxis = data.yAxis || [];
     let lines = data.lines || [];

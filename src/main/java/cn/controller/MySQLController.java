@@ -1,6 +1,7 @@
 package cn.controller;
 
 import cn.pojo.mysql.Rideyear;
+import cn.pojo.mysql.yearpeople;
 import cn.service.MySQLService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,6 +30,23 @@ public class MySQLController {
         }
         list.add(Member);
         list.add(Casual);
+        return list;
+    }
+
+
+    @RequestMapping(value = "/main33", produces = "application/json;charset=UTF-8")
+    @ResponseBody
+    public List main33() {
+        List list = new ArrayList();
+        List<yearpeople> o = MySQLService.selectpp();
+        List High = new ArrayList();
+        List Low = new ArrayList();
+        for (yearpeople i : o) {
+            High.add(i.getHigh());
+            Low.add(i.getLow());
+        }
+        list.add(High);
+        list.add(Low);
         return list;
     }
 

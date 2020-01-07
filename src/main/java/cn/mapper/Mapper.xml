@@ -7,5 +7,9 @@
             parameterType="int">
 		select * from rideyear order by year ASC ;
 	</select>
+	<select id="selectpp" resultType="cn.pojo.mysql.yearpeople"
+			parameterType="int">
+		select * from yearpeople order by year ASC ;
+	</select>
 
 </mapper>

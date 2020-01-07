@@ -147,6 +147,29 @@ $.ajax({
         console.log(err);
     }
 });
+$.ajax({
+    url: "/rideweb/main22",
+    type: "POST",
+    dataType: "json",
+    success: function (data) {
+        // console.log(data);
+        option2 = {
+            series: [{
+                name: '会员车',
+
+                data: data[0]
+            }, {
+                name: '临时车',
+
+                data: data[1]
+            },]
+        };
+        myChart2.setOption(option2);
+    },
+    error: function (err) {
+        console.log(err);
+    }
+});
 
 $.ajax({
     url: "/rideweb/sum",
