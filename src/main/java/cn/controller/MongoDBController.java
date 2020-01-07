@@ -42,7 +42,6 @@ public class MongoDBController {
         c1.add(two);
         c1.add(a1.get(4));
         c1.add(three);
-        System.out.println(c1.get(0));
         return c1;
     }
     @RequestMapping(value = "/getList")
