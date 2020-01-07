@@ -173,7 +173,7 @@ option1 = {
             },
             formatter: function (params, index) {
                 var newParamsName = "";
-                var splitNumber = 5;
+                var splitNumber = 7;
                 var paramsNameNumber = params && params.length;
                 if (paramsNameNumber && paramsNameNumber <= 4) {
                     splitNumber = 4;
@@ -205,7 +205,7 @@ option1 = {
                 } else {
                     newParamsName = params;
                 }
-                params = newParamsName
+                params = newParamsName;
                 return '{Sunny|' + params + '}';
             },
             color: '#687284',
