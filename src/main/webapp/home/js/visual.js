@@ -421,7 +421,6 @@ var renderData = [{
     }
 }];
 
-
 data.forEach(function (d, i) {
     var value = ['', '', '', '', ''];
     value[i] = max,
