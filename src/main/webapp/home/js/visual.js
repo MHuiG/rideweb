@@ -441,7 +441,7 @@ data.forEach(function (d, i) {
             }
         }
     })
-})
+});
 var indicator = [{
     "name": "车锁",
     "value": 15
