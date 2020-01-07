@@ -1,6 +1,5 @@
 package cn.controller;
 
-import cn.pojo.Cassandra.Location;
 import cn.pojo.Cassandra.Season;
 import cn.service.HBaseService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,10 +24,11 @@ public class HBaseController {
         System.out.println("getHBaseService..");
         return 1;
     }
+
     //插入更新
     @RequestMapping(value = "/getinsertHBase", produces = "application/json;charset=UTF-8")
     @ResponseBody
-    public int getinsertHBase(String ID, String StartDate, String StartStation, String StartStationNumber, String EndDate,String EndStation,String EndStationNumber, String TotalDuration, String AccountType) throws IOException {
+    public int getinsertHBase(String ID, String StartDate, String StartStation, String StartStationNumber, String EndDate, String EndStation, String EndStationNumber, String TotalDuration, String AccountType) throws IOException {
         Season o = new Season();
         o.setId(ID);
         o.setStartDate(StartDate);
@@ -43,17 +43,18 @@ public class HBaseController {
         HBaseService.addSeasonData(o);
         return 1;
     }
-//删除
+
+    //删除
     @RequestMapping(value = "/getdeleteHBase", produces = "application/json;charset=UTF-8")
     @ResponseBody
     public int getdeleteHBase(String ID) throws IOException {
 
         HBaseService.deleteRow(ID);
-        System.out.println("deleterowByID " +ID);
+        System.out.println("deleterowByID " + ID);
         return 1;
     }
 
-//    根据ID查
+    //    根据ID查
     @RequestMapping(value = "/getHBaseDatabyID", produces = "application/json;charset=UTF-8")
     @ResponseBody
     public int getHBaseDatabyID(String ID) throws IOException {
@@ -64,11 +65,13 @@ public class HBaseController {
         return 1;
     }
 
-//    查整表
+    //    查整表
     @RequestMapping(value = "/getHBaseAll", produces = "application/json;charset=UTF-8")
     @ResponseBody
     public List<Season> getHBaseAll() throws IOException {
-        List<Season> o =HBaseService.queryTable();
+        System.out.println("/getHBaseAll");
+        List<Season> o = HBaseService.queryTable();
+        System.out.println("OK");
         return o;
     }
 
