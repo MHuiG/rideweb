@@ -90,19 +90,19 @@ public class HBaseServiceImpl implements HBaseService {
         }
     }
 // 查询整表
+    @Test
     public List<Season> queryTable() throws IOException {
             getconncet();
             List<Season> p = new ArrayList<>();
             Table table =connection.getTable(TableName.valueOf("ride"));
-            Scan scan=new Scan();
-            ResultScanner results=table.getScanner(scan);
-            int a=0;
-            for (Result result:results){
+
+            for(int i=1;i<=20;i++){
+                Get get1 = new Get(Bytes.toBytes(String.valueOf(i)));
+                Result result = table.get(get1);
                 Season o = new Season();
-//                System.out.println(new String(result.getRow()));
                 o.setId(new String(result.getRow()));
-                for (Cell cell:result.rawCells()){
-                    //列名
+                System.out.println(new String(result.getRow()));
+                for (Cell cell : result.rawCells()) {
                     if (new String(CellUtil.cloneQualifier(cell)).equals("Startdate")){
                         o.setStartDate(new String(CellUtil.cloneValue(cell)));
 //                        System.out.println(new String(CellUtil.cloneValue(cell)));
@@ -136,10 +136,8 @@ public class HBaseServiceImpl implements HBaseService {
 //                        System.out.println(new String(CellUtil.cloneValue(cell)));
                     }
                 }
-                System.out.println(o.getId()+" "+o.getStartDate()+" "+o.getStartStation()+" "+o.getStartStationNumber()+" "+o.getEndDate()+" "+o.getEndStation()+" "+o.getEndStationNumber()+" "+o.getTotalDuration()+" "+o.getAccountType());
+//            System.out.println(o.getId()+" "+o.getStartDate()+" "+o.getStartStation()+" "+o.getStartStationNumber()+" "+o.getEndDate()+" "+o.getEndStation()+" "+o.getEndStationNumber()+" "+o.getTotalDuration()+" "+o.getAccountType());
                 p.add(o);
-                a=a+1;
-                if (a==20) break;
             }
             return p;
     }
@@ -190,7 +188,7 @@ public class HBaseServiceImpl implements HBaseService {
                     System.out.println(new String(CellUtil.cloneValue(cell)));
                 }
             }
-//            System.out.println(o.getId()+" "+o.getStartDate()+" "+o.getStartStation()+" "+o.getStartStationNumber()+" "+o.getEndDate()+" "+o.getEndStation()+" "+o.getEndStationNumber()+" "+o.getTotalDuration()+" "+o.getAccountType());
+            System.out.println(o.getId()+" "+o.getStartDate()+" "+o.getStartStation()+" "+o.getStartStationNumber()+" "+o.getEndDate()+" "+o.getEndStation()+" "+o.getEndStationNumber()+" "+o.getTotalDuration()+" "+o.getAccountType());
             p.add(o);
             table_Name.close();
             return p;

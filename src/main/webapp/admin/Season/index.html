@@ -112,13 +112,13 @@
             delone(ID);
             // var url = "index.html";
             // window.location.href = url;
-        }, false, true)
+        },true, true)
 
     }
 
     function edit(obj) {
         ID = obj.parentNode.parentNode.id;
-        window.location.href = "edit.html?Terminal=" + ID;
+        window.location.href = "edit.html?ID=" + ID;
     }
 
     function delone(ID) {
@@ -195,7 +195,7 @@
                 'ID': ID
             },
             success: function (data) {
-                // console.log(data);
+                console.log(data);
                 var result = '';
                 var arrLen = data.length;
                 if (arrLen > 0) {

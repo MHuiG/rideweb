@@ -1,6 +1,7 @@
 package cn.controller;
 
 import cn.pojo.Cassandra.Location;
+import cn.pojo.Cassandra.Sea;
 import cn.pojo.Cassandra.Season;
 import cn.service.HBaseService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,12 +57,12 @@ public class HBaseController {
 //    根据ID查
     @RequestMapping(value = "/getHBaseDatabyID", produces = "application/json;charset=UTF-8")
     @ResponseBody
-    public int getHBaseDatabyID(String ID) throws IOException {
+    public List getHBaseDatabyID(String ID) throws IOException {
         Season o = new Season();
         o.setId(ID);
-        HBaseService.getData(o);
+        List<Season> p =HBaseService.getData(o);
         System.out.println("getHBaseDatabyID " + o.getId());
-        return 1;
+        return p;
     }
 
 //    查整表
