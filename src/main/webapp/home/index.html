@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>共享单车大数据分析平台</title>
@@ -163,7 +163,7 @@
             <div class="visual_conTop_box visual_conTop2">
                 <div>
                     <h3>当前单车消费总额</h3>
-                    <p style="text-align: center;width: 100%;">6564336254</p>
+                    <p style="text-align: center;width: 100%;">6296684</p>
                 </div>
             </div>
             <div class="clear"></div>
@@ -229,24 +229,50 @@
                         <td>临时会员</td>
                     </tr>
                     <tr>
-                        <td>2486万</td>
-                        <td>2486万</td>
+                        <td><span id="one">2486</span>元</td>
+                        <td><span id="two">2486</span>元</td>
                     </tr>
                     <tr>
-                        <td>2486万</td>
-                        <td>2486万</td>
+                        <td><span id="three">2486</span>元</td>
+                        <td><span id="four">2486</span>元</td>
                     </tr>
                     <tr>
-                        <td>2486万</td>
-                        <td>2486万</td>
+                        <td><span id="five">2486</span>元</td>
+                        <td><span id="six">2486</span>元</td>
                     </tr>
                     <tr>
-                        <td>2486万</td>
-                        <td>2486万</td>
+                        <td><span id="seven">2486</span>元</td>
+                        <td><span id="eight">2486</span>元</td>
                     </tr>
                 </table>
             </div>
         </div>
+        <script>
+            $.ajax({
+                url: "/rideweb/getList",
+                type: 'POST',
+                dataType: 'json',
+                success: function (data) {
+                    var one = document.getElementById("one");
+                    one.innerHTML = data[0];
+                    var two = document.getElementById("two");
+                    two.innerHTML = data[4];
+                    var three = document.getElementById("three");
+                    three.innerHTML = data[1];
+                    var four = document.getElementById("four");
+                    four.innerHTML = data[5];
+                    var five = document.getElementById("five");
+                    five.innerHTML = data[2];
+                    var six = document.getElementById("six");
+                    six.innerHTML = data[6];
+                    var seven = document.getElementById("seven");
+                    seven.innerHTML = data[3];
+                    var eight = document.getElementById("eight");
+                    eight.innerHTML = data[7];
+
+                }
+            })
+        </script>
         <div class="visual_box">
             <div class="visual_title">
                 <span>站点收费排行</span>
@@ -265,7 +291,7 @@
 <script src="js/main2.js"></script>
 <script type="text/javascript">
     $(function () {
-        var a = $('.visualSssf_left a')
+        var a = $('.visualSssf_left a');
         for (var i = 0; i < a.length; i++) {
             a[i].index = i;
             a[i].onclick = function () {
@@ -276,18 +302,18 @@
             }
         }
 
-        var sfzcllH = $('.sfzcll_box').height()
-        var sfzcllHtwo = sfzcllH - 2
-        $('.sfzcll_box').css('line-height', sfzcllH + 'px')
-        $('.sfzcll_smallBk>div').css('line-height', sfzcllHtwo + 'px')
+        var sfzcllH = $('.sfzcll_box').height();
+        var sfzcllHtwo = sfzcllH - 2;
+        $('.sfzcll_box').css('line-height', sfzcllH + 'px');
+        $('.sfzcll_smallBk>div').css('line-height', sfzcllHtwo + 'px');
 
         //删除加载动画
-        $('#load').fadeOut(1000)
+        $('#load').fadeOut(1000);
         setTimeout(function () {
                 $('#load').remove()
             }
             , 1100);
-    })
+    });
 
     //交通流量
     var myChart1 = echarts.init(document.getElementById('main1'));
@@ -306,7 +332,7 @@
         autoplay: {
             delay: 5000,//1秒切换一次
         },
-    })
+    });
     //收费站收费排行
     var myChart4 = echarts.init(document.getElementById('main4'));
     myChart4.setOption(option4);
@@ -316,7 +342,7 @@
         autoplay: true,//可选选项，自动滑动
         direction: 'vertical',//可选选项，滑动方向
         speed: 2000,//可选选项，滑动速度
-    })
+    });
     //今日实时收费
     var myChart5 = echarts.init(document.getElementById('main5'));
     myChart5.setOption(option5);
