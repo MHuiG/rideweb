@@ -2,7 +2,7 @@
 var data = {
     id: 'multipleBarsLines',
     legendBar: ['<=15min', '>15min'],
-    symbol: ' ', //数值是否带百分号        --默认为空 ''
+    // symbol: '', //数值是否带百分号        --默认为空 ''
     // legendLine: ['环比', '同比'],
     xAxis: ['2010', '2011', '2012', '2013', '2014', '2015'],
     yAxis: [
@@ -19,13 +19,13 @@ var data = {
 }
 
 var myData = (function test() {
-    let yAxis = data.yAxis || []
-    let lines = data.lines || []
-    let legendBar = data.legendBar || []
-    let legendLine = data.legendLine || []
-    var symbol = data.symbol || ' '
-    let seriesArr = []
-    let legendArr = []
+    let yAxis = data.yAxis || [];
+    let lines = data.lines || [];
+    let legendBar = data.legendBar || [];
+    let legendLine = data.legendLine || [];
+    var symbol = data.symbol || ' ';
+    let seriesArr = [];
+    let legendArr = [];
     yAxis && yAxis.forEach((item, index) => {
         legendArr.push({
             name: legendBar && legendBar.length > 0 && legendBar[index]
@@ -112,7 +112,7 @@ option1 = {
                 if (i.data == 'null' || i.data == null) {
                     str += i.seriesName + '：无数据' + '<br/>'
                 } else {
-                    str += i.seriesName + '：' + i.data + i.symbol + '%<br/>'
+                    str += i.seriesName + '：' + i.data + '<br/>'
                 }
 
             }
