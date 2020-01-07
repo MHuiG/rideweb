@@ -5,6 +5,8 @@ import cn.service.MongoDBService;
 import com.mongodb.*;
 import com.mongodb.client.*;
 import com.mongodb.client.MongoClient;
+import com.mongodb.client.model.Filters;
+import org.bson.conversions.Bson;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +28,27 @@ public class MongoDBServiceImpl implements MongoDBService {
         MongoCollection col = db.getCollection("season");
         return col;
     }
+    @Test
+    public void test(){
+        MongoClient mongo = MongoClients.create("mongodb://worker02:27017");
+        MongoDatabase db = mongo.getDatabase("ywh");
+        MongoCollection col = db.getCollection("text");
+        Document document = new Document("name","张三").append("sex", "男").append("age", 18);//---------------增
+        col.insertOne(document);
+        Bson filter = Filters.eq("age",18); //------------------删
+        //删除与筛选器匹配的单个文档
+        col.deleteOne(filter);
+        Document document2 = new Document("$set", new Document("age", 100));//------------------------改
+        //修改单个文档
+        col.updateOne(filter, document2);
+        FindIterable findIterable = col.find(); // ------------------------------查
+        MongoCursor cursor = findIterable.iterator();
+        while (cursor.hasNext()) {
+            System.out.println(cursor.next());
+        }
 
+        System.out.println("Success!!!");
+    }
         public ArrayList casual_start(MongoCollection col){
 
             BasicDBObject query = new BasicDBObject(); //------------临时车+出发站
