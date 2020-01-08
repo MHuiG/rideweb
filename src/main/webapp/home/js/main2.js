@@ -179,6 +179,8 @@ $.ajax({
         // console.log(data);
         $("body > div.visual > div.visual_con > div.visual_conTop > div:nth-child(1) > div > p").html(data[0]);
         $("body > div.visual > div.visual_con > div.visual_conTop > div:nth-child(2) > div > p").html(data[1]);
+        // $("body > div.visual > div.visual_con > div.visual_conTop > div:nth-child(3) > div > p").html(data[2]);
+        // $("body > div.visual > div.visual_con > div.visual_conTop > div:nth-child(4) > div > p").html(data[3]);
     },
     error: function (err) {
         console.log(err);
